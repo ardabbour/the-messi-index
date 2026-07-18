@@ -48,3 +48,19 @@ test("live World Cup claims retain their audit cutoff", async () => {
   assert.match(page, /tournament was still in progress/i);
   assert.match(ledger, new RegExp(`Live; dated ${snapshot.auditDateShort}`));
 });
+
+test("visual plates and source links retain accessible, safe markup", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+  const imageRoles = page.match(/<[^>]+role="img"[^>]*>/g) ?? [];
+  const labelledSections = [...page.matchAll(/<section[^>]+aria-labelledby="([^"]+)"/g)]
+    .map((match) => match[1]);
+  const ids = new Set([...page.matchAll(/id="([^"]+)"/g)].map((match) => match[1]));
+  const externalAnchors = page.match(/<a [^>]*target="_blank"[^>]*>/g) ?? [];
+
+  assert.ok(imageRoles.length >= 20);
+  imageRoles.forEach((tag) => assert.match(tag, /aria-label=/));
+  assert.equal(new Set(labelledSections).size, labelledSections.length);
+  labelledSections.forEach((id) => assert.ok(ids.has(id), `Missing heading id: ${id}`));
+  assert.ok(externalAnchors.length >= 40);
+  externalAnchors.forEach((tag) => assert.match(tag, /rel="noreferrer"/));
+});

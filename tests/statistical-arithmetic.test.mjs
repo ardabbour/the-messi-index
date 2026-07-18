@@ -246,3 +246,10 @@ test("the 2014 World Cup dribbling peak reconciles at both scales", () => {
   assert.equal(((46 / 34 - 1) * 100).toFixed(1), "35.3");
   assert.deepEqual([53, 47, 46].sort((a, b) => b - a), [53, 47, 46]);
 });
+
+test("the 2015 FIFA Ballon d'Or ballot dominance reconciles", () => {
+  assert.equal((27.76 + 7.86).toFixed(2), "35.62");
+  assert.equal((41.33 - 35.62).toFixed(2), "5.71");
+  assert.ok(41.33 > 27.76 + 7.86);
+  assert.equal(165 + 162 + 171, 498);
+});

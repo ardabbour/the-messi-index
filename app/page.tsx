@@ -55,6 +55,8 @@ const sources = {
     "https://www.uefa.com/uefachampionsleague/news/0257-0e9a02ecaf1e-a1d96d1587ba-1000--who-are-the-all-time-champions-league-group-stage-top-scorers/",
   worldCupDribbles:
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/lionel-messi-2014-eden-hazard-2018-dribbles",
+  ballonDor2015Vote:
+    "https://inside.fifa.com/en/media-releases/messi-lloyd-luis-enrique-and-ellis-triumph-at-fifa-ballon-d-or-2015-2754944",
   suarezBarca:
     "https://www.fcbarcelona.com/en/football/first-team/players/4138/luis-suarez",
   freeKicks:
@@ -282,6 +284,13 @@ const ledger = [
     group: "argentina" as Dossier,
     href: sources.worldCupDribbles,
   },
+  {
+    value: "41.33%",
+    label: "share of the 2015 FIFA Ballon d’Or vote",
+    note: "More than Cristiano Ronaldo and Neymar’s second- and third-place shares combined.",
+    group: "awards" as Dossier,
+    href: sources.ballonDor2015Vote,
+  },
 ];
 
 const calendarYear = [
@@ -328,6 +337,16 @@ const worldCupDribblePodium = [
 const brazil2014DribbleLeaders = [
   { name: "Lionel Messi", dribbles: 46 },
   { name: "Arjen Robben", dribbles: 34 },
+];
+const ballonDor2015Podium = [
+  { name: "Lionel Messi", share: 41.33 },
+  { name: "Cristiano Ronaldo", share: 27.76 },
+  { name: "Neymar", share: 7.86 },
+];
+const ballonDor2015Electorate = [
+  { group: "National-team coaches", voters: 165 },
+  { group: "National-team captains", voters: 162 },
+  { group: "Media representatives", voters: 171 },
 ];
 
 const barcaBreakdown = [
@@ -1725,6 +1744,37 @@ export default function Home() {
           </div>
         </div>
         <div className="world-dribble-peak-proof"><strong>53 → 47 → 46</strong><p>The third-highest edition in World Cup history—and a 35.3% advantage over the player in second place that year.</p><span>Historical tournament · FIFA</span></div>
+      </section>
+
+      <section className="plate ballot-plate" aria-labelledby="ballot-title">
+        <div className="plate-heading inverse">
+          <span>Plate 51 · ballot dominance</span>
+          <h2 id="ballot-title">Second and third together still lost.</h2>
+          <a href={sources.ballonDor2015Vote} target="_blank" rel="noreferrer">FIFA voting record ↗</a>
+        </div>
+        <div className="ballot-lead">
+          <div><span>2015 FIFA Ballon d’Or</span><strong>41.33%</strong><p>Lionel Messi’s share of the complete vote</p></div>
+          <div><strong>498</strong><span>participating voters</span><p>Coaches, captains and media representatives.</p></div>
+        </div>
+        <div className="ballot-analysis" role="img" aria-label="2015 FIFA Ballon d'Or voting: Lionel Messi 41.33 percent, Cristiano Ronaldo 27.76 percent and Neymar 7.86 percent. Ronaldo and Neymar combined received 35.62 percent, 5.71 percentage points below Messi. The electorate comprised 165 national-team coaches, 162 captains and 171 media representatives.">
+          <div className="ballot-podium">
+            <span>Final vote share</span>
+            {ballonDor2015Podium.map((player, index) => (
+              <div className={player.name === "Lionel Messi" ? "winner" : ""} key={player.name}>
+                <b>{String(index + 1).padStart(2, "0")}</b><p>{player.name}</p><i><em style={{ width: `${(player.share / 41.33) * 100}%` }} /></i><strong>{player.share.toFixed(2)}%</strong>
+              </div>
+            ))}
+            <div className="ballot-combined"><p>Second + third</p><i><em style={{ width: `${(35.62 / 41.33) * 100}%` }} /></i><strong>35.62%</strong></div>
+          </div>
+          <div className="ballot-electorate">
+            <span>Who voted</span>
+            {ballonDor2015Electorate.map((group) => (
+              <div key={group.group}><strong>{group.voters}</strong><p>{group.group}</p></div>
+            ))}
+            <div className="ballot-margin"><strong>+5.71</strong><p>percentage points beyond the combined shares of second and third place.</p></div>
+          </div>
+        </div>
+        <div className="ballot-proof"><strong>27.76 + 7.86 = 35.62</strong><p>Put both podium challengers on the same side of the ballot. Messi still wins.</p><span>Official final result · FIFA</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

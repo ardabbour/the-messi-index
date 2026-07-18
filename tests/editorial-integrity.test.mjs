@@ -36,7 +36,7 @@ test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];
 
-  assert.equal(urls.length, 41);
+  assert.equal(urls.length, 42);
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(page, /http:\/\//);
 });
@@ -52,6 +52,7 @@ test("the live source audit restricts redirects to approved evidence owners", as
   assert.match(auditScript, /"1,482", "Iker Muniain", "567", "487", "Cristiano Ronaldo", "365"/);
   assert.match(auditScript, /"Right foot", "Left foot", "Header", "100 goals", "122 games", "1–20", "42 games", "81–100"/);
   assert.match(auditScript, /"just 86 matches", "ratio of 0\.93", "40 goals \/ 38 games", "80 \/ 86", "73 \/ 87", "73 \/ 98"/);
+  assert.match(auditScript, /"165 national team coaches", "162 national team captains", "171 media representatives", "41\.33%", "27\.76%", "7\.86%"/);
   assert.match(auditScript, /missing claim fingerprints/);
 });
 
@@ -238,4 +239,16 @@ test("the World Cup dribbling plate separates edition rank from tournament margi
   assert.match(page, /Lionel Messi", edition: "Brazil 2014", dribbles: 46/);
   assert.match(page, /Arjen Robben", dribbles: 34/);
   assert.match(page, /sources\.worldCupDribbles/);
+});
+
+test("the 2015 Ballon d'Or plate compares Messi with the combined podium challengers", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+
+  assert.match(page, /Plate 51 · ballot dominance/);
+  assert.match(page, /Second and third together still lost\./);
+  assert.match(page, /Lionel Messi", share: 41\.33/);
+  assert.match(page, /Cristiano Ronaldo", share: 27\.76/);
+  assert.match(page, /Neymar", share: 7\.86/);
+  assert.match(page, /National-team coaches", voters: 165/);
+  assert.match(page, /sources\.ballonDor2015Vote/);
 });

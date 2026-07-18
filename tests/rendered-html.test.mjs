@@ -73,6 +73,10 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /All-time single-edition podium/);
   assert.match(html, /53 → 47 → 46/);
   assert.match(html, /35\.3% advantage/);
+  assert.match(html, /Second and third together still lost\./);
+  assert.match(html, /41\.33%/);
+  assert.match(html, /Second \+ third/);
+  assert.match(html, /27\.76 \+ 7\.86 = 35\.62/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

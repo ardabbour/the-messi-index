@@ -23,6 +23,10 @@ const claimFingerprints = new Map([
     "https://www.uefa.com/uefachampionsleague/news/0257-0e9a02ecaf1e-a1d96d1587ba-1000--who-are-the-all-time-champions-league-group-stage-top-scorers/",
     ["just 86 matches", "ratio of 0.93", "40 goals / 38 games", "80 / 86", "73 / 87", "73 / 98"],
   ],
+  [
+    "https://inside.fifa.com/en/media-releases/messi-lloyd-luis-enrique-and-ellis-triumph-at-fifa-ballon-d-or-2015-2754944",
+    ["165 national team coaches", "162 national team captains", "171 media representatives", "41.33%", "27.76%", "7.86%"],
+  ],
 ]);
 
 if (urls.length === 0) {

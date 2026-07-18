@@ -959,6 +959,30 @@ export default function Home() {
         <div className="six-cups-legend"><span><i className="assist" />A · assist</span><span><i className="goal" />G · goal</span><p>Every edition contains a direct contribution; five contain both.</p></div>
       </section>
 
+      <section className="plate world-streak-plate" aria-labelledby="world-streak-title">
+        <div className="plate-heading">
+          <span>Plate 32 · live dossier</span>
+          <h2 id="world-streak-title">Nine World Cup matches. Nine scoresheets.</h2>
+          <a href={sources.uefaRecords} target="_blank" rel="noreferrer">UEFA · 16 Jul 2026 ↗</a>
+        </div>
+        <div className="world-streak-summary">
+          <div><strong>9</strong><span>consecutive World Cup matches scoring</span><p>tournament record</p></div>
+          <div><strong>13</strong><span>goals inside the streak</span><p>five in 2022 · eight in 2026</p></div>
+          <div><strong>1.44</strong><span>goals per match</span><p>derived across the nine</p></div>
+        </div>
+        <div className="world-streak-run" role="img" aria-label="Messi scored in nine consecutive World Cup matches: the 2022 round of 16, quarter-final, semi-final and final, then three 2026 group matches, the round of 32 and round of 16, scoring 13 goals total">
+          {[
+            ["2022", "R16", "1"], ["2022", "QF", "1"], ["2022", "SF", "1"], ["2022", "Final", "2"],
+            ["2026", "Group", "3"], ["2026", "Group", "2"], ["2026", "Group", "1"], ["2026", "R32", "1"], ["2026", "R16", "1"],
+          ].map(([year, stage, goals], index) => (
+            <div className={year === "2026" ? "current" : "prior"} key={`${year}-${stage}-${index}`}>
+              <span>{year} · {stage}</span><strong>{goals}</strong><b>{Number(goals) === 1 ? "goal" : "goals"}</b>
+            </div>
+          ))}
+        </div>
+        <p className="world-streak-note">The run begins with every knockout round of Argentina’s 2022 title and continues through the first five matches of 2026. Two tournament formats; no blank match between them.</p>
+      </section>
+
       <section className="ledger-section" aria-labelledby="ledger-title">
         <div className="ledger-header">
           <div><p className="kicker">Selected entries</p><h2 id="ledger-title">The ledger of implausibility</h2></div>

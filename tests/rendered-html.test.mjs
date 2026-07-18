@@ -60,6 +60,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /The penalty area was optional\./);
   assert.match(html, /The semi-final had never seen this age\./);
   assert.match(html, /Six World Cups\. No empty columns\./);
+  assert.match(html, /Nine World Cup matches\. Nine scoresheets\./);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

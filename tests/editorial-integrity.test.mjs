@@ -15,7 +15,7 @@ test("edition plate counts agree across product and documentation", async () => 
   const advertisedPlateCount = Number(readme.match(/contains (\d+) statistical plates/)?.[1]);
   const ledgerPlateCount = ledger.match(/^\| (?:\d|05A)/gm)?.length ?? 0;
 
-  assert.equal(renderedPlateCount, 32);
+  assert.equal(renderedPlateCount, 33);
   assert.equal(advertisedPlateCount, renderedPlateCount);
   assert.equal(ledgerPlateCount, renderedPlateCount);
 });

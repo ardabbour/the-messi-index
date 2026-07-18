@@ -99,3 +99,10 @@ test("World Cup goals from distance reconcile", () => {
   assert.equal(((7 / 5 - 1) * 100).toFixed(0), "40");
   assert.equal(((7 / 21) * 100).toFixed(1), "33.3");
 });
+
+test("nine-match World Cup scoring streak reconciles", () => {
+  const goals = [1, 1, 1, 2, 3, 2, 1, 1, 1];
+  assert.equal(goals.length, 9);
+  assert.equal(goals.reduce((sum, value) => sum + value, 0), 13);
+  assert.equal((13 / 9).toFixed(2), "1.44");
+});

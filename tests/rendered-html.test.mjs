@@ -38,6 +38,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /href="#awards-title"/);
   assert.match(html, /href="#career-assists-title"/);
   assert.match(html, /href="#dribble-title"/);
+  assert.match(html, /href="#world-golden-ball-title"/);
   assert.match(html, /href="#argentina-honours-title"/);
   assert.match(html, /href="#copa-career-title"/);
   assert.match(html, /href="#qualifying-title"/);

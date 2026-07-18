@@ -444,6 +444,7 @@ export default function Home() {
         <a href="#awards-title"><b>11</b> Awards</a>
         <a href="#career-assists-title"><b>45</b> Creation</a>
         <a href="#dribble-title"><b>46</b> Dribbling</a>
+        <a href="#world-golden-ball-title"><b>47</b> World Cup awards</a>
         <a href="#argentina-honours-title"><b>41</b> Argentina honours</a>
         <a href="#copa-career-title"><b>43</b> Copa América</a>
         <a href="#qualifying-title"><b>44</b> Qualifying</a>

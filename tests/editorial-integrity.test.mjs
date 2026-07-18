@@ -124,7 +124,8 @@ test("every evidence-index destination resolves to an in-page heading", async ()
   const destinations = [...indexMarkup.matchAll(/href="#([^"]+)"/g)].map((match) => match[1]);
   const ids = new Set([...page.matchAll(/id="([^"]+)"/g)].map((match) => match[1]));
 
-  assert.equal(destinations.length, 12);
+  assert.equal(destinations.length, 13);
+  assert.equal(new Set(destinations).size, destinations.length);
   destinations.forEach((destination) => {
     assert.ok(ids.has(destination), `Missing evidence-index destination: #${destination}`);
   });

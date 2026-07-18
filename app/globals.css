@@ -57,6 +57,10 @@ h1 em { color: var(--blue); font-style: normal; }
 .evidence-index > :nth-child(n + 7) { border-top: 1px solid var(--ink); }
 .evidence-index b { margin-bottom: 8px; color: var(--blue); font: 400 1.25rem var(--font-display), sans-serif; }
 @media (hover:hover) { .evidence-index > a:hover { background: var(--blue); color: white; } .evidence-index > a:hover b { color: white; } }
+@media (min-width: 901px) {
+  .evidence-index > a:nth-last-child(-n + 2) { grid-column: span 3; }
+  .evidence-index > a:last-child { border-right: 0; }
+}
 
 .plate { border-bottom: 2px solid var(--ink); }
 .plate-heading { min-height: 92px; display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 24px; padding: 18px 34px; border-bottom: 2px solid var(--ink); }
@@ -968,6 +972,7 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .evidence-index > span { grid-column: 1 / -1; min-height: 55px; border-bottom: 1px solid var(--ink); }
   .evidence-index > :nth-child(n + 7) { border-top: 0; }
   .evidence-index > a:nth-child(3n + 1) { border-right: 0; }
+  .evidence-index > a:last-child { grid-column: 1 / -1; border-right: 0; }
   .plate-heading { grid-template-columns: 1fr auto; gap: 8px 16px; padding: 18px 20px; }
   .plate-heading > span { grid-column: 1 / -1; }
   .plate-heading h2 { font-size: 1.85rem; }

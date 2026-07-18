@@ -740,7 +740,11 @@ export default function Home() {
           <div><strong>46</strong><span>clubs faced</span></div>
           <div><strong>42</strong><span>clubs scored against</span></div>
           <div><strong>19</strong><span>countries represented</span></div>
-          <div><strong>132</strong><span>UEFA club goals</span></div>
+          <div>
+            <strong>132</strong>
+            <span>UEFA club goals</span>
+            <small><a href={sources.uefaRecords} target="_blank" rel="noreferrer">123 for Barcelona · single-club record ↗</a></small>
+          </div>
         </div>
         <div className="victim-table">
           <div className="victim-head"><span>Opponent</span><span>Goals</span><span>Minutes</span><span>Minutes per goal</span></div>

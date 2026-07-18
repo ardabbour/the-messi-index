@@ -24,6 +24,7 @@ Rechecked 18 July: [FIFA’s 14 July key-stat table](https://www.fifa.com/en/tou
 ## High-value candidate plates
 
 - **Post-final World Cup record margins:** highest priority once FIFA marks the 2026 tournament statistics final; should replace the live checkpoint rather than create a duplicate plate.
+- **Youngest-to-oldest Argentina World Cup scoring span:** after the final, measure the elapsed time from Messi’s 18 years 357 days youngest-player mark to his final oldest-player mark; UEFA’s 16 July inventory currently lists 39 years 13 days, but that endpoint can still move.
 - **Player-of-the-Match edition distribution:** add only if FIFA publishes a clean edition-by-edition table; the current career and 2026 totals already appear in Plate 05A.
 - **Future Inter Miami season ledger:** wait for an official completed-season source so a moving total is not presented as a stable record.
 

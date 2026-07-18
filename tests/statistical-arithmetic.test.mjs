@@ -28,6 +28,11 @@ test("Barcelona competition anatomy sums to 672", () => {
   assert.equal(672 - 474, 198);
 });
 
+test("UEFA club goals split between Barcelona and Paris", () => {
+  assert.equal(123 + 9, 132);
+  assert.equal((123 / 132 * 100).toFixed(1), "93.2");
+});
+
 test("late-career production rates reconcile", () => {
   assert.equal(29 + 19, 48);
   assert.equal((48 / 28).toFixed(2), "1.71");

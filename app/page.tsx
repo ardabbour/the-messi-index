@@ -54,6 +54,12 @@ const sources = {
     "https://www.fcbarcelona.com/en/news/2127955/messi-50-goals-from-free-kicks-for-fc-barcelona",
   freeKickYear:
     "https://www.fcbarcelona.com/en/news/863072/messi-sets-new-record-with-eighth-free-kick-goal-of-the-year",
+  finalGoals:
+    "https://www.fcbarcelona.com/en/news/3642383/leo-messi-becomes-the-most-decorated-player-in-history",
+  finalsBreakdown:
+    "https://www.fcbarcelona.com/en/football/first-team/news/2105698/leo-messi-29-goals-in-finals",
+  copaFinal2021:
+    "https://www.fcbarcelona.com/en/news/2108496/copa-del-rey-champions/amp",
 };
 
 const wcCareer = worldCup2026.career;
@@ -192,6 +198,14 @@ const peakSeasonBreakdown = [
   { name: "Spanish Super Cup", value: 3 },
   { name: "UEFA Super Cup", value: 1 },
   { name: "Club World Cup", value: 2 },
+];
+
+const finalGoalsBreakdown = [
+  { name: "Spanish Super Cup", value: 13 },
+  { name: "Copa del Rey", value: 9 },
+  { name: "Club World Cup", value: 4 },
+  { name: "European Super Cup", value: 3 },
+  { name: "Champions League", value: 2 },
 ];
 
 const filters: { id: Dossier; label: string }[] = [
@@ -1030,6 +1044,31 @@ export default function Home() {
           <div><strong>49</strong><span>goals</span></div><b>+</b><div><strong>35</strong><span>assists</span></div><b>=</b><div className="mls-two-year-lead"><strong>84</strong><span>contributions</span></div>
         </div>
         <div className="mls-two-year-rate"><strong>84 ÷ 47 = 1.79</strong><p>goal contributions per regular-season appearance across the two MVP campaigns</p><span>First player in MLS history to win the award back to back</span></div>
+      </section>
+
+      <section className="plate finals-plate" aria-labelledby="finals-title">
+        <div className="plate-heading inverse">
+          <span>Plate 35 · high stakes</span>
+          <h2 id="finals-title">The trophy match got thirty-one goals.</h2>
+          <a href={sources.finalGoals} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="finals-layout">
+          <div className="finals-total"><strong>31</strong><span>goals in finals for Barcelona</span><p>across five competitions</p></div>
+          <div className="finals-breakdown" role="img" aria-label="Messi's 31 goals in finals for Barcelona: 13 in the Spanish Super Cup, 9 in the Copa del Rey, 4 in the Club World Cup, 3 in the European Super Cup and 2 in the Champions League">
+            {finalGoalsBreakdown.map((item) => (
+              <div key={item.name}>
+                <span>{item.name}</span>
+                <i style={{ width: `${(item.value / 13) * 100}%` }} />
+                <strong>{item.value}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="finals-proof">
+          <strong>13 + 9 + 4 + 3 + 2 = 31</strong>
+          <p>The stage changed. The scoring habit did not.</p>
+          <span><a href={sources.finalsBreakdown} target="_blank" rel="noreferrer">29-goal breakdown ↗</a><a href={sources.copaFinal2021} target="_blank" rel="noreferrer">2021 final brace ↗</a></span>
+        </div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

@@ -41,6 +41,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 32 | World Cup record of scoring in nine consecutive matches; 13 goals derived | UEFA, FIFA | Live; dated 15 Jul 2026 |
 | 33 | MLS single-match records of five assists and six contributions, all in one half | Major League Soccer | Historical / stable |
 | 34 | 84 regular-season contributions across back-to-back MLS MVP campaigns | Major League Soccer | Historical / stable |
+| 35 | 31 Barcelona goals in finals: 13 Spanish Super Cup, 9 Copa del Rey, 4 Club World Cup, 3 European Super Cup and 2 Champions League | FC Barcelona; competition sum derived | Barcelona career complete |
 
 ## Live-data rule
 

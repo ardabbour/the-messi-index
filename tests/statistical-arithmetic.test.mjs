@@ -126,3 +126,9 @@ test("back-to-back MLS MVP seasons reconcile", () => {
   assert.equal(19 + 28, 47);
   assert.equal((84 / 47).toFixed(2), "1.79");
 });
+
+test("Barcelona final goals reconcile across five competitions", () => {
+  const breakdown = [13, 9, 4, 3, 2];
+  assert.equal(breakdown.reduce((sum, value) => sum + value, 0), 31);
+  assert.equal(29 + 2, 31);
+});

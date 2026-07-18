@@ -60,6 +60,8 @@ const sources = {
     "https://www.fcbarcelona.com/en/football/first-team/news/2105698/leo-messi-29-goals-in-finals",
   copaFinal2021:
     "https://www.fcbarcelona.com/en/news/2108496/copa-del-rey-champions/amp",
+  thirtyGoalRun:
+    "https://www.fcbarcelona.com/en/football/first-team/news/2110565/thirteenth-consecutive-30-goal-season-for-messi/featured",
 };
 
 const wcCareer = worldCup2026.career;
@@ -126,11 +128,11 @@ const ledger = [
     href: sources.goldenBall,
   },
   {
-    value: "12",
+    value: "13",
     label: "straight 30-goal seasons",
-    note: "More than 30 official club goals every season from 2008/09 through 2019/20.",
+    note: "At least 30 official club goals every season from 2008/09 through 2020/21.",
     group: "club" as Dossier,
-    href: sources.barca,
+    href: sources.thirtyGoalRun,
   },
   {
     value: "2×",
@@ -206,6 +208,11 @@ const finalGoalsBreakdown = [
   { name: "Club World Cup", value: 4 },
   { name: "European Super Cup", value: 3 },
   { name: "Champions League", value: 2 },
+];
+
+const thirtyGoalSeasons = [
+  "08/09", "09/10", "10/11", "11/12", "12/13", "13/14", "14/15",
+  "15/16", "16/17", "17/18", "18/19", "19/20", "20/21",
 ];
 
 const filters: { id: Dossier; label: string }[] = [
@@ -1069,6 +1076,28 @@ export default function Home() {
           <p>The stage changed. The scoring habit did not.</p>
           <span><a href={sources.finalsBreakdown} target="_blank" rel="noreferrer">29-goal breakdown ↗</a><a href={sources.copaFinal2021} target="_blank" rel="noreferrer">2021 final brace ↗</a></span>
         </div>
+      </section>
+
+      <section className="plate thirty-run-plate" aria-labelledby="thirty-run-title">
+        <div className="plate-heading">
+          <span>Plate 36 · production floor</span>
+          <h2 id="thirty-run-title">Thirteen seasons. The floor was thirty.</h2>
+          <a href={sources.thirtyGoalRun} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="thirty-run-summary">
+          <div><strong>13</strong><span>consecutive 30-goal seasons</span></div>
+          <p>From the treble-winning 2008/09 campaign through 2020/21, every season cleared the same elite threshold.</p>
+          <div><strong>390</strong><span>minimum goals required</span></div>
+        </div>
+        <div className="thirty-run-track" role="img" aria-label="Thirteen consecutive Barcelona seasons with at least 30 Messi goals, from 2008-09 through 2020-21; the first had 38 and the 2011-12 peak had 73">
+          {thirtyGoalSeasons.map((season) => (
+            <div className={season === "11/12" ? "peak" : ""} key={season}>
+              <span>{season}</span>
+              <strong>{season === "11/12" ? "73" : season === "08/09" ? "38" : "30+"}</strong>
+            </div>
+          ))}
+        </div>
+        <div className="thirty-run-proof"><strong>13 × 30 = 390</strong><p>That is the minimum entry fee for the streak, not his actual total.</p><span>Peak: 73 official goals · 2011/12</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

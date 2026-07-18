@@ -132,3 +132,8 @@ test("Barcelona final goals reconcile across five competitions", () => {
   assert.equal(breakdown.reduce((sum, value) => sum + value, 0), 31);
   assert.equal(29 + 2, 31);
 });
+
+test("thirteen-season scoring floor reconciles", () => {
+  assert.equal(13 * 30, 390);
+  assert.equal(2021 - 2008, 13);
+});

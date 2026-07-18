@@ -1543,6 +1543,41 @@ export default function Home() {
         <div className="dribble-proof"><strong>1,482 ÷ 330 = 4.49</strong><p>Recorded dribbles per appearance—and 2.61 for every one by second place.</p><span>Historical snapshot published 17 April 2020</span></div>
       </section>
 
+      <section className="plate world-golden-ball-plate" aria-labelledby="world-golden-ball-title">
+        <div className="plate-heading inverse">
+          <span>Plate 47 · tournament influence</span>
+          <h2 id="world-golden-ball-title">The Golden Ball had never found a repeat winner.</h2>
+          <a href={sources.goldenBall} target="_blank" rel="noreferrer">FIFA record archive ↗</a>
+        </div>
+        <div className="world-golden-ball-lead">
+          <div><strong>2</strong><span>World Cup Golden Balls</span><p>The first—and through 2022, only—player to win the tournament’s best-player award twice.</p></div>
+          <div className="world-golden-ball-years" role="img" aria-label="Lionel Messi won FIFA World Cup Golden Balls eight years apart: in 2014 with four goals and one assist, and in 2022 with seven goals and three assists">
+            <article>
+              <span>Brazil · 2014</span>
+              <strong>4 + 1</strong>
+              <p>goals + assists</p>
+              <ul>
+                <li>Most dribbles</li>
+                <li>Most chances created</li>
+                <li>Most deliveries into the penalty area</li>
+              </ul>
+            </article>
+            <b><span>8 years</span>→</b>
+            <article>
+              <span>Qatar · 2022</span>
+              <strong>7 + 3</strong>
+              <p>goals + assists</p>
+              <ul>
+                <li>Joint-most assists and key passes</li>
+                <li>Most shots on target</li>
+                <li>Every minute of the title run</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div className="world-golden-ball-proof"><strong>5 → 10</strong><p>He doubled his direct goal contributions between his first and second award-winning World Cups.</p><span>2014 and 2022 · FIFA</span></div>
+      </section>
+
       <section className="ledger-section" aria-labelledby="ledger-title">
         <div className="ledger-header">
           <div><p className="kicker">Selected entries</p><h2 id="ledger-title">The ledger of implausibility</h2></div>

@@ -210,3 +210,10 @@ test("the decade dribbling chasm reconciles", () => {
   assert.equal((915 / 567 * 100).toFixed(1), "161.4");
   assert.equal((1482 / 330).toFixed(2), "4.49");
 });
+
+test("the two Golden Ball campaigns reconcile", () => {
+  assert.equal(4 + 1, 5);
+  assert.equal(7 + 3, 10);
+  assert.equal(10 / 5, 2);
+  assert.equal(2022 - 2014, 8);
+});

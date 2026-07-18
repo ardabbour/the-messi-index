@@ -54,6 +54,10 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /First place was 915 dribbles away/);
   assert.match(html, /1,482 ÷ 330 = 4\.49/);
   assert.match(html, /across 330 appearances/);
+  assert.match(html, /The Golden Ball had never found a repeat winner/);
+  assert.match(html, /first—and through 2022, only—player/i);
+  assert.match(html, /5 → 10/);
+  assert.match(html, /doubled his direct goal contributions/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

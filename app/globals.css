@@ -896,6 +896,26 @@ h1 em { color: var(--blue); font-style: normal; }
 .dribble-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem) var(--font-serif), serif; }
 .dribble-proof span { font: 600 .61rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
 
+.world-golden-ball-plate { background: var(--ink); color: var(--paper); }
+.world-golden-ball-lead { display: grid; grid-template-columns: 4fr 8fr; min-height: 560px; }
+.world-golden-ball-lead > div:first-child { padding: 38px 34px; border-right: 1px solid #67685f; display: flex; flex-direction: column; justify-content: center; }
+.world-golden-ball-lead > div:first-child > strong { color: var(--red); font: 400 clamp(11rem, 21vw, 20rem)/.62 var(--font-display), sans-serif; letter-spacing: -.08em; }
+.world-golden-ball-lead > div:first-child > span { margin-top: 28px; font: 600 .72rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.world-golden-ball-lead > div:first-child > p { margin: 18px 0 0; max-width: 34ch; color: #d3cec0; font: italic 500 clamp(1rem, 1.7vw, 1.35rem)/1.4 var(--font-serif), serif; }
+.world-golden-ball-years { display: grid; grid-template-columns: 1fr 110px 1fr; }
+.world-golden-ball-years article { padding: 45px 34px; display: flex; flex-direction: column; justify-content: center; }
+.world-golden-ball-years article > span, .world-golden-ball-years article > p { font: 600 .67rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.world-golden-ball-years article > strong { margin: 24px 0 10px; color: var(--blue); font: 400 clamp(5rem, 9vw, 8.5rem)/.7 var(--font-display), sans-serif; }
+.world-golden-ball-years article > p { margin: 0; color: #aaa79e; }
+.world-golden-ball-years ul { margin: 36px 0 0; padding: 0; list-style: none; border-top: 1px solid #67685f; }
+.world-golden-ball-years li { padding: 14px 0; border-bottom: 1px solid #67685f; color: #d3cec0; font: 500 .68rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.world-golden-ball-years > b { border-right: 1px solid #67685f; border-left: 1px solid #67685f; color: var(--red); display: flex; flex-direction: column; align-items: center; justify-content: center; font: 400 3rem var(--font-display), sans-serif; }
+.world-golden-ball-years > b span { margin-bottom: 16px; color: var(--paper); font: 600 .62rem var(--font-mono), monospace; text-transform: uppercase; writing-mode: vertical-rl; }
+.world-golden-ball-proof { min-height: 140px; padding: 25px 34px; border-top: 1px solid #67685f; display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
+.world-golden-ball-proof strong { color: var(--red); font: 400 clamp(2.5rem, 5vw, 5rem)/.8 var(--font-display), sans-serif; }
+.world-golden-ball-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem)/1.35 var(--font-serif), serif; }
+.world-golden-ball-proof span { font: 600 .61rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+
 .ledger-section { border-bottom: 2px solid var(--ink); }
 .ledger-header { padding: 38px 34px; border-bottom: 2px solid var(--ink); display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .ledger-header .kicker { margin-bottom: 12px; }
@@ -1144,6 +1164,10 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .dribble-lead { min-height: 340px; padding: 30px 20px; border-right: 0; border-bottom: 2px solid var(--ink); }
   .dribble-race { padding: 36px 20px; }
   .dribble-proof { padding: 24px 20px; grid-template-columns: 1fr; }
+  .world-golden-ball-lead { grid-template-columns: 1fr; }
+  .world-golden-ball-lead > div:first-child { min-height: 350px; padding: 30px 20px; border-right: 0; border-bottom: 1px solid #67685f; }
+  .world-golden-ball-years article { padding: 38px 20px; }
+  .world-golden-ball-proof { padding: 24px 20px; grid-template-columns: 1fr; }
   .ledger-header { padding: 30px 20px; align-items: flex-start; flex-direction: column; }
   .filters { justify-content: flex-start; }
   .ledger-row { padding: 20px; grid-template-columns: 90px 1fr; gap: 18px; }
@@ -1288,6 +1312,9 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .assist-stack { height: 48px; }
   .assist-breakdown { grid-template-columns: 1fr 1fr; }
   .assist-breakdown > div { min-height: 180px; }
+  .world-golden-ball-years { grid-template-columns: 1fr; }
+  .world-golden-ball-years > b { min-height: 90px; border: 0; border-top: 1px solid #67685f; border-bottom: 1px solid #67685f; flex-direction: row; gap: 14px; }
+  .world-golden-ball-years > b span { margin: 0; writing-mode: initial; }
   .decade-summary { grid-template-columns: 1fr; }
   .decade-summary p { grid-column: auto; grid-row: auto; }
   .decade-chart { height: 350px; }

@@ -182,6 +182,16 @@ test("the awards plate preserves the unique four-award season sweep", async () =
   assert.match(ledgerSource, /value: "4\/4"/);
 });
 
+test("the World Cup Golden Ball record is treated separately from the Ballon d'Or", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+
+  assert.match(page, /Plate 47 · tournament influence/);
+  assert.match(page, /World Cup Golden Balls/);
+  assert.match(page, /Brazil · 2014/);
+  assert.match(page, /Qatar · 2022/);
+  assert.match(page, /sources\.goldenBall/);
+});
+
 test("the dribbling plate adds a non-scoring statistical dimension", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
 

@@ -47,7 +47,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 38 | Only player to score in the World Cup group stage, round of 16, quarter-final, semi-final and final; also scored in the new 2026 round of 32 | UEFA | Core record established 2022; R32 addendum live |
 | 39 | Selected to the FIFA FIFPRO Men’s World 11 in 17 consecutive editions, every year from 2007 through 2023 | FIFA | Historical / stable |
 | 40 | Won the 2005 U-20 World Cup, Golden Ball and Golden Boot with six goals; five came while scoring in all four knockout rounds | FIFA | Historical / stable |
-| 41 | Six Argentina team trophies across five competitions from the 2005 U-20 World Cup through the 2024 Copa América | FIFA | Historical / stable |
+| 41 | Six Argentina team trophies across five competitions from the 2005 U-20 World Cup through the 2024 Copa América; one of 15 Olympic-and-World-Cup double winners | FIFA | Historical / stable |
 
 ## Live-data rule
 

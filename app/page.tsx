@@ -69,6 +69,8 @@ const sources = {
     "https://www.fifa.com/en/tournaments/mens/u20worldcup/chile-2025/articles/lionel-messi-u20-world-cup",
   fifaTrophies:
     "https://www.fifa.com/en/the-best-fifa-football-awards/articles/the-world-cup-the-best-and-all-of-lionel-messis-trophy-wins",
+  olympicWorldDouble:
+    "https://www.fifa.com/en/tournaments/olympicgames/paris2024/articles/world-champions-olympic-gold",
 };
 
 const wcCareer = worldCup2026.career;
@@ -1242,7 +1244,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="argentina-honours-proof"><strong>2024 − 2005 = 19</strong><p>Nineteen years from the first Argentina trophy to the latest.</p><span>Two world titles at two age levels</span></div>
+        <div className="argentina-honours-proof"><strong>2024 − 2005 = 19</strong><p>Nineteen years from the first Argentina trophy to the latest.</p><span><a href={sources.olympicWorldDouble} target="_blank" rel="noreferrer">1 of 15 Olympic + World Cup double winners ↗</a></span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

@@ -749,6 +749,7 @@ h1 em { color: var(--blue); font-style: normal; }
 .argentina-honours-proof strong { color: var(--paper); font: 400 clamp(1.8rem, 3.5vw, 3.4rem) var(--font-display), sans-serif; }
 .argentina-honours-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem) var(--font-serif), serif; }
 .argentina-honours-proof span { font: 600 .61rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.argentina-honours-proof a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 .ledger-section { border-bottom: 2px solid var(--ink); }
 .ledger-header { padding: 38px 34px; border-bottom: 2px solid var(--ink); display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }

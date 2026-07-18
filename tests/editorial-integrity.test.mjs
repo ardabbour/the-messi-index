@@ -33,6 +33,15 @@ test("citation inventory uses unique secure URLs", async () => {
   assert.doesNotMatch(page, /http:\/\//);
 });
 
+test("the live source audit restricts redirects to approved evidence owners", async () => {
+  const auditScript = await readFile(new URL("scripts/audit-sources.mjs", root), "utf8");
+
+  ["copaamerica.com", "fcbarcelona.com", "fifa.com", "guinnessworldrecords.com", "mlssoccer.com", "uefa.com"]
+    .forEach((host) => assert.match(auditScript, new RegExp(host.replaceAll(".", "\\."))));
+  assert.match(auditScript, /finalUrl\.hostname\.endsWith/);
+  assert.match(auditScript, /\^text\\\/html\\b\/i/);
+});
+
 test("live World Cup claims retain their audit cutoff", async () => {
   const [page, ledger, snapshotText] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),

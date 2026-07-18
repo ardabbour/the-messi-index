@@ -11,6 +11,7 @@ The 2026 FIFA World Cup final is scheduled after the current 15 July audit cutof
 3. Recompute the career World Cup margins against Klose, Márquez and the assisted-editions comparison group.
 4. Replace `status: "in_progress"` and the matching interface wording only when FIFA publishes final tournament statistics.
 5. Run `npm test`, `npm run lint` and `npm run audit:sources`.
+6. Recheck UEFA’s quickest-to-60 Champions League table; Plate 42 is current through 1 June 2026 and Haaland had not yet reached the milestone at that cutoff.
 
 ### Live-source conflict protocol
 

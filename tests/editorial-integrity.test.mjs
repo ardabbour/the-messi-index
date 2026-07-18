@@ -82,3 +82,18 @@ test("visual plates and source links retain accessible, safe markup", async () =
   assert.ok(externalAnchors.length >= 40);
   externalAnchors.forEach((tag) => assert.match(tag, /rel="noreferrer"/));
 });
+
+test("public discovery routes share the canonical production origin", async () => {
+  const [layout, robots, sitemap, readme] = await Promise.all([
+    readFile(new URL("app/layout.tsx", root), "utf8"),
+    readFile(new URL("app/robots.ts", root), "utf8"),
+    readFile(new URL("app/sitemap.ts", root), "utf8"),
+    readFile(new URL("README.md", root), "utf8"),
+  ]);
+  const canonical = layout.match(/metadataBase: new URL\("([^"]+)"\)/)?.[1];
+
+  assert.equal(canonical, "https://messi-rouge.vercel.app");
+  assert.match(robots, new RegExp(canonical.replaceAll(".", "\\.")));
+  assert.match(sitemap, new RegExp(canonical.replaceAll(".", "\\.")));
+  assert.match(readme, new RegExp(canonical.replaceAll(".", "\\.")));
+});

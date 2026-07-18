@@ -137,3 +137,10 @@ test("thirteen-season scoring floor reconciles", () => {
   assert.equal(13 * 30, 390);
   assert.equal(2021 - 2008, 13);
 });
+
+test("Barcelona trophy cabinet reconciles", () => {
+  const trophies = [10, 8, 7, 4, 3, 3];
+  assert.equal(trophies.reduce((sum, value) => sum + value, 0), 35);
+  assert.equal((35 / 17).toFixed(2), "2.06");
+  assert.equal((778 / 35).toFixed(1), "22.2");
+});

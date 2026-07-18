@@ -215,6 +215,15 @@ const thirtyGoalSeasons = [
   "15/16", "16/17", "17/18", "18/19", "19/20", "20/21",
 ];
 
+const barcaTrophies = [
+  { name: "La Liga", value: 10 },
+  { name: "Spanish Super Cup", value: 8 },
+  { name: "Copa del Rey", value: 7 },
+  { name: "Champions League", value: 4 },
+  { name: "European Super Cup", value: 3 },
+  { name: "Club World Cup", value: 3 },
+];
+
 const filters: { id: Dossier; label: string }[] = [
   { id: "all", label: "Everything" },
   { id: "club", label: "Club" },
@@ -1098,6 +1107,26 @@ export default function Home() {
           ))}
         </div>
         <div className="thirty-run-proof"><strong>13 × 30 = 390</strong><p>That is the minimum entry fee for the streak, not his actual total.</p><span>Peak: 73 official goals · 2011/12</span></div>
+      </section>
+
+      <section className="plate trophy-plate" aria-labelledby="trophy-title">
+        <div className="plate-heading inverse">
+          <span>Plate 37 · honours</span>
+          <h2 id="trophy-title">Seventeen seasons. Thirty-five trophies.</h2>
+          <a href={sources.finalGoals} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="trophy-layout">
+          <div className="trophy-total"><strong>35</strong><span>team trophies with Barcelona</span><p>a club-record haul</p></div>
+          <div className="trophy-breakdown" role="img" aria-label="Messi's 35 Barcelona trophies: 10 La Liga, 8 Spanish Super Cups, 7 Copas del Rey, 4 Champions Leagues, 3 European Super Cups and 3 Club World Cups">
+            {barcaTrophies.map((item) => (
+              <div key={item.name}>
+                <strong>{item.value}</strong>
+                <span>{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="trophy-proof"><strong>35 ÷ 17 = 2.06</strong><p>trophies per Barcelona season</p><span>One trophy per 22.2 appearances across 778 games</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

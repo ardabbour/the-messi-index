@@ -43,6 +43,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 34 | 84 regular-season contributions across back-to-back MLS MVP campaigns | Major League Soccer | Historical / stable |
 | 35 | 31 Barcelona goals in finals: 13 Spanish Super Cup, 9 Copa del Rey, 4 Club World Cup, 3 European Super Cup and 2 Champions League | FC Barcelona; competition sum derived | Barcelona career complete |
 | 36 | At least 30 official goals in 13 consecutive Barcelona seasons, from 2008/09 through 2020/21; 390-goal floor derived | FC Barcelona | Historical / stable |
+| 37 | 35 Barcelona trophies across 17 seasons: 10 Liga, 8 Spanish Super Cup, 7 Copa del Rey, 4 Champions League, 3 European Super Cup and 3 Club World Cup | FC Barcelona; rates derived | Barcelona career complete |
 
 ## Live-data rule
 

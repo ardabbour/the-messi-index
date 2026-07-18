@@ -74,6 +74,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /Two MVP seasons\. Eighty-four contributions\./);
   assert.match(html, /The trophy match got thirty-one goals\./);
   assert.match(html, /Thirteen seasons\. The floor was thirty\./);
+  assert.match(html, /Seventeen seasons\. Thirty-five trophies\./);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

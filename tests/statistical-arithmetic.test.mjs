@@ -93,3 +93,9 @@ test("the 2019/20 league contribution rate reconciles", () => {
   assert.equal((46 / 33).toFixed(2), "1.39");
   assert.equal(21 - 20, 1);
 });
+
+test("World Cup goals from distance reconcile", () => {
+  assert.equal(7 - 5, 2);
+  assert.equal(((7 / 5 - 1) * 100).toFixed(0), "40");
+  assert.equal(((7 / 21) * 100).toFixed(1), "33.3");
+});

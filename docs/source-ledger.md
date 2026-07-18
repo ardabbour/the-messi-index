@@ -35,6 +35,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 26 | Records for scoring against 38 La Liga opponents and 38 direct free kicks | FC Barcelona | Historical / stable |
 | 27 | Argentina calendar-year record of 18 goals in 14 appearances in 2022 | FIFA | Historical / stable |
 | 28 | 250th Barcelona assist and 46 La Liga goal contributions in 2019/20 | FIFA, FC Barcelona | Historical / stable |
+| 29 | Seven World Cup goals from outside the area versus Rivellino’s prior five | FIFA | Live; dated 15 Jul 2026 |
 
 ## Live-data rule
 

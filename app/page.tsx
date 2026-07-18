@@ -900,6 +900,23 @@ export default function Home() {
         <div className="creation-rate"><strong>46 ÷ 33 = 1.39</strong><p>goals plus assists per La Liga appearance in 2019/20</p><span>The 21 assists surpassed Xavi’s previous single-season mark of 20.</span></div>
       </section>
 
+      <section className="plate distance-plate" aria-labelledby="distance-title">
+        <div className="plate-heading inverse">
+          <span>Plate 29 · live dossier</span>
+          <h2 id="distance-title">The penalty area was optional.</h2>
+          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
+        </div>
+        <div className="distance-layout">
+          <div className="distance-total"><strong>7</strong><span>World Cup goals from outside the box</span><p>tournament record</p></div>
+          <div className="distance-comparison">
+            <div><span>Lionel Messi</span><i style={{ width: "100%" }} /><strong>7</strong></div>
+            <div><span>Rivellino · old record</span><i style={{ width: `${(5 / 7) * 100}%` }} /><strong>5</strong></div>
+            <p><strong>+2 · 40% above</strong><span>the previous distance-scoring mark</span></p>
+          </div>
+        </div>
+        <div className="distance-share"><strong>7 ÷ 21 = 33.3%</strong><p>One in every three Messi World Cup goals has come from outside the area.</p><span>Live career total through 15 July 2026</span></div>
+      </section>
+
       <section className="ledger-section" aria-labelledby="ledger-title">
         <div className="ledger-header">
           <div><p className="kicker">Selected entries</p><h2 id="ledger-title">The ledger of implausibility</h2></div>

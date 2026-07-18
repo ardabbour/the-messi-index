@@ -520,6 +520,27 @@ h1 em { color: var(--blue); font-style: normal; }
 .creation-rate p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem) var(--font-serif), serif; }
 .creation-rate span { color: #aaa99e; font: 600 .62rem/1.45 var(--font-mono), monospace; text-transform: uppercase; }
 
+.distance-plate { background: var(--blue); color: white; }
+.distance-plate .plate-heading { border-color: white; }
+.distance-layout { min-height: 450px; display: grid; grid-template-columns: 1fr 1.7fr; border-bottom: 1px solid rgba(255,255,255,.65); }
+.distance-total { padding: 34px; border-right: 1px solid rgba(255,255,255,.65); display: flex; flex-direction: column; justify-content: flex-end; }
+.distance-total strong { font: 400 clamp(11rem, 23vw, 22rem)/.65 var(--font-display), sans-serif; letter-spacing: -.1em; }
+.distance-total span { margin-top: 34px; font: 600 .72rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.distance-total p { margin: 9px 0 0; font: italic 500 1rem var(--font-serif), serif; }
+.distance-comparison { padding: 55px 34px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+.distance-comparison > div { display: grid; grid-template-columns: 160px 1fr 45px; gap: 15px; align-items: center; }
+.distance-comparison > div span { font: 600 .64rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.distance-comparison > div i { height: 58px; background: white; }
+.distance-comparison > div:nth-child(2) i { background: rgba(255,255,255,.45); }
+.distance-comparison > div strong { font: 400 2rem var(--font-display), sans-serif; }
+.distance-comparison > p { margin: 20px 0 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.65); display: flex; align-items: end; justify-content: space-between; gap: 20px; }
+.distance-comparison > p strong { font: 400 clamp(2rem, 4vw, 3.8rem)/.8 var(--font-display), sans-serif; text-transform: uppercase; }
+.distance-comparison > p span { font: 600 .62rem var(--font-mono), monospace; text-transform: uppercase; }
+.distance-share { min-height: 140px; padding: 25px 34px; display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
+.distance-share strong { font: 400 clamp(1.7rem, 3vw, 2.8rem) var(--font-display), sans-serif; }
+.distance-share p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem) var(--font-serif), serif; }
+.distance-share span { font: 600 .62rem var(--font-mono), monospace; text-transform: uppercase; }
+
 .ledger-section { border-bottom: 2px solid var(--ink); }
 .ledger-header { padding: 38px 34px; border-bottom: 2px solid var(--ink); display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .ledger-header .kicker { margin-bottom: 12px; }
@@ -692,6 +713,10 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .creation-career { min-height: 350px; border-right: 0; border-bottom: 1px solid #67685f; }
   .creation-season { min-height: 300px; }
   .creation-rate { padding: 24px 20px; grid-template-columns: 1fr; }
+  .distance-layout { grid-template-columns: 1fr; }
+  .distance-total { min-height: 350px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.65); }
+  .distance-comparison { padding: 45px 20px; }
+  .distance-share { padding: 24px 20px; grid-template-columns: 1fr; }
   .ledger-header { padding: 30px 20px; align-items: flex-start; flex-direction: column; }
   .filters { justify-content: flex-start; }
   .ledger-row { padding: 20px; grid-template-columns: 90px 1fr; gap: 18px; }
@@ -776,6 +801,8 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .creation-season { grid-template-columns: 1fr; }
   .creation-season > div { min-height: 200px; border-bottom: 1px solid #67685f; }
   .creation-season > b { display: none; }
+  .distance-comparison > div { grid-template-columns: 110px 1fr 32px; gap: 8px; }
+  .distance-comparison > p { align-items: flex-start; flex-direction: column; }
   .decade-summary { grid-template-columns: 1fr; }
   .decade-summary p { grid-column: auto; grid-row: auto; }
   .decade-chart { height: 350px; }

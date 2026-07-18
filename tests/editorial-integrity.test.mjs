@@ -30,12 +30,16 @@ test("citation inventory uses unique secure URLs", async () => {
 });
 
 test("live World Cup claims retain their audit cutoff", async () => {
-  const [page, ledger] = await Promise.all([
+  const [page, ledger, snapshotText] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("docs/source-ledger.md", root), "utf8"),
+    readFile(new URL("data/live-world-cup-2026.json", root), "utf8"),
   ]);
+  const snapshot = JSON.parse(snapshotText);
 
-  assert.match(page, /15 July 2026/);
+  assert.equal(snapshot.auditDate, "2026-07-15");
+  assert.equal(snapshot.status, "in_progress");
+  assert.match(page, /wcAuditLabel/);
   assert.match(page, /tournament was still in progress/i);
-  assert.match(ledger, /Live; dated 15 Jul 2026/);
+  assert.match(ledger, new RegExp(`Live; dated ${snapshot.auditDateShort}`));
 });

@@ -44,7 +44,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 
 ## Live-data rule
 
-The 2026 World Cup was still in progress at audit time. Live figures must retain an “as of” date, should not be described as final, and must be rechecked before any later edition is published.
+The 2026 World Cup was still in progress at audit time. Live figures are centralized in `data/live-world-cup-2026.json`; they must retain an “as of” date, should not be described as final, and must be rechecked before any later edition is published.
 
 ## Arithmetic note
 

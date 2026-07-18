@@ -1,0 +1,37 @@
+{
+  "auditDate": "2026-07-15",
+  "auditDateLabel": "15 July 2026",
+  "auditDateShort": "15 Jul 2026",
+  "status": "in_progress",
+  "career": {
+    "goals": 21,
+    "appearances": 33,
+    "wins": 23,
+    "knockoutAssists": 10,
+    "editionsPlayed": 6,
+    "assistedEditions": 6,
+    "goalscoringEditions": 5,
+    "minutes": 2944,
+    "captainAppearances": 26,
+    "outsideAreaGoals": 7,
+    "playerOfMatchAwards": 16,
+    "goalscoringStreak": 9,
+    "firstLatestGoalSpan": "20 years · 21 days"
+  },
+  "tournament": {
+    "matches": 7,
+    "goals": 8,
+    "assists": 4,
+    "contributions": 12,
+    "displayedMinutes": 620,
+    "minutesPerContribution": 51.6,
+    "playerOfMatchAwards": 5
+  },
+  "comparators": {
+    "previousGoalRecord": 16,
+    "previousWinRecord": 17,
+    "nextCaptainAppearances": 17,
+    "nextAssistedEditions": 3,
+    "previousOutsideAreaGoals": 5
+  }
+}

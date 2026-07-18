@@ -3,6 +3,9 @@ import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const projectRoot = new URL("../", import.meta.url);
+const worldCup2026 = JSON.parse(
+  await readFile(new URL("../data/live-world-cup-2026.json", import.meta.url), "utf8"),
+);
 
 async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -30,11 +33,16 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, />91</);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
-  assert.match(html, /51\.6/);
+  assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));
+  assert.match(html, new RegExp(`>${worldCup2026.tournament.contributions}<`));
+  assert.match(html, new RegExp(String(worldCup2026.tournament.minutesPerContribution).replace(".", "\\.")));
   assert.match(html, /oldest World Cup hat-trick scorer/);
   assert.match(html, /Player of the Match awards in 2026/);
-  assert.match(html, /16 across his World Cup career is also unequalled/);
-  assert.match(html, /15 July 2026/);
+  assert.match(
+    html,
+    new RegExp(`${worldCup2026.career.playerOfMatchAwards}(?:<!-- -->)? across his World Cup career is also unequalled`),
+  );
+  assert.match(html, new RegExp(worldCup2026.auditDateLabel));
   assert.match(html, /The “bad” year was 45 goals/);
   assert.match(html, /Fifty in the league\. Not the season\./);
   assert.match(html, /He led both columns\. Three years running\./);

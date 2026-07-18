@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import worldCup2026 from "../data/live-world-cup-2026.json";
 
 type Dossier = "all" | "club" | "argentina" | "awards";
 
@@ -55,6 +56,12 @@ const sources = {
     "https://www.fcbarcelona.com/en/news/863072/messi-sets-new-record-with-eighth-free-kick-goal-of-the-year",
 };
 
+const wcCareer = worldCup2026.career;
+const wcTournament = worldCup2026.tournament;
+const wcComparators = worldCup2026.comparators;
+const wcAuditLabel = worldCup2026.auditDateLabel;
+const wcAuditShort = worldCup2026.auditDateShort;
+
 const ledger = [
   {
     value: "672",
@@ -85,9 +92,9 @@ const ledger = [
     href: sources.uefaRecords,
   },
   {
-    value: "21",
+    value: String(wcCareer.goals),
     label: "World Cup goals",
-    note: "The tournament record as of 15 July 2026.",
+    note: `The tournament record as of ${wcAuditLabel}.`,
     group: "argentina" as Dossier,
     href: sources.worldCup,
   },
@@ -365,45 +372,45 @@ export default function Home() {
         <div className="plate-heading">
           <span>Plate 05 · live dossier</span>
           <h2 id="world-title">The World Cup, rewritten at 39</h2>
-          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
+          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
         <div className="world-grid">
-          <div className="world-lead"><strong>21</strong><span>World Cup goals</span><p>All-time record</p></div>
-          <div><strong>33</strong><span>appearances</span><p>All-time record</p></div>
-          <div><strong>23</strong><span>match wins</span><p>All-time record</p></div>
-          <div><strong>10</strong><span>knockout assists</span><p>All-time record</p></div>
-          <div><strong>6</strong><span>tournaments assisted in</span><p>Only player</p></div>
-          <div><strong>2,944</strong><span>minutes played</span><p>All-time record</p></div>
+          <div className="world-lead"><strong>{wcCareer.goals}</strong><span>World Cup goals</span><p>All-time record</p></div>
+          <div><strong>{wcCareer.appearances}</strong><span>appearances</span><p>All-time record</p></div>
+          <div><strong>{wcCareer.wins}</strong><span>match wins</span><p>All-time record</p></div>
+          <div><strong>{wcCareer.knockoutAssists}</strong><span>knockout assists</span><p>All-time record</p></div>
+          <div><strong>{wcCareer.assistedEditions}</strong><span>tournaments assisted in</span><p>Only player</p></div>
+          <div><strong>{wcCareer.minutes.toLocaleString("en-US")}</strong><span>minutes played</span><p>All-time record</p></div>
         </div>
         <div className="world-span">
-          <div><strong>20 years · 21 days</strong><span>between his first and latest World Cup goals · record</span></div>
+          <div><strong>{wcCareer.firstLatestGoalSpan}</strong><span>between his first and latest World Cup goals · record</span></div>
           <div><strong>Teens · 20s · 30s</strong><span>the only player to score across all three age decades</span></div>
         </div>
-        <p className="live-note">Live-stat warning: the 2026 tournament was still in progress when this plate was audited. Figures above follow FIFA’s 15 July 2026 update.</p>
+        <p className="live-note">Live-stat warning: the 2026 tournament was still in progress when this plate was audited. Figures above follow FIFA’s {wcAuditLabel} update.</p>
       </section>
 
       <section className="plate live-2026-plate" aria-labelledby="live-2026-title">
         <div className="plate-heading inverse">
           <span>Plate 05A · tournament checkpoint</span>
           <h2 id="live-2026-title">Thirty-nine. Still setting the pace.</h2>
-          <a href={sources.worldCup2026} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
+          <a href={sources.worldCup2026} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
-        <div className="live-2026-equation" role="img" aria-label="At the 15 July 2026 checkpoint Messi had eight goals and four assists, making twelve goal contributions in seven World Cup matches">
-          <div><strong>8</strong><span>goals</span></div>
+        <div className="live-2026-equation" role="img" aria-label={`At the ${wcAuditLabel} checkpoint Messi had ${wcTournament.goals} goals and ${wcTournament.assists} assists, making ${wcTournament.contributions} goal contributions in ${wcTournament.matches} World Cup matches`}>
+          <div><strong>{wcTournament.goals}</strong><span>goals</span></div>
           <b>+</b>
-          <div><strong>4</strong><span>assists</span></div>
+          <div><strong>{wcTournament.assists}</strong><span>assists</span></div>
           <b>=</b>
-          <div className="live-2026-total"><strong>12</strong><span>goal contributions</span></div>
+          <div className="live-2026-total"><strong>{wcTournament.contributions}</strong><span>goal contributions</span></div>
         </div>
         <div className="live-2026-footer">
-          <div><strong>7</strong><span>matches</span></div>
-          <div><strong>620</strong><span>minutes</span></div>
-          <div><strong>51.6</strong><span>minutes per contribution</span></div>
+          <div><strong>{wcTournament.matches}</strong><span>matches</span></div>
+          <div><strong>{wcTournament.displayedMinutes}</strong><span>minutes</span></div>
+          <div><strong>{wcTournament.minutesPerContribution}</strong><span>minutes per contribution</span></div>
           <p>FIFA listed Messi first in the Golden Boot race at this checkpoint. The final had not yet been played, so this is a dated snapshot—not a finished tournament total.</p>
         </div>
         <div className="live-2026-records">
           <div><strong>38 years · 357 days</strong><span>oldest World Cup hat-trick scorer</span><p>Three against Algeria; the previous record was 33 years, 130 days.</p></div>
-          <div><strong>5</strong><span>Player of the Match awards in 2026</span><p>A single-edition record; 16 across his World Cup career is also unequalled.</p></div>
+          <div><strong>{wcTournament.playerOfMatchAwards}</strong><span>Player of the Match awards in 2026</span><p>A single-edition record; {wcCareer.playerOfMatchAwards} across his World Cup career is also unequalled.</p></div>
           <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA record dossier ↗</a>
         </div>
       </section>
@@ -700,14 +707,14 @@ export default function Home() {
         <div className="plate-heading inverse">
           <span>Plate 18 · live margins</span>
           <h2 id="world-gap-title">“First” undersells the distance.</h2>
-          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
+          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
-        <div className="world-gap-table" role="img" aria-label="World Cup record margins: Messi 21 goals to previous record 16, 23 wins to previous record 17, 26 captain appearances to next player 17, and assists in six editions to next-best three">
+        <div className="world-gap-table" role="img" aria-label={`World Cup record margins: Messi ${wcCareer.goals} goals to previous record ${wcComparators.previousGoalRecord}, ${wcCareer.wins} wins to previous record ${wcComparators.previousWinRecord}, ${wcCareer.captainAppearances} captain appearances to next player ${wcComparators.nextCaptainAppearances}, and assists in ${wcCareer.assistedEditions} editions to next-best ${wcComparators.nextAssistedEditions}`}>
           {[
-            { label: "World Cup goals", messi: 21, other: 16, otherLabel: "old record · Klose", suffix: "+5" },
-            { label: "World Cup wins", messi: 23, other: 17, otherLabel: "old record · Klose", suffix: "+6" },
-            { label: "Appearances as captain", messi: 26, other: 17, otherLabel: "next · Márquez", suffix: "+9" },
-            { label: "Editions with an assist", messi: 6, other: 3, otherLabel: "next-best group", suffix: "2×" },
+            { label: "World Cup goals", messi: wcCareer.goals, other: wcComparators.previousGoalRecord, otherLabel: "old record · Klose", suffix: `+${wcCareer.goals - wcComparators.previousGoalRecord}` },
+            { label: "World Cup wins", messi: wcCareer.wins, other: wcComparators.previousWinRecord, otherLabel: "old record · Klose", suffix: `+${wcCareer.wins - wcComparators.previousWinRecord}` },
+            { label: "Appearances as captain", messi: wcCareer.captainAppearances, other: wcComparators.nextCaptainAppearances, otherLabel: "next · Márquez", suffix: `+${wcCareer.captainAppearances - wcComparators.nextCaptainAppearances}` },
+            { label: "Editions with an assist", messi: wcCareer.assistedEditions, other: wcComparators.nextAssistedEditions, otherLabel: "next-best group", suffix: `${wcCareer.assistedEditions / wcComparators.nextAssistedEditions}×` },
           ].map((row) => (
             <div className="world-gap-row" key={row.label}>
               <div className="world-gap-label"><strong>{row.label}</strong><b>{row.suffix}</b></div>
@@ -910,17 +917,17 @@ export default function Home() {
         <div className="plate-heading inverse">
           <span>Plate 29 · live dossier</span>
           <h2 id="distance-title">The penalty area was optional.</h2>
-          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
+          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
         <div className="distance-layout">
-          <div className="distance-total"><strong>7</strong><span>World Cup goals from outside the box</span><p>tournament record</p></div>
+          <div className="distance-total"><strong>{wcCareer.outsideAreaGoals}</strong><span>World Cup goals from outside the box</span><p>tournament record</p></div>
           <div className="distance-comparison">
-            <div><span>Lionel Messi</span><i style={{ width: "100%" }} /><strong>7</strong></div>
-            <div><span>Rivellino · old record</span><i style={{ width: `${(5 / 7) * 100}%` }} /><strong>5</strong></div>
-            <p><strong>+2 · 40% above</strong><span>the previous distance-scoring mark</span></p>
+            <div><span>Lionel Messi</span><i style={{ width: "100%" }} /><strong>{wcCareer.outsideAreaGoals}</strong></div>
+            <div><span>Rivellino · old record</span><i style={{ width: `${(wcComparators.previousOutsideAreaGoals / wcCareer.outsideAreaGoals) * 100}%` }} /><strong>{wcComparators.previousOutsideAreaGoals}</strong></div>
+            <p><strong>+{wcCareer.outsideAreaGoals - wcComparators.previousOutsideAreaGoals} · {((wcCareer.outsideAreaGoals / wcComparators.previousOutsideAreaGoals - 1) * 100).toFixed(0)}% above</strong><span>the previous distance-scoring mark</span></p>
           </div>
         </div>
-        <div className="distance-share"><strong>7 ÷ 21 = 33.3%</strong><p>One in every three Messi World Cup goals has come from outside the area.</p><span>Live career total through 15 July 2026</span></div>
+        <div className="distance-share"><strong>{wcCareer.outsideAreaGoals} ÷ {wcCareer.goals} = {((wcCareer.outsideAreaGoals / wcCareer.goals) * 100).toFixed(1)}%</strong><p>One in every three Messi World Cup goals has come from outside the area.</p><span>Live career total through {wcAuditLabel}</span></div>
       </section>
 
       <section className="plate semifinal-age-plate" aria-labelledby="semifinal-age-title">
@@ -944,12 +951,12 @@ export default function Home() {
         <div className="plate-heading inverse">
           <span>Plate 31 · live dossier</span>
           <h2 id="six-cups-title">Six World Cups. No empty columns.</h2>
-          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
+          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
         <div className="six-cups-summary">
-          <div><strong>6</strong><span>World Cups played</span><p>joint record</p></div>
-          <div><strong>6</strong><span>World Cups with an assist</span><p>only player</p></div>
-          <div><strong>5</strong><span>World Cups with a goal</span><p>Argentina record</p></div>
+          <div><strong>{wcCareer.editionsPlayed}</strong><span>World Cups played</span><p>joint record</p></div>
+          <div><strong>{wcCareer.assistedEditions}</strong><span>World Cups with an assist</span><p>only player</p></div>
+          <div><strong>{wcCareer.goalscoringEditions}</strong><span>World Cups with a goal</span><p>Argentina record</p></div>
         </div>
         <div className="six-cups-grid" role="img" aria-label="Messi played and assisted in the 2006, 2010, 2014, 2018, 2022 and 2026 World Cups, and scored in every one except 2010">
           {[2006, 2010, 2014, 2018, 2022, 2026].map((year) => (
@@ -970,7 +977,7 @@ export default function Home() {
           <a href={sources.uefaRecords} target="_blank" rel="noreferrer">UEFA · 16 Jul 2026 ↗</a>
         </div>
         <div className="world-streak-summary">
-          <div><strong>9</strong><span>consecutive World Cup matches scoring</span><p>tournament record</p></div>
+          <div><strong>{wcCareer.goalscoringStreak}</strong><span>consecutive World Cup matches scoring</span><p>tournament record</p></div>
           <div><strong>13</strong><span>goals inside the streak</span><p>five in 2022 · eight in 2026</p></div>
           <div><strong>1.44</strong><span>goals per match</span><p>derived across the nine</p></div>
         </div>

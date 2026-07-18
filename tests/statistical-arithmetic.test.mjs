@@ -1,5 +1,11 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
+
+const worldCup2026 = JSON.parse(
+  await readFile(new URL("../data/live-world-cup-2026.json", import.meta.url), "utf8"),
+);
+const { career: wcCareer, tournament: wcTournament, comparators: wcComparators } = worldCup2026;
 
 test("calendar-year anomaly reconciles", () => {
   assert.equal(79 + 12, 91);
@@ -24,8 +30,9 @@ test("Barcelona competition anatomy sums to 672", () => {
 test("late-career production rates reconcile", () => {
   assert.equal(29 + 19, 48);
   assert.equal((48 / 28).toFixed(2), "1.71");
-  assert.equal(8 + 4, 12);
-  assert.equal((620 / 12).toFixed(1), "51.7");
+  assert.equal(wcTournament.goals + wcTournament.assists, wcTournament.contributions);
+  assert.equal((wcTournament.displayedMinutes / wcTournament.contributions).toFixed(1), "51.7");
+  assert.equal(wcTournament.minutesPerContribution, 51.6);
 });
 
 test("comparison gaps and pace translator reconcile", () => {
@@ -37,10 +44,10 @@ test("comparison gaps and pace translator reconcile", () => {
 });
 
 test("World Cup record margins reconcile at the live checkpoint", () => {
-  assert.equal(21 - 16, 5);
-  assert.equal(23 - 17, 6);
-  assert.equal(26 - 17, 9);
-  assert.equal(6 / 3, 2);
+  assert.equal(wcCareer.goals - wcComparators.previousGoalRecord, 5);
+  assert.equal(wcCareer.wins - wcComparators.previousWinRecord, 6);
+  assert.equal(wcCareer.captainAppearances - wcComparators.nextCaptainAppearances, 9);
+  assert.equal(wcCareer.assistedEditions / wcComparators.nextAssistedEditions, 2);
 });
 
 test("the 73-goal club season reconciles across six competitions", () => {
@@ -95,9 +102,9 @@ test("the 2019/20 league contribution rate reconciles", () => {
 });
 
 test("World Cup goals from distance reconcile", () => {
-  assert.equal(7 - 5, 2);
-  assert.equal(((7 / 5 - 1) * 100).toFixed(0), "40");
-  assert.equal(((7 / 21) * 100).toFixed(1), "33.3");
+  assert.equal(wcCareer.outsideAreaGoals - wcComparators.previousOutsideAreaGoals, 2);
+  assert.equal(((wcCareer.outsideAreaGoals / wcComparators.previousOutsideAreaGoals - 1) * 100).toFixed(0), "40");
+  assert.equal(((wcCareer.outsideAreaGoals / wcCareer.goals) * 100).toFixed(1), "33.3");
 });
 
 test("nine-match World Cup scoring streak reconciles", () => {

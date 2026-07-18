@@ -55,3 +55,29 @@ test("Barcelona multi-goal eruptions reconcile", () => {
   assert.equal(41 * 3 + 6 * 4 + 1 * 5, 152);
   assert.equal(((152 / 672) * 100).toFixed(1), "22.6");
 });
+
+test("the single-club record margin reconciles", () => {
+  assert.equal(672 - 643, 29);
+  assert.equal((672 / 643).toFixed(3), "1.045");
+});
+
+test("Barcelona goal milestone acceleration reconciles", () => {
+  const days = (Date.UTC(2011, 10, 1) - Date.UTC(2010, 0, 16)) / 86_400_000;
+  assert.equal(days, 654);
+  assert.equal((days / 100).toFixed(2), "6.54");
+  assert.equal(672 - 200, 472);
+});
+
+test("Barcelona win volume reconciles", () => {
+  assert.equal(542 - 476, 66);
+  assert.equal(((542 / 778) * 100).toFixed(1), "69.7");
+});
+
+test("El Clásico goal composition reconciles", () => {
+  assert.equal(18 + 6 + 2, 26);
+  assert.deepEqual([18, 6, 2].map((value) => ((value / 26) * 100).toFixed(1)), ["69.2", "23.1", "7.7"]);
+});
+
+test("La Liga opponent breadth margin reconciles", () => {
+  assert.equal(38 - 35, 3);
+});

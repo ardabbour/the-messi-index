@@ -760,6 +760,105 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="plate venue-plate" aria-labelledby="venue-title">
+        <div className="plate-heading inverse">
+          <span>Plate 21</span>
+          <h2 id="venue-title">Change the venue. Same result.</h2>
+          <a href={sources.barca} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="venue-grid">
+          <div className="venue-home"><strong>35</strong><span>home La Liga goals</span><p>2011/12 · season record</p></div>
+          <div className="venue-away"><strong>24</strong><span>away La Liga goals</span><p>2012/13 · season record</p></div>
+          <div><strong>15</strong><span>straight away league matches scoring</span><p>2012/13 · record streak</p></div>
+          <div><strong>28</strong><span>goals in a league season’s second half</span><p>2011/12 · record</p></div>
+        </div>
+        <p className="venue-note">Two different seasons. Four different slices of the schedule. Each slice ends in a competition record.</p>
+      </section>
+
+      <section className="plate single-club-plate" aria-labelledby="single-club-title">
+        <div className="plate-heading">
+          <span>Plate 22</span>
+          <h2 id="single-club-title">He cleared Pelé, then kept going.</h2>
+          <a href={sources.barca} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="single-club-race" role="img" aria-label="Official goals for one club: Lionel Messi scored 672 for Barcelona, 29 more than Pelé's previous record of 643 for Santos">
+          <div className="single-club-line pele"><span>Pelé · Santos · 1956–1974</span><i style={{ width: `${(643 / 672) * 100}%` }} /><strong>643</strong></div>
+          <div className="single-club-line messi"><span>Lionel Messi · Barcelona · 2004–2021</span><i style={{ width: "100%" }} /><strong>672</strong></div>
+        </div>
+        <div className="single-club-margin"><strong>+29</strong><p>official goals beyond the previous single-club world record</p><span>672 ÷ 643 = 1.045×</span></div>
+      </section>
+
+      <section className="plate milestone-plate" aria-labelledby="milestone-title">
+        <div className="plate-heading">
+          <span>Plate 23</span>
+          <h2 id="milestone-title">The milestones started arriving faster.</h2>
+          <a href={sources.barca} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="milestone-track" role="img" aria-label="Barcelona goal milestones: Messi reached 100 official goals on 16 January 2010 at age 22, 200 on 1 November 2011 at age 24, and finished with 672 in 2021">
+          <div><span>16 Jan 2010</span><i /><strong>100</strong><p>youngest to 100 · age 22</p></div>
+          <div><span>1 Nov 2011</span><i /><strong>200</strong><p>youngest to 200 · age 24</p></div>
+          <div><span>2021</span><i /><strong>672</strong><p>final official Barça total</p></div>
+        </div>
+        <div className="milestone-math">
+          <div><strong>654 days</strong><span>from goal 100 to goal 200</span></div>
+          <div><strong>6.54 days</strong><span>per goal across that hundred</span></div>
+          <div><strong>+472</strong><span>after reaching 200</span></div>
+        </div>
+      </section>
+
+      <section className="plate wins-plate" aria-labelledby="wins-title">
+        <div className="plate-heading inverse">
+          <span>Plate 24</span>
+          <h2 id="wins-title">Even the win column has a chasm.</h2>
+          <a href={sources.barca} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="wins-layout">
+          <div className="wins-total"><strong>542</strong><span>official Barcelona wins</span><p>club player record</p></div>
+          <div className="wins-study">
+            <div className="wins-bar"><span>Lionel Messi</span><i style={{ width: "100%" }} /><strong>542</strong></div>
+            <div className="wins-bar"><span>Xavi Hernández</span><i style={{ width: `${(476 / 542) * 100}%` }} /><strong>476</strong></div>
+            <div className="wins-gap"><strong>+66 wins</strong><span>beyond the previous club benchmark</span></div>
+          </div>
+        </div>
+        <div className="wins-rate"><strong>542 ÷ 778 = 69.7%</strong><p>Messi’s Barcelona won nearly seven of every ten official matches he played.</p><span>Derived from club appearance and win totals</span></div>
+      </section>
+
+      <section className="plate clasico-plate" aria-labelledby="clasico-title">
+        <div className="plate-heading">
+          <span>Plate 25</span>
+          <h2 id="clasico-title">The biggest fixture got 26 examples.</h2>
+          <a href={sources.barca} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="clasico-layout">
+          <div className="clasico-total"><strong>26</strong><span>El Clásico goals</span><p>all-time record</p></div>
+          <div className="clasico-split" role="img" aria-label="Messi's 26 El Clásico goals: 18 in La Liga, six in the Spanish Super Cup and two in the Champions League">
+            <div className="clasico-segment liga"><strong>18</strong><span>La Liga</span><small>69.2%</small></div>
+            <div className="clasico-segment super"><strong>6</strong><span>Spanish Super Cup</span><small>23.1%</small></div>
+            <div className="clasico-segment europe"><strong>2</strong><span>Champions League</span><small>7.7%</small></div>
+          </div>
+        </div>
+        <div className="clasico-cells" role="img" aria-label="Twenty-six cells representing Messi's El Clásico goals, grouped 18 league, six Spanish Super Cup and two Champions League">
+          {Array.from({ length: 26 }, (_, index) => <span className={index < 18 ? "liga" : index < 24 ? "super" : "europe"} key={index}>{index + 1}</span>)}
+        </div>
+      </section>
+
+      <section className="plate double-38-plate" aria-labelledby="double-38-title">
+        <div className="plate-heading inverse">
+          <span>Plate 26</span>
+          <h2 id="double-38-title">Thirty-eight, twice.</h2>
+          <a href={sources.barca} target="_blank" rel="noreferrer">FC Barcelona ↗</a>
+        </div>
+        <div className="double-38-layout">
+          <div><strong>38</strong><span>different La Liga opponents scored against</span><p>Competition record · prior mark 35</p></div>
+          <b>≠</b>
+          <div><strong>38</strong><span>direct free-kick goals in La Liga</span><p>Competition record</p></div>
+        </div>
+        <div className="double-38-proof">
+          <p><strong>+3 opponents</strong><span>beyond Raúl González and Aritz Aduriz’s prior breadth record</span></p>
+          <p><strong>One number</strong><span>two unrelated record categories</span></p>
+        </div>
+      </section>
+
       <section className="ledger-section" aria-labelledby="ledger-title">
         <div className="ledger-header">
           <div><p className="kicker">Selected entries</p><h2 id="ledger-title">The ledger of implausibility</h2></div>

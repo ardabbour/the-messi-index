@@ -49,6 +49,12 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /“First” undersells the distance\./);
   assert.match(html, /Seventy-three\. In one club season\./);
   assert.match(html, /The hat-trick was the small version\./);
+  assert.match(html, /Change the venue\. Same result\./);
+  assert.match(html, /He cleared Pelé, then kept going\./);
+  assert.match(html, /The milestones started arriving faster\./);
+  assert.match(html, /Even the win column has a chasm\./);
+  assert.match(html, /The biggest fixture got 26 examples\./);
+  assert.match(html, /Thirty-eight, twice\./);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

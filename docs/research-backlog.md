@@ -1,0 +1,35 @@
+# Research backlog
+
+The index is intentionally edition-based. New plates should add a genuinely different statistical lens, retain a primary-source link and state whether the number is stable or live.
+
+## Next live update
+
+The 2026 FIFA World Cup final is scheduled after the current 15 July audit cutoff. Before the next publication:
+
+1. Recheck Messi’s goals, assists, minutes, appearances, wins and Player of the Match awards on FIFA.
+2. Recompute the career World Cup margins against Klose, Márquez and the assisted-editions comparison group.
+3. Replace “tournament in progress” wording only when FIFA publishes final tournament statistics.
+4. Run `npm test`, `npm run lint` and `npm run audit:sources`.
+
+## High-value candidate plates
+
+### Creation as a parallel career
+
+- 250th Barcelona assist reached in June 2020.
+- 21 league assists in 2019/20, then the single-season competition record.
+- Candidate visual: goals and assists as equal-width contribution lanes, with an explicit provider-definition note.
+- Primary source: FIFA’s “Consistency personified” record review.
+
+### Argentina calendar peak
+
+- 18 international goals in 14 matches in 2022.
+- Candidate derived rate: 1.29 goals per appearance.
+- Primary source: FIFA international record dossier.
+
+## Editorial gates
+
+- Avoid mixing official and friendly club matches.
+- Do not combine assist providers without noting definition changes.
+- Prefer a record margin over a bare rank when the comparison is available.
+- A new plate should not repeat an existing total unless it reveals composition, pace, longevity or distance.
+- Live figures require an audit date in both the interface and source ledger.

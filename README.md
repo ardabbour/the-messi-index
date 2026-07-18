@@ -2,7 +2,7 @@
 
 An interactive, evidence-backed football almanac about the statistical distances Lionel Messi put between himself and everyone else.
 
-Edition 002 contains 21 statistical plates, a filterable record ledger and an interactive scoring-pace translator.
+Edition 002 contains 27 statistical plates, a filterable record ledger and an interactive scoring-pace translator.
 
 The site favors directly labeled comparisons, transparent arithmetic and links to primary or governing-body sources. Moving totals—especially 2026 World Cup figures—carry explicit audit dates.
 
@@ -22,9 +22,10 @@ The development site runs at `http://localhost:3000` by default.
 ```bash
 npm test
 npm run lint
+npm run audit:sources
 ```
 
-`npm test` creates the production build, checks the server-rendered page for the finished product copy and source labels, and reconciles the arithmetic behind the headline comparisons.
+`npm test` creates the production build, checks the server-rendered page for the finished product copy and source labels, and reconciles the arithmetic behind the headline comparisons. `npm run audit:sources` performs a live reachability check for every linked statistical source.
 
 ## Counting policy
 
@@ -45,6 +46,7 @@ npm run lint
 Every statistical plate links to its specific source.
 
 The claim-by-claim audit trail lives in [`docs/source-ledger.md`](docs/source-ledger.md).
+Future editions are queued in [`docs/research-backlog.md`](docs/research-backlog.md), including the post-final 2026 World Cup refresh.
 
 ## Project shape
 
@@ -52,4 +54,5 @@ The claim-by-claim audit trail lives in [`docs/source-ledger.md`](docs/source-le
 - `app/globals.css` contains the responsive archival design system.
 - `tests/rendered-html.test.mjs` verifies the production-rendered product.
 - `tests/statistical-arithmetic.test.mjs` verifies derived totals, rates and gaps.
+- `scripts/audit-sources.mjs` checks every citation URL before a live-data update ships.
 - `.openai/hosting.json` contains the Sites project binding.

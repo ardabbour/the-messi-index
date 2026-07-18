@@ -27,6 +27,12 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 18 | World Cup record margins for goals, wins, captaincy appearances and assisted editions | FIFA | Live; dated 15 Jul 2026 |
 | 19 | 73 official club goals in 2011/12, reconciled across six competitions | FC Barcelona | Historical / stable |
 | 20 | 48 official Barcelona matches with 3+ goals, distributed 41 / 6 / 1 | FC Barcelona | Historical / stable |
+| 21 | Home, away, away-streak and second-half La Liga scoring records | FC Barcelona | Historical / stable |
+| 22 | 672 official goals for one club versus Pelé’s prior 643-goal mark | FC Barcelona | Historical / stable |
+| 23 | Youngest Barcelona player to 100 and 200 official goals; 654-day interval derived | FC Barcelona | Historical / stable |
+| 24 | 542 official Barcelona wins versus Xavi’s 476; appearance win rate derived | FC Barcelona | Historical / stable |
+| 25 | 26 El Clásico goals, reconciled across three competitions | FC Barcelona | Historical / stable |
+| 26 | Records for scoring against 38 La Liga opponents and 38 direct free kicks | FC Barcelona | Historical / stable |
 
 ## Live-data rule
 

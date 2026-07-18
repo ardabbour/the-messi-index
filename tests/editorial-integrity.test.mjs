@@ -36,7 +36,7 @@ test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];
 
-  assert.equal(urls.length, 38);
+  assert.equal(urls.length, 39);
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(page, /http:\/\//);
 });
@@ -50,6 +50,7 @@ test("the live source audit restricts redirects to approved evidence owners", as
   assert.match(auditScript, /\^text\\\/html\\b\/i/);
   assert.match(auditScript, /claimFingerprints/);
   assert.match(auditScript, /"1,482", "Iker Muniain", "567", "487", "Cristiano Ronaldo", "365"/);
+  assert.match(auditScript, /"Right foot", "Left foot", "Header", "100 goals", "122 games"/);
   assert.match(auditScript, /missing claim fingerprints/);
 });
 
@@ -200,4 +201,15 @@ test("the dribbling plate adds a non-scoring statistical dimension", async () =>
   assert.match(page, /Lionel Messi", dribbles: 1482/);
   assert.match(page, /Iker Muniain", dribbles: 567/);
   assert.match(page, /Historical snapshot published 17 April 2020/);
+});
+
+test("the European century plate exposes finishing-body-part composition", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+
+  assert.match(page, /Plate 48 · finishing anatomy/);
+  assert.match(page, /first 100 UEFA club competition goals/);
+  assert.match(page, /80%/);
+  assert.match(page, /16%/);
+  assert.match(page, /4%/);
+  assert.match(page, /sources\.europeanCentury/);
 });

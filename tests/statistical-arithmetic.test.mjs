@@ -217,3 +217,10 @@ test("the two Golden Ball campaigns reconcile", () => {
   assert.equal(10 / 5, 2);
   assert.equal(2022 - 2014, 8);
 });
+
+test("the first European century's finishing anatomy reconciles", () => {
+  assert.equal(80 + 16 + 4, 100);
+  assert.equal(16 + 4, 20);
+  assert.equal((20 / 100) * 100, 20);
+  assert.equal((100 / 122).toFixed(2), "0.82");
+});

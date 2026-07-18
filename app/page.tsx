@@ -49,6 +49,8 @@ const sources = {
     "https://www.fifa.com/en/the-best-fifa-football-awards/articles/lionel-messi-international-football-argentina-records-statistics",
   europeVictims:
     "https://www.uefa.com/uefachampionsleague/news/0253-0d81ee9b8a08-b457910cf27d-1000--who-were-lionel-messi-s-favourite-opponents/",
+  europeanCentury:
+    "https://www.uefa.com/uefachampionsleague/news/023e-0e97dfba07ee-e1db23662ae5-1000--how-messi-s-100-european-goals-were-scored/",
   suarezBarca:
     "https://www.fcbarcelona.com/en/football/first-team/players/4138/luis-suarez",
   freeKicks:
@@ -254,6 +256,13 @@ const ledger = [
     note: "A 915-dribble lead over second place—2.61 times Iker Muniain’s total.",
     group: "club" as Dossier,
     href: sources.decadeAnalysis,
+  },
+  {
+    value: "80 / 16 / 4",
+    label: "finishing anatomy of the first 100 European goals",
+    note: "Left foot, right foot and headers—one in five without his dominant foot.",
+    group: "club" as Dossier,
+    href: sources.europeanCentury,
   },
 ];
 
@@ -1577,6 +1586,29 @@ export default function Home() {
           </div>
         </div>
         <div className="world-golden-ball-proof"><strong>5 → 10</strong><p>He doubled his direct goal contributions between his first and second award-winning World Cups.</p><span>2014 and 2022 · FIFA</span></div>
+      </section>
+
+      <section className="plate european-century-plate" aria-labelledby="european-century-title">
+        <div className="plate-heading">
+          <span>Plate 48 · finishing anatomy</span>
+          <h2 id="european-century-title">The famous left foot still left twenty goals unexplained.</h2>
+          <a href={sources.europeanCentury} target="_blank" rel="noreferrer">UEFA century audit ↗</a>
+        </div>
+        <div className="european-century-intro">
+          <strong>100</strong>
+          <div><span>first UEFA club competition goals</span><p>Reached across 122 appearances. UEFA split every finish by body part.</p></div>
+        </div>
+        <div className="european-century-stack" role="img" aria-label="Messi's first 100 UEFA club competition goals: 80 with his left foot, 16 with his right foot and four headers">
+          <div className="left" style={{ width: "80%" }}><strong>80</strong><span>Left foot · 80%</span></div>
+          <div className="right" style={{ width: "16%" }}><strong>16</strong><span>Right foot</span></div>
+          <div className="head" style={{ width: "4%" }}><strong>4</strong><span>Headers</span></div>
+        </div>
+        <div className="european-century-key">
+          <div><i className="left" /><strong>80</strong><span>left foot</span><p>Five direct free kicks and nine penalties included.</p></div>
+          <div><i className="right" /><strong>16</strong><span>right foot</span><p>The supposedly weaker side still supplied one goal in six.</p></div>
+          <div><i className="head" /><strong>4</strong><span>headers</span><p>Four more ways around the dominant-foot expectation.</p></div>
+        </div>
+        <div className="european-century-proof"><strong>16 + 4 = 20</strong><p>One fifth of the European century arrived without the left foot.</p><span>100 goals in 122 games · UEFA</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

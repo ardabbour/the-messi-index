@@ -15,6 +15,10 @@ const claimFingerprints = new Map([
     "https://www.fcbarcelona.com/en/football/first-team/actualites/1655195",
     ["1,482", "Iker Muniain", "567", "487", "Cristiano Ronaldo", "365"],
   ],
+  [
+    "https://www.uefa.com/uefachampionsleague/news/023e-0e97dfba07ee-e1db23662ae5-1000--how-messi-s-100-european-goals-were-scored/",
+    ["Right foot", "Left foot", "Header", "100 goals", "122 games"],
+  ],
 ]);
 
 if (urls.length === 0) {

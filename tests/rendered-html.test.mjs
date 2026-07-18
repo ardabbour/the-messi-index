@@ -59,6 +59,10 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /first—and through 2022, only—player/i);
   assert.match(html, /5 → 10/);
   assert.match(html, /doubled his direct goal contributions/);
+  assert.match(html, /The famous left foot still left twenty goals unexplained/);
+  assert.match(html, /first 100 UEFA club competition goals/);
+  assert.match(html, /16 \+ 4 = 20/);
+  assert.match(html, /without the left foot/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

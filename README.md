@@ -54,5 +54,6 @@ Future editions are queued in [`docs/research-backlog.md`](docs/research-backlog
 - `app/globals.css` contains the responsive archival design system.
 - `tests/rendered-html.test.mjs` verifies the production-rendered product.
 - `tests/statistical-arithmetic.test.mjs` verifies derived totals, rates and gaps.
+- `tests/editorial-integrity.test.mjs` keeps plate counts, source rows and live cutoffs synchronized.
 - `scripts/audit-sources.mjs` checks every citation URL before a live-data update ships.
 - `.openai/hosting.json` contains the Sites project binding.

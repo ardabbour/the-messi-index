@@ -20,6 +20,10 @@ test("the 2010s total and mean reconcile", () => {
   assert.equal(goals.reduce((sum, value) => sum + value, 0), 579);
   assert.equal((579 / goals.length).toFixed(1), "57.9");
   assert.equal(goals.filter((value) => value >= 50).length, 9);
+  assert.equal(350 + 137, 487);
+  assert.equal(285 + 80, 365);
+  assert.equal(487 - 365, 122);
+  assert.equal((487 / 365).toFixed(2), "1.33");
 });
 
 test("Barcelona competition anatomy sums to 672", () => {

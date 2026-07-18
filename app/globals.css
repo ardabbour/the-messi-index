@@ -173,6 +173,23 @@ h1 em { color: var(--blue); font-style: normal; }
 .decade-column span { padding-top: 10px; font: 600 .65rem var(--font-mono), monospace; }
 .fifty-line { position: absolute; z-index: 0; left: 34px; right: 34px; bottom: calc(45px + 25px + (100% - 105px) * .549); border-top: 2px dashed var(--red); color: var(--red); }
 .fifty-line span { position: absolute; right: 0; bottom: 5px; font: normal 600 .62rem var(--font-mono), monospace; text-transform: uppercase; }
+.decade-contributions { display: grid; grid-template-columns: minmax(280px, 4fr) 8fr; border-top: 2px solid var(--ink); }
+.decade-contribution-intro { min-height: 300px; padding: 30px 34px; border-right: 2px solid var(--ink); display: flex; flex-direction: column; justify-content: center; }
+.decade-contribution-intro > span, .decade-contribution-intro > a { font: 600 .65rem/1.4 var(--font-mono), monospace; text-transform: uppercase; letter-spacing: .07em; }
+.decade-contribution-intro > strong { margin: 20px 0 14px; color: var(--blue); font: 400 clamp(5.5rem, 10vw, 9rem)/.7 var(--font-display), sans-serif; letter-spacing: -.08em; }
+.decade-contribution-intro > p { margin: 0 0 22px; font: italic 500 1rem/1.4 var(--font-serif), serif; }
+.decade-contribution-intro > a { text-underline-offset: 4px; }
+.decade-contribution-race { padding: 44px 42px; display: flex; flex-direction: column; justify-content: center; }
+.decade-contribution-race > div { min-height: 96px; display: grid; grid-template-columns: 145px 1fr 55px; gap: 18px; align-items: center; border-bottom: 1px solid var(--paper-deep); }
+.decade-contribution-race > div > span { font: 600 .68rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.decade-contribution-race i { height: 38px; display: flex; border: 1px solid var(--ink); }
+.decade-contribution-race i b { height: 100%; position: relative; background: var(--blue); }
+.decade-contribution-race i b.assists { background: var(--red); }
+.decade-contribution-race i em { position: absolute; inset: 0; display: grid; place-items: center; color: white; font: normal 600 .62rem var(--font-mono), monospace; }
+.decade-contribution-race > div > strong { font: 400 1.8rem var(--font-display), sans-serif; text-align: right; }
+.decade-contribution-race > p { margin: 34px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+.decade-contribution-race > p strong { color: var(--blue); font: 400 clamp(3.8rem, 7vw, 6rem)/.8 var(--font-display), sans-serif; }
+.decade-contribution-race > p span { max-width: 34ch; font: italic 500 clamp(1rem, 1.8vw, 1.35rem)/1.35 var(--font-serif), serif; }
 .decade-note { margin: 0; padding: 18px 34px; border-top: 2px solid var(--ink); color: #625e54; font: 600 .67rem/1.45 var(--font-mono), monospace; text-transform: uppercase; }
 
 .fifty-layout { min-height: 540px; display: grid; grid-template-columns: 1fr 1.35fr; }
@@ -969,6 +986,9 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .decade-chart { height: 420px; padding-left: 20px; padding-right: 20px; gap: 5px; }
   .fifty-line { left: 20px; right: 20px; }
   .decade-column span { writing-mode: vertical-rl; justify-self: center; }
+  .decade-contributions { grid-template-columns: 1fr; }
+  .decade-contribution-intro { min-height: 260px; padding: 28px 20px; border-right: 0; border-bottom: 2px solid var(--ink); }
+  .decade-contribution-race { padding: 36px 20px; }
   .decade-note { padding: 18px 20px; }
   .fifty-layout { grid-template-columns: 1fr; }
   .fifty-number { min-height: 380px; border-right: 0; border-bottom: 2px solid var(--ink); padding: 28px 20px; }
@@ -1272,6 +1292,9 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .decade-summary p { grid-column: auto; grid-row: auto; }
   .decade-chart { height: 350px; }
   .decade-column strong { font-size: .62rem; }
+  .decade-contribution-race > div { grid-template-columns: 105px 1fr 45px; gap: 10px; }
+  .decade-contribution-race i em { font-size: .54rem; }
+  .decade-contribution-race > p { grid-template-columns: 1fr; }
   .fifty-number strong { font-size: 10rem; }
   .fifty-facts { grid-template-columns: 1fr; }
   .fifty-facts > div { border-right: 0; border-bottom: 1px solid var(--ink); }

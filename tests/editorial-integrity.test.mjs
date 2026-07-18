@@ -49,7 +49,7 @@ test("the live source audit restricts redirects to approved evidence owners", as
   assert.match(auditScript, /finalUrl\.hostname\.endsWith/);
   assert.match(auditScript, /\^text\\\/html\\b\/i/);
   assert.match(auditScript, /claimFingerprints/);
-  assert.match(auditScript, /"1,482", "Iker Muniain", "567"/);
+  assert.match(auditScript, /"1,482", "Iker Muniain", "567", "487", "Cristiano Ronaldo", "365"/);
   assert.match(auditScript, /missing claim fingerprints/);
 });
 

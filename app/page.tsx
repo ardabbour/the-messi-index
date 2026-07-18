@@ -81,7 +81,7 @@ const sources = {
     "https://www.fifa.com/en/tournaments/mens/worldcup/articles/conmebol-qualifying-top-goalscorers-history",
   careerAssists400:
     "https://es.mlssoccer.com/playoffs/2025/noticias/leo-messi-records-sin-fin-en-un-inter-miami-que-nunca-llego-tan-lejos",
-  decadeDribbles:
+  decadeAnalysis:
     "https://www.fcbarcelona.com/en/football/first-team/actualites/1655195",
 };
 
@@ -253,7 +253,7 @@ const ledger = [
     label: "La Liga dribbles in Barça’s decade analysis",
     note: "A 915-dribble lead over second place—2.61 times Iker Muniain’s total.",
     group: "club" as Dossier,
-    href: sources.decadeDribbles,
+    href: sources.decadeAnalysis,
   },
 ];
 
@@ -275,6 +275,10 @@ const decadeGoals = [
   { year: "2017", goals: 54 },
   { year: "2018", goals: 51 },
   { year: "2019", goals: 50 },
+];
+const decadeLeagueContributions = [
+  { name: "Lionel Messi", goals: 350, assists: 137, total: 487 },
+  { name: "Cristiano Ronaldo", goals: 285, assists: 80, total: 365 },
 ];
 
 const barcaBreakdown = [
@@ -629,7 +633,28 @@ export default function Home() {
           ))}
           <i className="fifty-line"><span>50-goal line</span></i>
         </div>
-        <p className="decade-note">Totals combine Barcelona and Argentina. Sum and annual mean are derived from FC Barcelona’s year-by-year table.</p>
+        <div className="decade-contributions">
+          <div className="decade-contribution-intro">
+            <span>La Liga · 2010/11 decade analysis</span>
+            <strong>487</strong>
+            <p>Messi goals + assists across 330 appearances</p>
+            <a href={sources.decadeAnalysis} target="_blank" rel="noreferrer">FC Barcelona comparison ↗</a>
+          </div>
+          <div className="decade-contribution-race" role="img" aria-label="La Liga decade goal contributions in FC Barcelona's analysis: Lionel Messi 350 goals plus 137 assists equals 487; Cristiano Ronaldo 285 goals plus 80 assists equals 365">
+            {decadeLeagueContributions.map((player) => (
+              <div key={player.name}>
+                <span>{player.name}</span>
+                <i>
+                  <b style={{ width: `${(player.goals / 487) * 100}%` }}><em>{player.goals} G</em></b>
+                  <b className="assists" style={{ width: `${(player.assists / 487) * 100}%` }}><em>{player.assists} A</em></b>
+                </i>
+                <strong>{player.total}</strong>
+              </div>
+            ))}
+            <p><strong>+122</strong><span>direct contributions beyond second place in the same analysis</span></p>
+          </div>
+        </div>
+        <p className="decade-note">Calendar totals combine Barcelona and Argentina. The contribution comparison is a separate La Liga dataset beginning in 2010/11; both panels follow their linked FC Barcelona analyses.</p>
       </section>
 
       <section className="plate fifty-plate" aria-labelledby="fifty-title">
@@ -1496,7 +1521,7 @@ export default function Home() {
         <div className="plate-heading">
           <span>Plate 46 · ball carrying</span>
           <h2 id="dribble-title">First place was 915 dribbles away.</h2>
-          <a href={sources.decadeDribbles} target="_blank" rel="noreferrer">FC Barcelona decade analysis ↗</a>
+          <a href={sources.decadeAnalysis} target="_blank" rel="noreferrer">FC Barcelona decade analysis ↗</a>
         </div>
         <div className="dribble-layout">
           <div className="dribble-lead">

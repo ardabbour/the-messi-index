@@ -45,6 +45,8 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, />91</);
   assert.match(html, /goal contributions in calendar 2012/);
   assert.match(html, /one direct contribution every 3\.18 days/);
+  assert.match(html, /350 goals plus 137 assists equals 487/i);
+  assert.match(html, /direct contributions beyond second place/);
   assert.match(html, /123 for Barcelona · single-club record/);
   assert.match(html, /2009\/10 · synchronized sweep/);
   assert.match(html, /The only player to complete the set/);

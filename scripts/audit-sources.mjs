@@ -13,7 +13,7 @@ const approvedHosts = [
 const claimFingerprints = new Map([
   [
     "https://www.fcbarcelona.com/en/football/first-team/actualites/1655195",
-    ["1,482", "Iker Muniain", "567"],
+    ["1,482", "Iker Muniain", "567", "487", "Cristiano Ronaldo", "365"],
   ],
 ]);
 

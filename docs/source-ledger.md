@@ -12,7 +12,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 04 | Champions League age records and 18 successive scoring seasons | UEFA | Historical / stable |
 | 05 | World Cup career records: 21 goals, 33 appearances, 23 wins, 10 knockout assists | FIFA | Live; dated 15 Jul 2026 |
 | 05A | 2026 checkpoint: 8 goals, 4 assists, 12 contributions and five of 16 career Player of Match awards | FIFA | Live; dated 15 Jul 2026 |
-| 06 | 579 goals from 2010–2019 and nine 50-goal years | FC Barcelona; total and mean derived | Historical / stable |
+| 06 | 579 goals from 2010–2019 and nine 50-goal years; in Barcelona’s separate La Liga decade analysis, 350 goals plus 137 assists gave Messi 487 contributions versus Ronaldo’s 365 | FC Barcelona; totals, mean and 122-contribution gap derived | Historical / stable |
 | 07 | 50 La Liga goals in 37 matches in 2011/12 | UEFA | Historical / stable |
 | 08 | Led La Liga in both goals and assists in three straight seasons | FC Barcelona | Historical / stable |
 | 09 | Seasons required to reproduce 672 goals at a selected scoring pace | Derived from FC Barcelona total | Interactive arithmetic |

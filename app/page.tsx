@@ -170,6 +170,13 @@ const ledger = [
     href: sources.goldenBall,
   },
   {
+    value: "4/4",
+    label: "major individual honours in 2009/10",
+    note: "The only Ballon d’Or, FIFA World Player, Pichichi and European Golden Shoe sweep.",
+    group: "awards" as Dossier,
+    href: sources.barca,
+  },
+  {
     value: "13",
     label: "straight 30-goal seasons",
     note: "At least 30 official club goals every season from 2008/09 through 2020/21.",

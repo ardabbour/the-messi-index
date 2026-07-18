@@ -47,6 +47,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /123 for Barcelona · single-club record/);
   assert.match(html, /2009\/10 · synchronized sweep/);
   assert.match(html, /The only player to complete the set/);
+  assert.match(html, /major individual honours in 2009\/10/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

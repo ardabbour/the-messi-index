@@ -168,10 +168,13 @@ test("public discovery routes share the canonical production origin", async () =
 
 test("the awards plate preserves the unique four-award season sweep", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
+  const ledgerSource = page.match(/const ledger = \[[\s\S]*?\n\];/)?.[0] ?? "";
 
   assert.match(page, /Ballon d’Or/);
   assert.match(page, /FIFA World Player/);
   assert.match(page, /Pichichi Trophy/);
   assert.match(page, /European Golden Shoe/);
   assert.match(page, /only player to complete the set/i);
+  assert.match(ledgerSource, /label: "major individual honours in 2009\/10"/);
+  assert.match(ledgerSource, /value: "4\/4"/);
 });

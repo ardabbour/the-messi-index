@@ -93,6 +93,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /Before the senior era, he swept the tournament\./);
   assert.match(html, /The youth world title was only the first one\./);
   assert.match(html, /1 of 15 Olympic \+ World Cup double winners/);
+  assert.match(html, /Argentina team trophies/);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

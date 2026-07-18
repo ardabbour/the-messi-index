@@ -111,6 +111,13 @@ const ledger = [
     href: sources.uefaRecords,
   },
   {
+    value: "6",
+    label: "Argentina team trophies",
+    note: "Five competitions from the 2005 U-20 World Cup through the 2024 Copa América.",
+    group: "argentina" as Dossier,
+    href: sources.fifaTrophies,
+  },
+  {
     value: String(wcCareer.goals),
     label: "World Cup goals",
     note: `The tournament record as of ${wcAuditLabel}.`,

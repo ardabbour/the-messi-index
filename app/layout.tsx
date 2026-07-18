@@ -10,7 +10,17 @@ const serif = Lora({ variable: "--font-serif", subsets: ["latin"], style: ["norm
 export const metadata: Metadata = {
   title: "The Messi Index — A statistical audit of the impossible",
   description: "An evidence-backed visual almanac of Lionel Messi records, margins and statistical absurdities.",
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  openGraph: {
+    title: "The Messi Index",
+    description: "The statistical distances Lionel Messi put between himself and football's idea of normal.",
+    type: "website",
+    siteName: "The Messi Index",
+  },
+  twitter: {
+    card: "summary",
+    title: "The Messi Index",
+    description: "A statistical audit of the impossible.",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

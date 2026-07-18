@@ -178,3 +178,12 @@ test("the seven-edition Copa America appearance record reconciles", () => {
   assert.equal(2024 - 1953, 71);
   assert.equal(appearances.length, 7);
 });
+
+test("the six-campaign South American qualifying record reconciles", () => {
+  const goals = [0, 4, 10, 7, 7, 8];
+  const games = [3, 18, 14, 10, 15, 12];
+  assert.equal(goals.reduce((sum, value) => sum + value, 0), 36);
+  assert.equal(games.reduce((sum, value) => sum + value, 0), 72);
+  assert.equal(36 - 29, 7);
+  assert.equal((36 / 72).toFixed(2), "0.50");
+});

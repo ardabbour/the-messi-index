@@ -77,6 +77,8 @@ const sources = {
     "https://copaamerica.com/en/news/copa-america-2024-numbers-champion-top-scorer",
   copaFinals:
     "https://copaamerica.com/en/news/records-broken-feats-copa-america-2024-messi-james-colombia-canada",
+  qualifyingScorers:
+    "https://www.fifa.com/en/tournaments/mens/worldcup/articles/conmebol-qualifying-top-goalscorers-history",
 };
 
 const wcCareer = worldCup2026.career;
@@ -285,6 +287,19 @@ const copaAmericaEditions = [
   { year: "2019", matches: 6, finish: "Third" },
   { year: "2021", matches: 7, finish: "Champion" },
   { year: "2024", matches: 5, finish: "Champion" },
+];
+const qualifyingLeaders = [
+  { name: "Lionel Messi", goals: 36 },
+  { name: "Luis Suárez", goals: 29 },
+  { name: "Marcelo Martins", goals: 22 },
+];
+const qualifyingCampaigns = [
+  { cycle: "2006", goals: 0, games: 3 },
+  { cycle: "2010", goals: 4, games: 18 },
+  { cycle: "2014", goals: 10, games: 14 },
+  { cycle: "2018", goals: 7, games: 10 },
+  { cycle: "2022", goals: 7, games: 15 },
+  { cycle: "2026", goals: 8, games: 12, winner: true },
 ];
 const editionPlateCount = edition.plateCount;
 
@@ -1319,6 +1334,35 @@ export default function Home() {
           ))}
         </div>
         <div className="copa-career-proof"><strong>6 + 4 + 6 + 5 + 6 + 7 + 5 = 39</strong><p>Seven editions. Five finals. Champion in the last two.</p><span><a href={sources.copaFinals} target="_blank" rel="noreferrer">Finals record verified by CONMEBOL ↗</a></span></div>
+      </section>
+
+      <section className="plate qualifying-plate" aria-labelledby="qualifying-title">
+        <div className="plate-heading">
+          <span>Plate 44 · qualification marathon</span>
+          <h2 id="qualifying-title">Thirty-six goals across six roads to the World Cup.</h2>
+          <a href={sources.qualifyingScorers} target="_blank" rel="noreferrer">FIFA qualifying archive ↗</a>
+        </div>
+        <div className="qualifying-leaders" role="img" aria-label="All-time South American World Cup qualifying goals: Lionel Messi 36, Luis Suarez 29 and Marcelo Martins 22">
+          {qualifyingLeaders.map((player) => (
+            <div className={player.name === "Lionel Messi" ? "leader" : ""} key={player.name}>
+              <span>{player.name}</span>
+              <i><b style={{ width: `${(player.goals / 36) * 100}%` }} /></i>
+              <strong>{player.goals}</strong>
+              <em>{player.goals === 36 ? "record" : `−${36 - player.goals}`}</em>
+            </div>
+          ))}
+        </div>
+        <div className="qualifying-campaigns" role="img" aria-label="Messi's South American qualifying goals and games by World Cup cycle: zero in three games for 2006, four in 18 for 2010, ten in 14 for 2014, seven in 10 for 2018, seven in 15 for 2022 and eight in 12 for 2026, when he led the scoring table for the first time">
+          {qualifyingCampaigns.map((campaign) => (
+            <div className={campaign.winner ? "winner" : ""} key={campaign.cycle}>
+              <span>Road to {campaign.cycle}</span>
+              <strong>{campaign.goals}</strong>
+              <p>goals · {campaign.games} games</p>
+              {campaign.winner ? <b>Top scorer</b> : null}
+            </div>
+          ))}
+        </div>
+        <div className="qualifying-proof"><strong>0 + 4 + 10 + 7 + 7 + 8 = 36</strong><p>CONMEBOL’s career leader—and, at 38, its 2026 campaign leader.</p><span>Seven goals clear of second place</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

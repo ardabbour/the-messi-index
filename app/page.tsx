@@ -295,6 +295,8 @@ export default function Home() {
         <a href="#age-title"><b>04</b> Europe</a>
         <a href="#world-title"><b>05</b> World Cup</a>
         <a href="#late-title"><b>10</b> Late career</a>
+        <a href="#awards-title"><b>11</b> Awards</a>
+        <a href="#world-xi-title"><b>39</b> Peer vote</a>
         <a href="#ledger-title"><b>∞</b> Full ledger</a>
       </nav>
 

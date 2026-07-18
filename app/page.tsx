@@ -728,6 +728,19 @@ export default function Home() {
             <a className="award-source" href={sources.goldenShoes} target="_blank" rel="noreferrer">UEFA Golden Shoe history ↗</a>
           </div>
         </div>
+        <div className="award-sweep" role="img" aria-label="In the 2009/10 season, Messi became the only player to win the Ballon d'Or, FIFA World Player, Pichichi Trophy and European Golden Shoe in the same season">
+          <div className="award-sweep-lead">
+            <span>2009/10 · synchronized sweep</span>
+            <strong>4 / 4</strong>
+            <p>Four major individual honours. One season. The only player to complete the set.</p>
+            <a href={sources.barca} target="_blank" rel="noreferrer">FC Barcelona record inventory ↗</a>
+          </div>
+          <div className="award-sweep-list">
+            {["Ballon d’Or", "FIFA World Player", "Pichichi Trophy", "European Golden Shoe"].map((award, index) => (
+              <div key={award}><b>{String(index + 1).padStart(2, "0")}</b><span>{award}</span><strong>Won</strong></div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="plate europe-plate" aria-labelledby="europe-title">

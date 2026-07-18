@@ -165,3 +165,13 @@ test("public discovery routes share the canonical production origin", async () =
   assert.match(sitemap, new RegExp(canonical.replaceAll(".", "\\.")));
   assert.match(readme, new RegExp(canonical.replaceAll(".", "\\.")));
 });
+
+test("the awards plate preserves the unique four-award season sweep", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+
+  assert.match(page, /Ballon d’Or/);
+  assert.match(page, /FIFA World Player/);
+  assert.match(page, /Pichichi Trophy/);
+  assert.match(page, /European Golden Shoe/);
+  assert.match(page, /only player to complete the set/i);
+});

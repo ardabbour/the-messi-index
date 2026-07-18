@@ -17,7 +17,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 08 | Led La Liga in both goals and assists in three straight seasons | FC Barcelona | Historical / stable |
 | 09 | Seasons required to reproduce 672 goals at a selected scoring pace | Derived from FC Barcelona total | Interactive arithmetic |
 | 10 | 29 goals and 19 assists in 28 MLS regular-season matches in 2025 | Major League Soccer | Season complete |
-| 11 | Eight Ballons d’Or and six European Golden Shoes | FIFA, UEFA | Historical / stable |
+| 11 | Eight Ballons d’Or, six European Golden Shoes and the unique 2009/10 Ballon d’Or–FIFA World Player–Pichichi–Golden Shoe sweep | FIFA, UEFA, FC Barcelona | Historical / stable |
 | 12 | 132 UEFA club goals against 42 of 46 opponents; a record 123 for one club, Barcelona | UEFA | European career complete |
 | 13 | Barcelona’s 672 goals by competition; non-league 198 equals Suárez’s club total | FC Barcelona; subtraction derived | Historical / stable |
 | 14 | 50 direct free-kick goals for Barcelona versus Koeman’s 26 | FC Barcelona | Historical / stable |

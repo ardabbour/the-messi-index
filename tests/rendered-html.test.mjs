@@ -29,6 +29,7 @@ test("server-renders the Messi statistical almanac", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>The Messi Index — A statistical audit of the impossible<\/title>/i);
+  assert.match(html, /rel="icon"/i);
   assert.match(html, new RegExp(`<meta name="description" content="A ${edition.plateCount}-plate, evidence-backed visual almanac`));
   assert.match(html, /The record book ran out of/);
   assert.match(html, new RegExp(`Vol\\. (?:<!-- -->)?${edition.volume}`));
@@ -44,6 +45,8 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /goal contributions in calendar 2012/);
   assert.match(html, /one direct contribution every 3\.18 days/);
   assert.match(html, /123 for Barcelona · single-club record/);
+  assert.match(html, /2009\/10 · synchronized sweep/);
+  assert.match(html, /The only player to complete the set/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

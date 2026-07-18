@@ -17,6 +17,8 @@ The 2026 FIFA World Cup final is scheduled after the current 15 July audit cutof
 
 FIFA's dated key-stat article listed four Messi assists at the 15 July checkpoint, while mutable statistics surfaces can later revise assist attribution. Treat the dated article and its audit cutoff as one internally consistent snapshot. For the final update, record the exact FIFA page and publication/update date, reconcile goals plus assists before editing the JSON, and never combine a goal total from one revision with an assist total from another.
 
+Rechecked 18 July: [FIFA’s 14 July key-stat table](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-key-statistics) lists Messi on four assists, and [FIFA’s 17 July Spain–Argentina final preview](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/duels-messi-laporte-rodri-fernandez-yamal-tagliafico) independently says four, including two against England. Search excerpts that surface “5 Assists” are rendering Michael Olise’s category-leading total beside Messi-related page text; they are not evidence of a fifth Messi assist. Keep the snapshot at four until a completed-tournament table explicitly changes the player row.
+
 ## High-value candidate plates
 
 - **Post-final World Cup record margins:** highest priority once FIFA marks the 2026 tournament statistics final; should replace the live checkpoint rather than create a duplicate plate.

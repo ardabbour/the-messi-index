@@ -126,6 +126,20 @@ const ledger = [
     href: sources.fifaTrophies,
   },
   {
+    value: "39",
+    label: "Copa América appearances",
+    note: "The tournament record, five beyond Sergio Livingstone’s previous 34.",
+    group: "argentina" as Dossier,
+    href: sources.copaAppearances,
+  },
+  {
+    value: "36",
+    label: "South American qualifying goals",
+    note: "The competition record across six World Cup cycles; seven clear of Luis Suárez.",
+    group: "argentina" as Dossier,
+    href: sources.qualifyingScorers,
+  },
+  {
     value: String(wcCareer.goals),
     label: "World Cup goals",
     note: `The tournament record as of ${wcAuditLabel}.`,

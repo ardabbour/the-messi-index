@@ -110,6 +110,16 @@ test("every evidence-index destination resolves to an in-page heading", async ()
   });
 });
 
+test("the Argentina ledger exposes the newest international records", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+  const ledgerSource = page.match(/const ledger = \[[\s\S]*?\n\];/)?.[0] ?? "";
+
+  assert.match(ledgerSource, /label: "Copa América appearances"/);
+  assert.match(ledgerSource, /label: "South American qualifying goals"/);
+  assert.match(ledgerSource, /value: "39"/);
+  assert.match(ledgerSource, /value: "36"/);
+});
+
 test("public discovery routes share the canonical production origin", async () => {
   const [layout, robots, sitemap, readme] = await Promise.all([
     readFile(new URL("app/layout.tsx", root), "utf8"),

@@ -34,6 +34,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 25 | 26 El Clásico goals, reconciled across three competitions | FC Barcelona | Historical / stable |
 | 26 | Records for scoring against 38 La Liga opponents and 38 direct free kicks | FC Barcelona | Historical / stable |
 | 27 | Argentina calendar-year record of 18 goals in 14 appearances in 2022 | FIFA | Historical / stable |
+| 28 | 250th Barcelona assist and 46 La Liga goal contributions in 2019/20 | FIFA, FC Barcelona | Historical / stable |
 
 ## Live-data rule
 

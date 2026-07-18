@@ -13,13 +13,6 @@ The 2026 FIFA World Cup final is scheduled after the current 15 July audit cutof
 
 ## High-value candidate plates
 
-### Creation as a parallel career
-
-- 250th Barcelona assist reached in June 2020.
-- 21 league assists in 2019/20, then the single-season competition record.
-- Candidate visual: goals and assists as equal-width contribution lanes, with an explicit provider-definition note.
-- Primary source: FIFA’s “Consistency personified” record review.
-
 ## Editorial gates
 
 - Avoid mixing official and friendly club matches.

@@ -23,6 +23,8 @@ const sources = {
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-key-statistics",
   argentinaDebut:
     "https://www.fifa.com/en/articles/lionel-messi-international-debut-anniversary",
+  assistMilestone:
+    "https://inside.fifa.com/en/news/lionel-messi-consistency-personified",
   goldenBall:
     "https://www.fifa.com/en/tournaments/mens/worldcup/articles/messi-golden-ball-record",
   goldenShoes:
@@ -877,6 +879,25 @@ export default function Home() {
         <div className="argentina-year-dots" role="img" aria-label="Eighteen goals for Argentina in 2022 compared with the prior calendar-year tier of twelve goals">
           {Array.from({ length: 18 }, (_, index) => <span className={index < 12 ? "baseline" : "margin"} key={index}>{index + 1}</span>)}
         </div>
+      </section>
+
+      <section className="plate creation-plate" aria-labelledby="creation-title">
+        <div className="plate-heading inverse">
+          <span>Plate 28</span>
+          <h2 id="creation-title">The scorer had a second career as a provider.</h2>
+          <a href={sources.assistMilestone} target="_blank" rel="noreferrer">FIFA ↗</a>
+        </div>
+        <div className="creation-layout">
+          <div className="creation-career"><strong>250</strong><span>Barcelona assists reached</span><p>23 June 2020 · one day before his 33rd birthday</p></div>
+          <div className="creation-season">
+            <div><strong>25</strong><span>league goals</span></div>
+            <b>+</b>
+            <div><strong>21</strong><span>league assists · record</span></div>
+            <b>=</b>
+            <div className="creation-total"><strong>46</strong><span>direct contributions</span></div>
+          </div>
+        </div>
+        <div className="creation-rate"><strong>46 ÷ 33 = 1.39</strong><p>goals plus assists per La Liga appearance in 2019/20</p><span>The 21 assists surpassed Xavi’s previous single-season mark of 20.</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

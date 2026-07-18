@@ -87,3 +87,9 @@ test("Argentina's 2022 calendar peak reconciles", () => {
   assert.equal(18 - 12, 6);
   assert.equal(((18 / 12 - 1) * 100).toFixed(0), "50");
 });
+
+test("the 2019/20 league contribution rate reconciles", () => {
+  assert.equal(25 + 21, 46);
+  assert.equal((46 / 33).toFixed(2), "1.39");
+  assert.equal(21 - 20, 1);
+});

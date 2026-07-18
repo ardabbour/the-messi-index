@@ -170,3 +170,11 @@ test("the race to 60 Champions League goals reconciles", () => {
   assert.equal((60 / 80).toFixed(2), "0.75");
   assert.equal((80 / 60).toFixed(2), "1.33");
 });
+
+test("the seven-edition Copa America appearance record reconciles", () => {
+  const appearances = [6, 4, 6, 5, 6, 7, 5];
+  assert.equal(appearances.reduce((sum, value) => sum + value, 0), 39);
+  assert.equal(39 - 34, 5);
+  assert.equal(2024 - 1953, 71);
+  assert.equal(appearances.length, 7);
+});

@@ -73,6 +73,10 @@ const sources = {
     "https://www.fifa.com/en/tournaments/olympicgames/paris2024/articles/world-champions-olympic-gold",
   championsLeagueSixty:
     "https://www.uefa.com/uefachampionsleague/news/026f-13bff87268a6-5932644cbba5-1000--kylian-mbappe-in-the-champions-league-records-stats-who-he/",
+  copaAppearances:
+    "https://copaamerica.com/en/news/copa-america-2024-numbers-champion-top-scorer",
+  copaFinals:
+    "https://copaamerica.com/en/news/records-broken-feats-copa-america-2024-messi-james-colombia-canada",
 };
 
 const wcCareer = worldCup2026.career;
@@ -272,6 +276,15 @@ const championsLeagueSixty = [
   { name: "Robert Lewandowski", matches: 85 },
   { name: "Kylian Mbappé", matches: 89 },
   { name: "Cristiano Ronaldo", matches: 98 },
+];
+const copaAmericaEditions = [
+  { year: "2007", matches: 6, finish: "Final" },
+  { year: "2011", matches: 4, finish: "Quarter-final" },
+  { year: "2015", matches: 6, finish: "Final" },
+  { year: "2016", matches: 5, finish: "Final" },
+  { year: "2019", matches: 6, finish: "Third" },
+  { year: "2021", matches: 7, finish: "Champion" },
+  { year: "2024", matches: 5, finish: "Champion" },
 ];
 const editionPlateCount = edition.plateCount;
 
@@ -1283,6 +1296,29 @@ export default function Home() {
           ))}
         </div>
         <div className="sixty-goal-proof"><strong>60 ÷ 80 = 0.75</strong><p>Three Champions League goals every four matches to the milestone.</p><span>Current through UEFA’s 1 June 2026 update</span></div>
+      </section>
+
+      <section className="plate copa-career-plate" aria-labelledby="copa-career-title">
+        <div className="plate-heading inverse">
+          <span>Plate 43 · continental longevity</span>
+          <h2 id="copa-career-title">The 71-year record fell. Then he added four more.</h2>
+          <a href={sources.copaAppearances} target="_blank" rel="noreferrer">CONMEBOL Copa América ↗</a>
+        </div>
+        <div className="copa-record-race" role="img" aria-label="Copa America appearance record: Lionel Messi 39 matches, five more than Sergio Livingstone's previous record of 34">
+          <div className="copa-record-lead"><span>Lionel Messi</span><i><b style={{ width: "100%" }} /></i><strong>39</strong></div>
+          <div><span>Sergio Livingstone</span><i><b style={{ width: `${(34 / 39) * 100}%` }} /></i><strong>34</strong></div>
+          <p><strong>+5</strong><span>beyond a benchmark set in 1953</span></p>
+        </div>
+        <div className="copa-edition-run" role="img" aria-label="Messi's 39 Copa America matches by edition: six in 2007, four in 2011, six in 2015, five in 2016, six in 2019, seven in 2021 and five in 2024. He reached five finals and won the last two.">
+          {copaAmericaEditions.map((edition) => (
+            <div className={edition.finish === "Champion" ? "champion" : ""} key={edition.year}>
+              <span>{edition.year}</span>
+              <strong>{edition.matches}</strong>
+              <p>{edition.finish}</p>
+            </div>
+          ))}
+        </div>
+        <div className="copa-career-proof"><strong>6 + 4 + 6 + 5 + 6 + 7 + 5 = 39</strong><p>Seven editions. Five finals. Champion in the last two.</p><span><a href={sources.copaFinals} target="_blank" rel="noreferrer">Finals record verified by CONMEBOL ↗</a></span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

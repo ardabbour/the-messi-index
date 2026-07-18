@@ -770,6 +770,30 @@ h1 em { color: var(--blue); font-style: normal; }
 .sixty-goal-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem) var(--font-serif), serif; }
 .sixty-goal-proof span { color: #aaa99e; font: 600 .61rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
 
+.copa-career-plate { background: var(--ink); color: var(--paper); }
+.copa-record-race { min-height: 390px; padding: 42px 34px; border-bottom: 1px solid #67685f; display: grid; gap: 22px; align-content: center; }
+.copa-record-race > div { display: grid; grid-template-columns: minmax(150px, 230px) 1fr 80px; gap: 18px; align-items: center; }
+.copa-record-race span { color: #aaa99e; font: 600 .64rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.copa-record-race i { height: 48px; border: 1px solid #777970; display: block; }
+.copa-record-race i b { height: 100%; background: #777970; display: block; }
+.copa-record-race .copa-record-lead i b { background: #75cfff; }
+.copa-record-race > div > strong { font: 400 clamp(3.5rem, 7vw, 6.5rem)/.7 var(--font-display), sans-serif; }
+.copa-record-race .copa-record-lead > strong { color: #75cfff; }
+.copa-record-race > p { margin: 12px 0 0; padding-top: 26px; border-top: 1px solid #67685f; display: flex; align-items: baseline; gap: 18px; }
+.copa-record-race > p strong { color: #75cfff; font: 400 clamp(3rem, 6vw, 5.5rem)/.8 var(--font-display), sans-serif; }
+.copa-edition-run { padding: 34px; border-bottom: 1px solid #67685f; display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.copa-edition-run > div { min-height: 230px; padding: 15px; border: 1px solid #777970; display: flex; flex-direction: column; }
+.copa-edition-run .champion { background: #75cfff; color: var(--ink); border-color: #75cfff; }
+.copa-edition-run span, .copa-edition-run p { margin: 0; font: 600 .58rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.copa-edition-run strong { margin: auto 0 18px; font: 400 clamp(4rem, 7vw, 7rem)/.7 var(--font-display), sans-serif; }
+.copa-edition-run p { color: #aaa99e; }
+.copa-edition-run .champion p { color: var(--ink); }
+.copa-career-proof { min-height: 135px; padding: 25px 34px; display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
+.copa-career-proof strong { color: #75cfff; font: 400 clamp(1.5rem, 2.8vw, 2.7rem) var(--font-display), sans-serif; }
+.copa-career-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem) var(--font-serif), serif; }
+.copa-career-proof span { color: #aaa99e; font: 600 .61rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.copa-career-proof a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
 .ledger-section { border-bottom: 2px solid var(--ink); }
 .ledger-header { padding: 38px 34px; border-bottom: 2px solid var(--ink); display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .ledger-header .kicker { margin-bottom: 12px; }
@@ -995,6 +1019,9 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .sixty-goal-lead { padding: 30px 20px; grid-template-columns: 1fr; gap: 30px; }
   .sixty-goal-race { padding: 24px 20px; }
   .sixty-goal-proof { padding: 24px 20px; grid-template-columns: 1fr; }
+  .copa-record-race { padding: 36px 20px; }
+  .copa-edition-run { padding: 24px 20px; grid-template-columns: repeat(4, 1fr); }
+  .copa-career-proof { padding: 24px 20px; grid-template-columns: 1fr; }
   .ledger-header { padding: 30px 20px; align-items: flex-start; flex-direction: column; }
   .filters { justify-content: flex-start; }
   .ledger-row { padding: 20px; grid-template-columns: 90px 1fr; gap: 18px; }
@@ -1127,6 +1154,11 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .argentina-honours-run > div { min-height: 190px; }
   .sixty-goal-race > div { grid-template-columns: 105px 1fr 36px; gap: 8px; }
   .sixty-goal-race em { grid-column: 2 / -1; }
+  .copa-record-race > div { grid-template-columns: 110px 1fr 44px; gap: 8px; }
+  .copa-record-race i { height: 36px; }
+  .copa-record-race > p { align-items: flex-start; flex-direction: column; }
+  .copa-edition-run { grid-template-columns: 1fr 1fr; }
+  .copa-edition-run > div { min-height: 180px; }
   .decade-summary { grid-template-columns: 1fr; }
   .decade-summary p { grid-column: auto; grid-row: auto; }
   .decade-chart { height: 350px; }

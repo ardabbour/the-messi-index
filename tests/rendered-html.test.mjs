@@ -96,6 +96,8 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /Argentina team trophies/);
   assert.match(html, /Sixty goals\. Eighty matches\. Two records\./);
   assert.match(html, /Current through UEFA’s 1 June 2026 update/);
+  assert.match(html, /The 71-year record fell\. Then he added four more\./);
+  assert.match(html, /Five finals\. Champion in the last two\./);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

@@ -49,6 +49,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 40 | Won the 2005 U-20 World Cup, Golden Ball and Golden Boot with six goals; five came while scoring in all four knockout rounds | FIFA | Historical / stable |
 | 41 | Six Argentina team trophies across five competitions from the 2005 U-20 World Cup through the 2024 Copa América; one of 15 Olympic-and-World-Cup double winners | FIFA | Historical / stable |
 | 42 | Reached 60 Champions League goals in a record 80 matches and at a record-youngest 26 years 86 days; Lewandowski needed 85, Mbappé 89 and Ronaldo 98 matches | UEFA | Current record; UEFA update 1 Jun 2026 |
+| 43 | Copa América record of 39 appearances across seven editions, five beyond Sergio Livingstone’s prior 34; record five finals in the current final format | CONMEBOL / Opta | Historical / stable |
 
 ## Live-data rule
 

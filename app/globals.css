@@ -945,6 +945,19 @@ h1 em { color: var(--blue); font-style: normal; }
 .european-century-key strong { font: 400 clamp(3.5rem, 6vw, 6rem)/.7 var(--font-display), sans-serif; }
 .european-century-key span { font: 600 .65rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
 .european-century-key p { grid-column: 2 / -1; margin: 12px 0 0; color: #625e54; font: 500 .68rem/1.45 var(--font-mono), monospace; text-transform: uppercase; }
+.european-century-progression { min-height: 440px; border-top: 2px solid var(--ink); display: grid; grid-template-columns: 4fr 8fr; }
+.european-century-progression-intro { padding: 34px; border-right: 2px solid var(--ink); display: flex; flex-direction: column; justify-content: center; }
+.european-century-progression-intro > span { font: 600 .68rem/1.4 var(--font-mono), monospace; text-transform: uppercase; letter-spacing: .08em; }
+.european-century-progression-intro > strong { margin: 25px 0 18px; color: var(--blue); font: 400 clamp(2.8rem, 5.5vw, 5.2rem)/.9 var(--font-display), sans-serif; text-transform: uppercase; letter-spacing: -.04em; }
+.european-century-progression-intro > p { margin: 0; font: italic 500 clamp(1rem, 1.7vw, 1.3rem)/1.4 var(--font-serif), serif; }
+.european-century-progression-bars { padding: 34px; display: flex; flex-direction: column; justify-content: center; }
+.european-century-progression-bars > div { min-height: 62px; display: grid; grid-template-columns: 110px 1fr 45px 42px; gap: 12px; align-items: center; }
+.european-century-progression-bars span, .european-century-progression-bars em { font: 600 .62rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.european-century-progression-bars em { color: #625e54; font-style: normal; }
+.european-century-progression-bars i { height: 25px; border: 1px solid var(--ink); }
+.european-century-progression-bars i b { display: block; height: 100%; background: var(--blue); }
+.european-century-progression-bars .runway i b { background: var(--red); }
+.european-century-progression-bars strong { font: 400 1.8rem var(--font-display), sans-serif; text-align: right; }
 .european-century-proof { min-height: 140px; padding: 25px 34px; border-top: 2px solid var(--ink); display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
 .european-century-proof strong { color: var(--blue); font: 400 clamp(2.5rem, 5vw, 5rem)/.8 var(--font-display), sans-serif; }
 .european-century-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem)/1.35 var(--font-serif), serif; }
@@ -1205,6 +1218,9 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .world-golden-ball-proof { padding: 24px 20px; grid-template-columns: 1fr; }
   .european-century-intro { padding: 30px 20px; grid-template-columns: 1fr; gap: 30px; }
   .european-century-key > div { padding: 26px 20px; }
+  .european-century-progression { grid-template-columns: 1fr; }
+  .european-century-progression-intro { min-height: 300px; padding: 30px 20px; border-right: 0; border-bottom: 2px solid var(--ink); }
+  .european-century-progression-bars { padding: 30px 20px; }
   .european-century-proof { padding: 24px 20px; grid-template-columns: 1fr; }
   .ledger-header { padding: 30px 20px; align-items: flex-start; flex-direction: column; }
   .filters { justify-content: flex-start; }
@@ -1360,6 +1376,8 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .european-century-key { grid-template-columns: 1fr; }
   .european-century-key > div { min-height: 170px; border-right: 0; border-bottom: 1px solid var(--ink); }
   .european-century-key > div:last-child { border-bottom: 0; }
+  .european-century-progression-bars > div { grid-template-columns: 90px 1fr 34px; gap: 8px; }
+  .european-century-progression-bars em { display: none; }
   .decade-summary { grid-template-columns: 1fr; }
   .decade-summary p { grid-column: auto; grid-row: auto; }
   .decade-chart { height: 350px; }

@@ -223,4 +223,8 @@ test("the first European century's finishing anatomy reconciles", () => {
   assert.equal(16 + 4, 20);
   assert.equal((20 / 100) * 100, 20);
   assert.equal((100 / 122).toFixed(2), "0.82");
+  const progressionGames = [42, 21, 18, 23, 18];
+  assert.equal(progressionGames.reduce((sum, games) => sum + games, 0), 122);
+  assert.equal(progressionGames.slice(1).reduce((sum, games) => sum + games, 0), 80);
+  assert.equal((80 / 80).toFixed(2), "1.00");
 });

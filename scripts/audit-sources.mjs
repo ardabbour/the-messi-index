@@ -17,7 +17,7 @@ const claimFingerprints = new Map([
   ],
   [
     "https://www.uefa.com/uefachampionsleague/news/023e-0e97dfba07ee-e1db23662ae5-1000--how-messi-s-100-european-goals-were-scored/",
-    ["Right foot", "Left foot", "Header", "100 goals", "122 games"],
+    ["Right foot", "Left foot", "Header", "100 goals", "122 games", "1–20", "42 games", "81–100"],
   ],
 ]);
 

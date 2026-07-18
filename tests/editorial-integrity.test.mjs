@@ -50,7 +50,7 @@ test("the live source audit restricts redirects to approved evidence owners", as
   assert.match(auditScript, /\^text\\\/html\\b\/i/);
   assert.match(auditScript, /claimFingerprints/);
   assert.match(auditScript, /"1,482", "Iker Muniain", "567", "487", "Cristiano Ronaldo", "365"/);
-  assert.match(auditScript, /"Right foot", "Left foot", "Header", "100 goals", "122 games"/);
+  assert.match(auditScript, /"Right foot", "Left foot", "Header", "100 goals", "122 games", "1–20", "42 games", "81–100"/);
   assert.match(auditScript, /missing claim fingerprints/);
 });
 
@@ -211,5 +211,7 @@ test("the European century plate exposes finishing-body-part composition", async
   assert.match(page, /80%/);
   assert.match(page, /16%/);
   assert.match(page, /4%/);
+  assert.match(page, /europeanCenturyProgression/);
+  assert.match(page, /The next 80 needed exactly 80/);
   assert.match(page, /sources\.europeanCentury/);
 });

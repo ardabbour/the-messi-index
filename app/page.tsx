@@ -289,6 +289,13 @@ const decadeLeagueContributions = [
   { name: "Lionel Messi", goals: 350, assists: 137, total: 487 },
   { name: "Cristiano Ronaldo", goals: 285, assists: 80, total: 365 },
 ];
+const europeanCenturyProgression = [
+  { goals: "1–20", games: 42 },
+  { goals: "21–40", games: 21 },
+  { goals: "41–60", games: 18 },
+  { goals: "61–80", games: 23 },
+  { goals: "81–100", games: 18 },
+];
 
 const barcaBreakdown = [
   { name: "La Liga", value: 474 },
@@ -1607,6 +1614,19 @@ export default function Home() {
           <div><i className="left" /><strong>80</strong><span>left foot</span><p>Five direct free kicks and nine penalties included.</p></div>
           <div><i className="right" /><strong>16</strong><span>right foot</span><p>The supposedly weaker side still supplied one goal in six.</p></div>
           <div><i className="head" /><strong>4</strong><span>headers</span><p>Four more ways around the dominant-foot expectation.</p></div>
+        </div>
+        <div className="european-century-progression" role="img" aria-label="Appearances required for each 20-goal block of Messi's first European century: goals 1 to 20 took 42 games, 21 to 40 took 21, 41 to 60 took 18, 61 to 80 took 23, and 81 to 100 took 18">
+          <div className="european-century-progression-intro"><span>Goal progression</span><strong>The next 80 needed exactly 80.</strong><p>After the 42-game runway to goal 20, the remaining four blocks compressed to one goal per appearance in aggregate.</p></div>
+          <div className="european-century-progression-bars">
+            {europeanCenturyProgression.map((block, index) => (
+              <div className={index === 0 ? "runway" : ""} key={block.goals}>
+                <span>Goals {block.goals}</span>
+                <i><b style={{ width: `${(block.games / 42) * 100}%` }} /></i>
+                <strong>{block.games}</strong>
+                <em>games</em>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="european-century-proof"><strong>16 + 4 = 20</strong><p>One fifth of the European century arrived without the left foot.</p><span>100 goals in 122 games · UEFA</span></div>
       </section>

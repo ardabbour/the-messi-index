@@ -204,4 +204,5 @@ test("the decade dribbling chasm reconciles", () => {
   assert.equal(1482 - 567, 915);
   assert.equal((1482 / 567).toFixed(2), "2.61");
   assert.equal((915 / 567 * 100).toFixed(1), "161.4");
+  assert.equal((1482 / 330).toFixed(2), "4.49");
 });

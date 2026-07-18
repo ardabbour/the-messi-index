@@ -27,7 +27,7 @@ npm run lint
 npm run audit:sources
 ```
 
-`npm test` creates the production build, checks the server-rendered page for the finished product copy and source labels, and reconciles the arithmetic behind the headline comparisons. `npm run audit:sources` verifies that every linked statistical source is reachable, returns HTML and remains on an approved evidence-owner domain after redirects.
+`npm test` creates the production build, checks the server-rendered page for the finished product copy and source labels, and reconciles the arithmetic behind the headline comparisons. `npm run audit:sources` verifies that every linked statistical source is reachable, returns HTML and remains on an approved evidence-owner domain after redirects; selected high-risk comparisons also require claim-level text fingerprints.
 
 ## Counting policy
 

@@ -10,6 +10,12 @@ const approvedHosts = [
   "mlssoccer.com",
   "uefa.com",
 ];
+const claimFingerprints = new Map([
+  [
+    "https://www.fcbarcelona.com/en/football/first-team/actualites/1655195",
+    ["1,482", "Iker Muniain", "567"],
+  ],
+]);
 
 if (urls.length === 0) {
   throw new Error("No source URLs found in app/page.tsx");
@@ -28,11 +34,16 @@ async function check(url) {
     );
     const contentType = response.headers.get("content-type") ?? "";
     const htmlDocument = /^text\/html\b/i.test(contentType);
-    await response.body?.cancel();
+    const expectedFingerprints = claimFingerprints.get(url) ?? [];
+    const document = expectedFingerprints.length > 0 && response.ok && htmlDocument
+      ? await response.text()
+      : "";
+    const missingFingerprints = expectedFingerprints.filter((fingerprint) => !document.includes(fingerprint));
+    if (expectedFingerprints.length === 0) await response.body?.cancel();
     return {
       url,
       status: response.status,
-      ok: response.ok && approvedHost && htmlDocument,
+      ok: response.ok && approvedHost && htmlDocument && missingFingerprints.length === 0,
       finalHost: finalUrl.hostname,
       contentType,
       reason: !response.ok
@@ -41,6 +52,8 @@ async function check(url) {
           ? "redirected outside the approved source owners"
           : !htmlDocument
             ? "did not return an HTML document"
+            : missingFingerprints.length > 0
+              ? `missing claim fingerprints: ${missingFingerprints.join(", ")}`
             : "",
     };
   } catch (error) {
@@ -56,7 +69,7 @@ for (const result of results) {
 }
 
 const failures = results.filter((result) => !result.ok);
-console.log(`\n${results.length - failures.length}/${results.length} source links reachable`);
+console.log(`\n${results.length - failures.length}/${results.length} source links verified`);
 
 if (failures.length > 0) {
   process.exitCode = 1;

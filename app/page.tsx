@@ -1502,7 +1502,7 @@ export default function Home() {
           <div className="dribble-lead">
             <span>La Liga · Barça’s ten-season analysis</span>
             <strong>1,482</strong>
-            <p>recorded dribbles by Lionel Messi</p>
+            <p>recorded dribbles by Lionel Messi across 330 appearances</p>
           </div>
           <div className="dribble-race" role="img" aria-label="La Liga dribbles in FC Barcelona's decade analysis: Lionel Messi 1,482 and second-place Iker Muniain 567, a gap of 915">
             {decadeDribbleLeaders.map((player) => (
@@ -1515,7 +1515,7 @@ export default function Home() {
             <div className="dribble-margin"><strong>+915</strong><p>Messi’s advantage was 161.4% of the runner-up’s entire total.</p></div>
           </div>
         </div>
-        <div className="dribble-proof"><strong>1,482 − 567 = 915</strong><p>Messi recorded 2.61 dribbles for every one by second place.</p><span>Historical snapshot published 17 April 2020</span></div>
+        <div className="dribble-proof"><strong>1,482 ÷ 330 = 4.49</strong><p>Recorded dribbles per appearance—and 2.61 for every one by second place.</p><span>Historical snapshot published 17 April 2020</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

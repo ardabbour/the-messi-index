@@ -48,6 +48,9 @@ test("the live source audit restricts redirects to approved evidence owners", as
     .forEach((host) => assert.match(auditScript, new RegExp(host.replaceAll(".", "\\."))));
   assert.match(auditScript, /finalUrl\.hostname\.endsWith/);
   assert.match(auditScript, /\^text\\\/html\\b\/i/);
+  assert.match(auditScript, /claimFingerprints/);
+  assert.match(auditScript, /"1,482", "Iker Muniain", "567"/);
+  assert.match(auditScript, /missing claim fingerprints/);
 });
 
 test("live World Cup claims retain their audit cutoff", async () => {

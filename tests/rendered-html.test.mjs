@@ -6,6 +6,9 @@ const projectRoot = new URL("../", import.meta.url);
 const worldCup2026 = JSON.parse(
   await readFile(new URL("../data/live-world-cup-2026.json", import.meta.url), "utf8"),
 );
+const edition = JSON.parse(
+  await readFile(new URL("../data/edition.json", import.meta.url), "utf8"),
+);
 
 async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -27,9 +30,9 @@ test("server-renders the Messi statistical almanac", async () => {
   const html = await response.text();
   assert.match(html, /<title>The Messi Index — A statistical audit of the impossible<\/title>/i);
   assert.match(html, /The record book ran out of/);
-  assert.match(html, /Vol\. 03/);
-  assert.match(html, /Issue 003/);
-  assert.match(html, /40<!-- --> plates, audited/);
+  assert.match(html, new RegExp(`Vol\\. (?:<!-- -->)?${edition.volume}`));
+  assert.match(html, new RegExp(`Issue (?:<!-- -->)?${edition.issue}`));
+  assert.match(html, new RegExp(`${edition.plateCount}(?:<!-- -->)? plates, audited`));
   assert.match(html, /href="#awards-title"/);
   assert.match(html, /href="#world-xi-title"/);
   assert.match(html, /The calendar-year anomaly/);

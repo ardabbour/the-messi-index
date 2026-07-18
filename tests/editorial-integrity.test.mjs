@@ -5,21 +5,23 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("edition plate counts agree across product and documentation", async () => {
-  const [page, readme, ledger] = await Promise.all([
+  const [page, readme, ledger, editionText] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("README.md", root), "utf8"),
     readFile(new URL("docs/source-ledger.md", root), "utf8"),
+    readFile(new URL("data/edition.json", root), "utf8"),
   ]);
+  const edition = JSON.parse(editionText);
 
   const renderedPlateCount = page.match(/className="plate-heading(?:\s|\")/g)?.length ?? 0;
-  const interfacePlateCount = Number(page.match(/const editionPlateCount = (\d+)/)?.[1]);
   const advertisedPlateCount = Number(readme.match(/contains (\d+) statistical plates/)?.[1]);
   const ledgerPlateCount = ledger.match(/^\| (?:\d|05A)/gm)?.length ?? 0;
+  const ledgerAuditDate = ledger.match(/^Last audited: (.+)\.$/m)?.[1];
 
-  assert.equal(renderedPlateCount, 40);
-  assert.equal(interfacePlateCount, renderedPlateCount);
+  assert.equal(renderedPlateCount, edition.plateCount);
   assert.equal(advertisedPlateCount, renderedPlateCount);
   assert.equal(ledgerPlateCount, renderedPlateCount);
+  assert.equal(ledgerAuditDate, edition.publicationDate);
 });
 
 test("citation inventory uses unique secure URLs", async () => {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import edition from "../data/edition.json";
 import worldCup2026 from "../data/live-world-cup-2026.json";
 
 type Dossier = "all" | "club" | "argentina" | "awards";
@@ -237,7 +238,7 @@ const worldCupScoringStages = [
 ];
 
 const worldXiYears = Array.from({ length: 17 }, (_, index) => 2007 + index);
-const editionPlateCount = 40;
+const editionPlateCount = edition.plateCount;
 
 const filters: { id: Dossier; label: string }[] = [
   { id: "all", label: "Everything" },
@@ -261,8 +262,8 @@ export default function Home() {
           The Messi Index
         </a>
         <div className="masthead-meta">
-          <span>Vol. 03</span>
-          <span>18 July 2026</span>
+          <span>Vol. {edition.volume}</span>
+          <span>{edition.publicationDate}</span>
           <span>{editionPlateCount} plates, audited</span>
         </div>
       </header>
@@ -1245,7 +1246,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <span>The Messi Index · Issue 003</span>
+        <span>The Messi Index · Issue {edition.issue}</span>
         <p>The whole point is that this isn&apos;t normal.</p>
         <a href="#top">Back to top ↑</a>
       </footer>

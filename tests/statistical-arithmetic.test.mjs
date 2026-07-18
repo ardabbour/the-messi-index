@@ -111,3 +111,11 @@ test("six contributions in one MLS half reconcile", () => {
   assert.equal(1 + 5, 6);
   assert.equal((45 / 6).toFixed(1), "7.5");
 });
+
+test("back-to-back MLS MVP seasons reconcile", () => {
+  assert.equal(20 + 29, 49);
+  assert.equal(16 + 19, 35);
+  assert.equal(36 + 48, 84);
+  assert.equal(19 + 28, 47);
+  assert.equal((84 / 47).toFixed(2), "1.79");
+});

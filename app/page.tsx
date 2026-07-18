@@ -39,6 +39,8 @@ const sources = {
     "https://www.fcbarcelona.com/en/news/1732775/leo-messi-wins-his-seventh-pichichi-a-laliga-record/amp",
   mlsMvp:
     "https://www.mlssoccer.com/news/inter-miami-cf-forward-lionel-messi-named-2025-landon-donovan-mls-most-valuable-player-for-second-consecutive-season",
+  mlsMvp2024:
+    "https://www.mlssoccer.com/news/inter-miami-cf-forward-lionel-messi-named-2024-landon-donovan-mls-most-valuable-player",
   mlsSix:
     "https://www.mlssoccer.com/news/six-goal-contributions-lionel-messi-sets-two-more-mls-records-in-matchday-12",
   awardGap:
@@ -1005,6 +1007,22 @@ export default function Home() {
           ))}
         </div>
         <div className="six-in-half-rate"><strong>45 ÷ 6 = 7.5 minutes</strong><p>One direct contribution every 7.5 minutes of the second half.</p><span>Inter Miami 6–2 New York Red Bulls · 4 May 2024</span></div>
+      </section>
+
+      <section className="plate mls-two-year-plate" aria-labelledby="mls-two-year-title">
+        <div className="plate-heading">
+          <span>Plate 34</span>
+          <h2 id="mls-two-year-title">Two MVP seasons. Eighty-four contributions.</h2>
+          <a href={sources.mlsMvp} target="_blank" rel="noreferrer">Major League Soccer ↗</a>
+        </div>
+        <div className="mls-two-year-seasons">
+          <div><span>2024 regular season</span><strong>20G + 16A</strong><b>36</b><small>contributions · 19 matches</small><a href={sources.mlsMvp2024} target="_blank" rel="noreferrer">Season source ↗</a></div>
+          <div><span>2025 regular season</span><strong>29G + 19A</strong><b>48</b><small>contributions · 28 matches</small><a href={sources.mlsMvp} target="_blank" rel="noreferrer">Season source ↗</a></div>
+        </div>
+        <div className="mls-two-year-total">
+          <div><strong>49</strong><span>goals</span></div><b>+</b><div><strong>35</strong><span>assists</span></div><b>=</b><div className="mls-two-year-lead"><strong>84</strong><span>contributions</span></div>
+        </div>
+        <div className="mls-two-year-rate"><strong>84 ÷ 47 = 1.79</strong><p>goal contributions per regular-season appearance across the two MVP campaigns</p><span>First player in MLS history to win the award back to back</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

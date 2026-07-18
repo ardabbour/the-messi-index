@@ -40,6 +40,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 31 | Played six World Cups, assisted in six and scored in five | FIFA | Live; dated 15 Jul 2026 |
 | 32 | World Cup record of scoring in nine consecutive matches; 13 goals derived | UEFA, FIFA | Live; dated 15 Jul 2026 |
 | 33 | MLS single-match records of five assists and six contributions, all in one half | Major League Soccer | Historical / stable |
+| 34 | 84 regular-season contributions across back-to-back MLS MVP campaigns | Major League Soccer | Historical / stable |
 
 ## Live-data rule
 

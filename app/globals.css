@@ -488,6 +488,21 @@ h1 em { color: var(--blue); font-style: normal; }
 .double-38-proof strong { font: 400 clamp(1.6rem, 3vw, 2.8rem) var(--font-display), sans-serif; text-transform: uppercase; }
 .double-38-proof span { margin-top: 12px; font: 600 .64rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
 
+.argentina-year-layout { min-height: 460px; display: grid; grid-template-columns: 1fr 1.7fr; }
+.argentina-year-total { padding: 32px; border-right: 2px solid var(--ink); background: #d8ff58; display: flex; flex-direction: column; justify-content: flex-end; }
+.argentina-year-total strong { font: 400 clamp(10rem, 21vw, 20rem)/.68 var(--font-display), sans-serif; letter-spacing: -.1em; }
+.argentina-year-total span { margin-top: 34px; font: 600 .72rem var(--font-mono), monospace; text-transform: uppercase; }
+.argentina-year-total p { margin: 8px 0 0; font: italic 500 1rem var(--font-serif), serif; }
+.argentina-year-study { display: grid; grid-template-columns: repeat(3, 1fr); }
+.argentina-year-study > div { padding: 28px; border-right: 1px solid var(--ink); display: flex; flex-direction: column; justify-content: flex-end; }
+.argentina-year-study > div:nth-child(3) { border-right: 0; }
+.argentina-year-study > div strong { color: var(--blue); font: 400 clamp(3.5rem, 7vw, 6.5rem)/.75 var(--font-display), sans-serif; }
+.argentina-year-study > div span { margin-top: 24px; font: 600 .65rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.argentina-year-study > p { grid-column: 1 / -1; margin: 0; padding: 28px; border-top: 1px solid var(--ink); font: italic 500 clamp(1.1rem, 2vw, 1.7rem)/1.35 var(--font-serif), serif; }
+.argentina-year-dots { padding: 28px 34px; border-top: 2px solid var(--ink); display: grid; grid-template-columns: repeat(18, 1fr); gap: 7px; }
+.argentina-year-dots span { min-height: 50px; display: grid; place-items: center; background: var(--ink); color: var(--paper); font: 600 .6rem var(--font-mono), monospace; }
+.argentina-year-dots span.margin { background: var(--blue); color: white; }
+
 .ledger-section { border-bottom: 2px solid var(--ink); }
 .ledger-header { padding: 38px 34px; border-bottom: 2px solid var(--ink); display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .ledger-header .kicker { margin-bottom: 12px; }
@@ -653,6 +668,9 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .double-38-layout > div { min-height: 330px; }
   .double-38-layout > b { display: none; }
   .double-38-proof p { padding: 24px 20px; }
+  .argentina-year-layout { grid-template-columns: 1fr; }
+  .argentina-year-total { min-height: 350px; border-right: 0; border-bottom: 2px solid var(--ink); }
+  .argentina-year-dots { padding: 24px 20px; grid-template-columns: repeat(9, 1fr); }
   .ledger-header { padding: 30px 20px; align-items: flex-start; flex-direction: column; }
   .filters { justify-content: flex-start; }
   .ledger-row { padding: 20px; grid-template-columns: 90px 1fr; gap: 18px; }
@@ -730,6 +748,10 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .clasico-cells { grid-template-columns: repeat(7, 1fr); gap: 5px; }
   .double-38-proof { grid-template-columns: 1fr; }
   .double-38-proof p { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.65); }
+  .argentina-year-study { grid-template-columns: 1fr; }
+  .argentina-year-study > div { min-height: 170px; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .argentina-year-study > p { grid-column: auto; }
+  .argentina-year-dots { grid-template-columns: repeat(6, 1fr); gap: 5px; }
   .decade-summary { grid-template-columns: 1fr; }
   .decade-summary p { grid-column: auto; grid-row: auto; }
   .decade-chart { height: 350px; }

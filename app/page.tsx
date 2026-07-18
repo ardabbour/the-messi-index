@@ -859,6 +859,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="plate argentina-year-plate" aria-labelledby="argentina-year-title">
+        <div className="plate-heading">
+          <span>Plate 27</span>
+          <h2 id="argentina-year-title">His Argentina peak arrived in the World Cup year.</h2>
+          <a href={sources.awardGap} target="_blank" rel="noreferrer">FIFA ↗</a>
+        </div>
+        <div className="argentina-year-layout">
+          <div className="argentina-year-total"><strong>18</strong><span>Argentina goals · 2022</span><p>national-team calendar-year record</p></div>
+          <div className="argentina-year-study">
+            <div><strong>14</strong><span>appearances</span></div>
+            <div><strong>1.29</strong><span>goals per appearance</span></div>
+            <div><strong>+6</strong><span>above the previous 12-goal tier</span></div>
+            <p>The next-highest calendar total was 12—set by Messi himself in 2012 and Gabriel Batistuta in 1998. Eighteen is 50% higher.</p>
+          </div>
+        </div>
+        <div className="argentina-year-dots" role="img" aria-label="Eighteen goals for Argentina in 2022 compared with the prior calendar-year tier of twelve goals">
+          {Array.from({ length: 18 }, (_, index) => <span className={index < 12 ? "baseline" : "margin"} key={index}>{index + 1}</span>)}
+        </div>
+      </section>
+
       <section className="ledger-section" aria-labelledby="ledger-title">
         <div className="ledger-header">
           <div><p className="kicker">Selected entries</p><h2 id="ledger-title">The ledger of implausibility</h2></div>

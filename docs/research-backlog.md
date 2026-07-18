@@ -20,12 +20,6 @@ The 2026 FIFA World Cup final is scheduled after the current 15 July audit cutof
 - Candidate visual: goals and assists as equal-width contribution lanes, with an explicit provider-definition note.
 - Primary source: FIFA’s “Consistency personified” record review.
 
-### Argentina calendar peak
-
-- 18 international goals in 14 matches in 2022.
-- Candidate derived rate: 1.29 goals per appearance.
-- Primary source: FIFA international record dossier.
-
 ## Editorial gates
 
 - Avoid mixing official and friendly club matches.

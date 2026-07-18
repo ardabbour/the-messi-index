@@ -81,3 +81,9 @@ test("El Clásico goal composition reconciles", () => {
 test("La Liga opponent breadth margin reconciles", () => {
   assert.equal(38 - 35, 3);
 });
+
+test("Argentina's 2022 calendar peak reconciles", () => {
+  assert.equal((18 / 14).toFixed(2), "1.29");
+  assert.equal(18 - 12, 6);
+  assert.equal(((18 / 12 - 1) * 100).toFixed(0), "50");
+});

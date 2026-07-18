@@ -33,6 +33,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 24 | 542 official Barcelona wins versus Xavi’s 476; appearance win rate derived | FC Barcelona | Historical / stable |
 | 25 | 26 El Clásico goals, reconciled across three competitions | FC Barcelona | Historical / stable |
 | 26 | Records for scoring against 38 La Liga opponents and 38 direct free kicks | FC Barcelona | Historical / stable |
+| 27 | Argentina calendar-year record of 18 goals in 14 appearances in 2022 | FIFA | Historical / stable |
 
 ## Live-data rule
 

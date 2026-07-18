@@ -98,6 +98,18 @@ test("visual plates and source links retain accessible, safe markup", async () =
   externalAnchors.forEach((tag) => assert.match(tag, /rel="noreferrer"/));
 });
 
+test("every evidence-index destination resolves to an in-page heading", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+  const indexMarkup = page.match(/<nav className="evidence-index"[\s\S]*?<\/nav>/)?.[0] ?? "";
+  const destinations = [...indexMarkup.matchAll(/href="#([^"]+)"/g)].map((match) => match[1]);
+  const ids = new Set([...page.matchAll(/id="([^"]+)"/g)].map((match) => match[1]));
+
+  assert.equal(destinations.length, 11);
+  destinations.forEach((destination) => {
+    assert.ok(ids.has(destination), `Missing evidence-index destination: #${destination}`);
+  });
+});
+
 test("public discovery routes share the canonical production origin", async () => {
   const [layout, robots, sitemap, readme] = await Promise.all([
     readFile(new URL("app/layout.tsx", root), "utf8"),

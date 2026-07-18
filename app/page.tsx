@@ -361,6 +361,9 @@ export default function Home() {
         <a href="#late-title"><b>10</b> Late career</a>
         <a href="#awards-title"><b>11</b> Awards</a>
         <a href="#world-xi-title"><b>39</b> Peer vote</a>
+        <a href="#argentina-honours-title"><b>41</b> Argentina honours</a>
+        <a href="#copa-career-title"><b>43</b> Copa América</a>
+        <a href="#qualifying-title"><b>44</b> Qualifying</a>
         <a href="#ledger-title"><b>∞</b> Full ledger</a>
       </nav>
 

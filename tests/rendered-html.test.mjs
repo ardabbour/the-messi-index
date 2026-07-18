@@ -35,6 +35,9 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, new RegExp(`${edition.plateCount}(?:<!-- -->)? plates, audited`));
   assert.match(html, /href="#awards-title"/);
   assert.match(html, /href="#world-xi-title"/);
+  assert.match(html, /href="#argentina-honours-title"/);
+  assert.match(html, /href="#copa-career-title"/);
+  assert.match(html, /href="#qualifying-title"/);
   assert.match(html, /The calendar-year anomaly/);
   assert.match(html, />91</);
   assert.match(html, /The World Cup, rewritten at 39/);

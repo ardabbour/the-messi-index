@@ -516,6 +516,8 @@ export default function Home() {
         <a href="#argentina-honours-title"><b>41</b> Argentina honours</a>
         <a href="#copa-career-title"><b>43</b> Copa América</a>
         <a href="#qualifying-title"><b>44</b> Qualifying</a>
+        <a href="#world-dribble-peak-title"><b>50</b> WC dribbling</a>
+        <a href="#ballot-title"><b>51</b> Vote share</a>
         <a href="#ledger-title"><b>∞</b> Full ledger</a>
       </nav>
 

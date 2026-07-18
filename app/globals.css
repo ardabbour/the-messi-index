@@ -58,8 +58,8 @@ h1 em { color: var(--blue); font-style: normal; }
 .evidence-index b { margin-bottom: 8px; color: var(--blue); font: 400 1.25rem var(--font-display), sans-serif; }
 @media (hover:hover) { .evidence-index > a:hover { background: var(--blue); color: white; } .evidence-index > a:hover b { color: white; } }
 @media (min-width: 901px) {
-  .evidence-index > a:nth-last-child(-n + 2) { grid-column: span 3; }
-  .evidence-index > a:last-child { border-right: 0; }
+  .evidence-index > a:nth-last-child(-n + 4) { grid-column: span 3; }
+  .evidence-index > a:nth-last-child(3), .evidence-index > a:last-child { border-right: 0; }
 }
 
 .plate { border-bottom: 2px solid var(--ink); }

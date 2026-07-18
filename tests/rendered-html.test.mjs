@@ -107,6 +107,10 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /Seven goals clear of second place/);
   assert.match(html, /Four hundred goals without taking the shot\./);
   assert.match(html, /Milestone reached 9 November 2025/);
+  assert.match(html, /official career assists reached/);
+  assert.match(html, /assists in one La Liga season/);
+  assert.match(html, /World Cup knockout assists/);
+  assert.match(html, /assists in one MLS match/);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

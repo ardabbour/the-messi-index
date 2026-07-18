@@ -120,6 +120,19 @@ test("the Argentina ledger exposes the newest international records", async () =
   assert.match(ledgerSource, /value: "36"/);
 });
 
+test("the creation dossier contains several independently sourced records", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+  const ledgerSource = page.match(/const ledger = \[[\s\S]*?\n\];/)?.[0] ?? "";
+  const creationEntries = ledgerSource.match(/group: "creation" as Dossier/g) ?? [];
+
+  assert.match(page, /\{ id: "creation", label: "Creation" \}/);
+  assert.equal(creationEntries.length, 4);
+  assert.match(ledgerSource, /label: "official career assists reached"/);
+  assert.match(ledgerSource, /label: "assists in one La Liga season"/);
+  assert.match(ledgerSource, /label: "World Cup knockout assists"/);
+  assert.match(ledgerSource, /label: "assists in one MLS match"/);
+});
+
 test("public discovery routes share the canonical production origin", async () => {
   const [layout, robots, sitemap, readme] = await Promise.all([
     readFile(new URL("app/layout.tsx", root), "utf8"),

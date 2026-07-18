@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import edition from "../data/edition.json";
 import worldCup2026 from "../data/live-world-cup-2026.json";
 
-type Dossier = "all" | "club" | "argentina" | "awards";
+type Dossier = "all" | "club" | "argentina" | "creation" | "awards";
 
 const sources = {
   calendar:
@@ -184,6 +184,34 @@ const ledger = [
     href: sources.mlsMvp,
   },
   {
+    value: "400",
+    label: "official career assists reached",
+    note: "A world-record first across Barcelona, Argentina, Paris Saint-Germain and Inter Miami.",
+    group: "creation" as Dossier,
+    href: sources.careerAssists400,
+  },
+  {
+    value: "21",
+    label: "assists in one La Liga season",
+    note: "The competition record, set while also winning the 2019/20 scoring title.",
+    group: "creation" as Dossier,
+    href: sources.assistMilestone,
+  },
+  {
+    value: "10",
+    label: "World Cup knockout assists",
+    note: "The tournament record through the 15 July 2026 checkpoint.",
+    group: "creation" as Dossier,
+    href: sources.worldCup,
+  },
+  {
+    value: "5",
+    label: "assists in one MLS match",
+    note: "A league record—and all five arrived in the second half.",
+    group: "creation" as Dossier,
+    href: sources.mlsSix,
+  },
+  {
     value: "22",
     label: "straight Argentina calendar years",
     note: "Capped every year from 2005 through 2026; scored in the last 21.",
@@ -329,6 +357,7 @@ const filters: { id: Dossier; label: string }[] = [
   { id: "all", label: "Everything" },
   { id: "club", label: "Club" },
   { id: "argentina", label: "Argentina" },
+  { id: "creation", label: "Creation" },
   { id: "awards", label: "Awards" },
 ];
 

@@ -191,6 +191,13 @@ const ledger = [
     href: sources.careerAssists400,
   },
   {
+    value: "115",
+    label: "goal contributions in calendar 2012",
+    note: "Ninety-one goals plus 24 assists: one direct contribution every 3.18 days.",
+    group: "creation" as Dossier,
+    href: sources.calendarSplit,
+  },
+  {
     value: "21",
     label: "assists in one La Liga season",
     note: "The competition record, set while also winning the 2019/20 scoring title.",

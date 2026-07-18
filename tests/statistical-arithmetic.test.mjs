@@ -10,6 +10,7 @@ const { career: wcCareer, tournament: wcTournament, comparators: wcComparators }
 test("calendar-year anomaly reconciles", () => {
   assert.equal(79 + 12, 91);
   assert.equal(91 + 24, 115);
+  assert.equal((366 / 115).toFixed(2), "3.18");
   assert.equal((91 / 69).toFixed(2), "1.32");
   assert.equal((366 / 91).toFixed(2), "4.02");
 });

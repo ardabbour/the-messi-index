@@ -6,7 +6,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 
 | Plate | Core claim | Source owner | Status |
 | --- | --- | --- | --- |
-| 01 | 91 official senior goals in calendar 2012; 79 for Barcelona and 12 for Argentina | Guinness, UEFA, FC Barcelona | Historical / stable |
+| 01 | 91 official senior goals in calendar 2012; 79 for Barcelona and 12 for Argentina; 115 goal contributions after adding 24 assists | Guinness, UEFA, FC Barcelona | Historical / stable |
 | 02 | 672 official Barcelona goals versus César Rodríguez’s 232 | FC Barcelona | Historical / stable |
 | 03 | Goals in 21 consecutive La Liga appearances and against all 19 opponents in sequence | FC Barcelona | Historical / stable |
 | 04 | Champions League age records and 18 successive scoring seasons | UEFA | Historical / stable |

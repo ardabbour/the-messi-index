@@ -143,8 +143,9 @@ test("the creation dossier contains several independently sourced records", asyn
   const creationEntries = ledgerSource.match(/group: "creation" as Dossier/g) ?? [];
 
   assert.match(page, /\{ id: "creation", label: "Creation" \}/);
-  assert.equal(creationEntries.length, 4);
+  assert.equal(creationEntries.length, 5);
   assert.match(ledgerSource, /label: "official career assists reached"/);
+  assert.match(ledgerSource, /label: "goal contributions in calendar 2012"/);
   assert.match(ledgerSource, /label: "assists in one La Liga season"/);
   assert.match(ledgerSource, /label: "World Cup knockout assists"/);
   assert.match(ledgerSource, /label: "assists in one MLS match"/);

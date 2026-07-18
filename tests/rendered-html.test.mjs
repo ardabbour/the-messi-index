@@ -41,6 +41,8 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /href="#qualifying-title"/);
   assert.match(html, /The calendar-year anomaly/);
   assert.match(html, />91</);
+  assert.match(html, /goal contributions in calendar 2012/);
+  assert.match(html, /one direct contribution every 3\.18 days/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

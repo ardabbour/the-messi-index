@@ -65,6 +65,10 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /without the left foot/);
   assert.match(html, /The next 80 needed exactly 80/);
   assert.match(html, /Goals (?:<!-- -->)?81–100/);
+  assert.match(html, /First in volume\. Second in speed\./);
+  assert.match(html, /Seven more goals than Ronaldo—in twelve fewer appearances/);
+  assert.match(html, /2 × 40 = 80/);
+  assert.match(html, /exactly twice his goal volume/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

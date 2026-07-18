@@ -19,6 +19,10 @@ const claimFingerprints = new Map([
     "https://www.uefa.com/uefachampionsleague/news/023e-0e97dfba07ee-e1db23662ae5-1000--how-messi-s-100-european-goals-were-scored/",
     ["Right foot", "Left foot", "Header", "100 goals", "122 games", "1–20", "42 games", "81–100"],
   ],
+  [
+    "https://www.uefa.com/uefachampionsleague/news/0257-0e9a02ecaf1e-a1d96d1587ba-1000--who-are-the-all-time-champions-league-group-stage-top-scorers/",
+    ["just 86 matches", "ratio of 0.93", "40 goals / 38 games", "80 / 86", "73 / 87", "73 / 98"],
+  ],
 ]);
 
 if (urls.length === 0) {

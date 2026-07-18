@@ -228,3 +228,13 @@ test("the first European century's finishing anatomy reconciles", () => {
   assert.equal(progressionGames.slice(1).reduce((sum, games) => sum + games, 0), 80);
   assert.equal((80 / 80).toFixed(2), "1.00");
 });
+
+test("the group-phase volume and rate comparison reconciles", () => {
+  assert.equal(80 - 73, 7);
+  assert.equal(98 - 86, 12);
+  assert.equal((80 / 86).toFixed(2), "0.93");
+  assert.equal((73 / 98).toFixed(2), "0.74");
+  assert.equal((73 / 87).toFixed(2), "0.84");
+  assert.equal((40 / 38).toFixed(2), "1.05");
+  assert.equal(80 / 40, 2);
+});

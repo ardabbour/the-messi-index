@@ -55,6 +55,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 46 | 1,482 La Liga dribbles across 330 appearances in FC Barcelona’s ten-season analysis versus Iker Muniain’s second-place 567; gap of 915, 2.61× ratio and 4.49-per-appearance rate derived | FC Barcelona | Historical snapshot; published 17 Apr 2020 |
 | 47 | Only two-time FIFA World Cup Golden Ball winner through 2022; 4 goals and 1 assist in 2014, then 7 goals and 3 assists in 2022 | FIFA; contribution sums and eight-year interval derived | Historical / stable through 2022 |
 | 48 | First 100 UEFA club competition goals: 80 left-footed, 16 right-footed and four headers across 122 appearances; 20% non-left-foot share derived; first 20 took 42 games and goals 21–100 took 80 | UEFA | Historical milestone; reached 18 Oct 2017 |
+| 49 | Champions League group/league-phase record of 80 goals in 86 matches, seven goals above Ronaldo and Lewandowski; second-best rate in UEFA's minimum-20-goal table, with exactly twice Haaland's 40-goal volume | UEFA; gaps and multiple derived | Current through UEFA update 1 Jun 2026 |
 
 ## Live-data rule
 

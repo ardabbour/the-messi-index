@@ -963,6 +963,33 @@ h1 em { color: var(--blue); font-style: normal; }
 .european-century-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem)/1.35 var(--font-serif), serif; }
 .european-century-proof span { font: 600 .61rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
 
+.group-phase-plate { background: var(--ink); color: #f2eddf; }
+.group-phase-summary { min-height: 350px; display: grid; grid-template-columns: 7fr 5fr; border-bottom: 1px solid #5f6058; }
+.group-phase-summary > div { padding: 34px; display: flex; flex-direction: column; justify-content: flex-end; }
+.group-phase-summary > div:first-child { border-right: 1px solid #5f6058; }
+.group-phase-summary span, .group-phase-comparison > div > span, .group-phase-summary p { margin: 0; font: 600 .66rem/1.5 var(--font-mono), monospace; text-transform: uppercase; }
+.group-phase-summary > div:first-child strong { color: var(--red); font: 400 clamp(9rem, 21vw, 21rem)/.62 var(--font-display), sans-serif; letter-spacing: -.08em; }
+.group-phase-summary > div:last-child strong { color: var(--blue); font: 400 clamp(6rem, 12vw, 12rem)/.7 var(--font-display), sans-serif; letter-spacing: -.07em; }
+.group-phase-summary p { margin-top: 18px; color: #b9b5aa; max-width: 42rem; }
+.group-phase-comparison { min-height: 490px; display: grid; grid-template-columns: 7fr 5fr; border-bottom: 1px solid #5f6058; }
+.group-phase-comparison > div { padding: 34px; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+.group-phase-volume { border-right: 1px solid #5f6058; }
+.group-phase-volume > div { display: grid; grid-template-columns: 165px 1fr 48px; gap: 14px; align-items: center; }
+.group-phase-volume p, .group-phase-rate p { margin: 0; font: 600 .65rem/1.35 var(--font-mono), monospace; text-transform: uppercase; }
+.group-phase-volume i { height: 35px; border: 1px solid #7c7d75; }
+.group-phase-volume i b { display: block; height: 100%; background: #777970; }
+.group-phase-volume .leader i b { background: var(--red); }
+.group-phase-volume strong, .group-phase-rate strong { font: 400 2.3rem/.8 var(--font-display), sans-serif; }
+.group-phase-rate > div { min-height: 62px; border-bottom: 1px solid #5f6058; display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: center; }
+.group-phase-rate > div:last-child { border-bottom: 0; }
+.group-phase-rate b { color: #8e8c83; font: 600 .62rem var(--font-mono), monospace; }
+.group-phase-rate .leader { color: #f2eddf; background: var(--blue); margin: 0 -12px; padding: 0 12px; border-bottom: 0; }
+.group-phase-rate .leader b { color: #dbe3ff; }
+.group-phase-proof { min-height: 150px; padding: 25px 34px; display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
+.group-phase-proof strong { color: var(--red); font: 400 clamp(2.6rem, 5vw, 5rem)/.8 var(--font-display), sans-serif; }
+.group-phase-proof p { margin: 0; font: italic 500 clamp(1rem, 1.7vw, 1.35rem)/1.35 var(--font-serif), serif; }
+.group-phase-proof span { font: 600 .62rem/1.4 var(--font-mono), monospace; text-transform: uppercase; text-align: right; }
+
 .ledger-section { border-bottom: 2px solid var(--ink); }
 .ledger-header { padding: 38px 34px; border-bottom: 2px solid var(--ink); display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .ledger-header .kicker { margin-bottom: 12px; }
@@ -1222,6 +1249,11 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .european-century-progression-intro { min-height: 300px; padding: 30px 20px; border-right: 0; border-bottom: 2px solid var(--ink); }
   .european-century-progression-bars { padding: 30px 20px; }
   .european-century-proof { padding: 24px 20px; grid-template-columns: 1fr; }
+  .group-phase-summary, .group-phase-comparison { grid-template-columns: 1fr; }
+  .group-phase-summary > div:first-child, .group-phase-volume { border-right: 0; border-bottom: 1px solid #5f6058; }
+  .group-phase-summary > div, .group-phase-comparison > div { padding: 30px 20px; }
+  .group-phase-proof { padding: 24px 20px; grid-template-columns: 1fr; }
+  .group-phase-proof span { text-align: left; }
   .ledger-header { padding: 30px 20px; align-items: flex-start; flex-direction: column; }
   .filters { justify-content: flex-start; }
   .ledger-row { padding: 20px; grid-template-columns: 90px 1fr; gap: 18px; }
@@ -1378,6 +1410,7 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .european-century-key > div:last-child { border-bottom: 0; }
   .european-century-progression-bars > div { grid-template-columns: 90px 1fr 34px; gap: 8px; }
   .european-century-progression-bars em { display: none; }
+  .group-phase-volume > div { grid-template-columns: 105px 1fr 38px; gap: 8px; }
   .decade-summary { grid-template-columns: 1fr; }
   .decade-summary p { grid-column: auto; grid-row: auto; }
   .decade-chart { height: 350px; }

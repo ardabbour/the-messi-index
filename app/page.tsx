@@ -51,6 +51,8 @@ const sources = {
     "https://www.uefa.com/uefachampionsleague/news/0253-0d81ee9b8a08-b457910cf27d-1000--who-were-lionel-messi-s-favourite-opponents/",
   europeanCentury:
     "https://www.uefa.com/uefachampionsleague/news/023e-0e97dfba07ee-e1db23662ae5-1000--how-messi-s-100-european-goals-were-scored/",
+  groupPhaseScorers:
+    "https://www.uefa.com/uefachampionsleague/news/0257-0e9a02ecaf1e-a1d96d1587ba-1000--who-are-the-all-time-champions-league-group-stage-top-scorers/",
   suarezBarca:
     "https://www.fcbarcelona.com/en/football/first-team/players/4138/luis-suarez",
   freeKicks:
@@ -264,6 +266,13 @@ const ledger = [
     group: "club" as Dossier,
     href: sources.europeanCentury,
   },
+  {
+    value: "80",
+    label: "Champions League group/league-phase goals",
+    note: "The competition record: seven clear of second place, scored in only 86 matches.",
+    group: "club" as Dossier,
+    href: sources.groupPhaseScorers,
+  },
 ];
 
 const calendarYear = [
@@ -295,6 +304,12 @@ const europeanCenturyProgression = [
   { goals: "41–60", games: 18 },
   { goals: "61–80", games: 23 },
   { goals: "81–100", games: 18 },
+];
+const groupPhaseLeaders = [
+  { name: "Lionel Messi", goals: 80, games: 86, rate: 0.93 },
+  { name: "Cristiano Ronaldo", goals: 73, games: 98, rate: 0.74 },
+  { name: "Robert Lewandowski", goals: 73, games: 87, rate: 0.84 },
+  { name: "Erling Haaland", goals: 40, games: 38, rate: 1.05 },
 ];
 
 const barcaBreakdown = [
@@ -1629,6 +1644,37 @@ export default function Home() {
           </div>
         </div>
         <div className="european-century-proof"><strong>16 + 4 = 20</strong><p>One fifth of the European century arrived without the left foot.</p><span>100 goals in 122 games · UEFA</span></div>
+      </section>
+
+      <section className="plate group-phase-plate" aria-labelledby="group-phase-title">
+        <div className="plate-heading inverse">
+          <span>Plate 49 · sustained velocity</span>
+          <h2 id="group-phase-title">First in volume. Second in speed.</h2>
+          <a href={sources.groupPhaseScorers} target="_blank" rel="noreferrer">UEFA all-time table ↗</a>
+        </div>
+        <div className="group-phase-summary">
+          <div><span>Group stage / league phase</span><strong>80</strong><p>goals · the all-time competition record</p></div>
+          <div><strong>86</strong><span>matches</span><p>Seven more goals than Ronaldo—in twelve fewer appearances.</p></div>
+        </div>
+        <div className="group-phase-comparison" role="img" aria-label="UEFA Champions League group stage and league phase comparison: Lionel Messi scored 80 goals in 86 matches at 0.93 per match; Cristiano Ronaldo 73 in 98 at 0.74; Robert Lewandowski 73 in 87 at 0.84; and Erling Haaland 40 in 38 at 1.05">
+          <div className="group-phase-volume">
+            <span>All-time goals</span>
+            {groupPhaseLeaders.slice(0, 3).map((player) => (
+              <div className={player.name === "Lionel Messi" ? "leader" : ""} key={player.name}>
+                <p>{player.name}</p><i><b style={{ width: `${(player.goals / 80) * 100}%` }} /></i><strong>{player.goals}</strong>
+              </div>
+            ))}
+          </div>
+          <div className="group-phase-rate">
+            <span>Goals per match · minimum 20 goals</span>
+            {[...groupPhaseLeaders].sort((a, b) => b.rate - a.rate).map((player, index) => (
+              <div className={player.name === "Lionel Messi" ? "leader" : ""} key={player.name}>
+                <b>{String(index + 1).padStart(2, "0")}</b><p>{player.name}</p><strong>{player.rate.toFixed(2)}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="group-phase-proof"><strong>2 × 40 = 80</strong><p>Only Haaland scores faster in UEFA’s minimum-20-goal table. Messi still owns exactly twice his goal volume.</p><span>Current through 1 June 2026</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

@@ -36,7 +36,7 @@ test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];
 
-  assert.equal(urls.length, 39);
+  assert.equal(urls.length, 40);
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(page, /http:\/\//);
 });
@@ -51,6 +51,7 @@ test("the live source audit restricts redirects to approved evidence owners", as
   assert.match(auditScript, /claimFingerprints/);
   assert.match(auditScript, /"1,482", "Iker Muniain", "567", "487", "Cristiano Ronaldo", "365"/);
   assert.match(auditScript, /"Right foot", "Left foot", "Header", "100 goals", "122 games", "1–20", "42 games", "81–100"/);
+  assert.match(auditScript, /"just 86 matches", "ratio of 0\.93", "40 goals \/ 38 games", "80 \/ 86", "73 \/ 87", "73 \/ 98"/);
   assert.match(auditScript, /missing claim fingerprints/);
 });
 
@@ -214,4 +215,15 @@ test("the European century plate exposes finishing-body-part composition", async
   assert.match(page, /europeanCenturyProgression/);
   assert.match(page, /The next 80 needed exactly 80/);
   assert.match(page, /sources\.europeanCentury/);
+});
+
+test("the group-phase plate combines all-time volume with scoring rate", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+
+  assert.match(page, /Plate 49 · sustained velocity/);
+  assert.match(page, /First in volume\. Second in speed\./);
+  assert.match(page, /Lionel Messi", goals: 80, games: 86, rate: 0\.93/);
+  assert.match(page, /Cristiano Ronaldo", goals: 73, games: 98, rate: 0\.74/);
+  assert.match(page, /Erling Haaland", goals: 40, games: 38, rate: 1\.05/);
+  assert.match(page, /sources\.groupPhaseScorers/);
 });

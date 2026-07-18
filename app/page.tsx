@@ -53,6 +53,8 @@ const sources = {
     "https://www.uefa.com/uefachampionsleague/news/023e-0e97dfba07ee-e1db23662ae5-1000--how-messi-s-100-european-goals-were-scored/",
   groupPhaseScorers:
     "https://www.uefa.com/uefachampionsleague/news/0257-0e9a02ecaf1e-a1d96d1587ba-1000--who-are-the-all-time-champions-league-group-stage-top-scorers/",
+  worldCupDribbles:
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/lionel-messi-2014-eden-hazard-2018-dribbles",
   suarezBarca:
     "https://www.fcbarcelona.com/en/football/first-team/players/4138/luis-suarez",
   freeKicks:
@@ -273,6 +275,13 @@ const ledger = [
     group: "club" as Dossier,
     href: sources.groupPhaseScorers,
   },
+  {
+    value: "46",
+    label: "successful dribbles at the 2014 World Cup",
+    note: "Third-most in any edition—and 12 more than 2014 runner-up Arjen Robben.",
+    group: "argentina" as Dossier,
+    href: sources.worldCupDribbles,
+  },
 ];
 
 const calendarYear = [
@@ -310,6 +319,15 @@ const groupPhaseLeaders = [
   { name: "Cristiano Ronaldo", goals: 73, games: 98, rate: 0.74 },
   { name: "Robert Lewandowski", goals: 73, games: 87, rate: 0.84 },
   { name: "Erling Haaland", goals: 40, games: 38, rate: 1.05 },
+];
+const worldCupDribblePodium = [
+  { name: "Diego Maradona", edition: "Mexico 1986", dribbles: 53 },
+  { name: "Jairzinho", edition: "Mexico 1970", dribbles: 47 },
+  { name: "Lionel Messi", edition: "Brazil 2014", dribbles: 46 },
+];
+const brazil2014DribbleLeaders = [
+  { name: "Lionel Messi", dribbles: 46 },
+  { name: "Arjen Robben", dribbles: 34 },
 ];
 
 const barcaBreakdown = [
@@ -1675,6 +1693,38 @@ export default function Home() {
           </div>
         </div>
         <div className="group-phase-proof"><strong>2 × 40 = 80</strong><p>Only Haaland scores faster in UEFA’s minimum-20-goal table. Messi still owns exactly twice his goal volume.</p><span>Current through 1 June 2026</span></div>
+      </section>
+
+      <section className="plate world-dribble-peak-plate" aria-labelledby="world-dribble-peak-title">
+        <div className="plate-heading">
+          <span>Plate 50 · tournament ball carrying</span>
+          <h2 id="world-dribble-peak-title">One short of second ever. Twelve clear in Brazil.</h2>
+          <a href={sources.worldCupDribbles} target="_blank" rel="noreferrer">FIFA dribbling archive ↗</a>
+        </div>
+        <div className="world-dribble-peak-lead">
+          <div><span>Brazil · 2014</span><strong>46</strong><p>successful take-ons by Lionel Messi</p></div>
+          <div><strong>03</strong><span>single-edition rank</span><p>Only Maradona in 1986 and Jairzinho in 1970 recorded more.</p></div>
+        </div>
+        <div className="world-dribble-scales" role="img" aria-label="World Cup single-edition successful dribble leaders: Diego Maradona 53 in 1986, Jairzinho 47 in 1970 and Lionel Messi 46 in 2014. At the 2014 World Cup, Messi led runner-up Arjen Robben by 46 to 34, a margin of 12.">
+          <div className="world-dribble-podium">
+            <span>All-time single-edition podium</span>
+            {worldCupDribblePodium.map((player, index) => (
+              <div className={player.name === "Lionel Messi" ? "messi" : ""} key={player.name}>
+                <b>{String(index + 1).padStart(2, "0")}</b><p>{player.name}<small>{player.edition}</small></p><i><em style={{ width: `${(player.dribbles / 53) * 100}%` }} /></i><strong>{player.dribbles}</strong>
+              </div>
+            ))}
+          </div>
+          <div className="world-dribble-brazil">
+            <span>Brazil 2014 leaders</span>
+            {brazil2014DribbleLeaders.map((player) => (
+              <div className={player.name === "Lionel Messi" ? "messi" : ""} key={player.name}>
+                <p>{player.name}</p><i><em style={{ width: `${(player.dribbles / 46) * 100}%` }} /></i><strong>{player.dribbles}</strong>
+              </div>
+            ))}
+            <div className="world-dribble-margin"><strong>+12</strong><p>Messi’s lead over the next-best dribbler at his tournament.</p></div>
+          </div>
+        </div>
+        <div className="world-dribble-peak-proof"><strong>53 → 47 → 46</strong><p>The third-highest edition in World Cup history—and a 35.3% advantage over the player in second place that year.</p><span>Historical tournament · FIFA</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

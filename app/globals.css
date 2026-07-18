@@ -990,6 +990,33 @@ h1 em { color: var(--blue); font-style: normal; }
 .group-phase-proof p { margin: 0; font: italic 500 clamp(1rem, 1.7vw, 1.35rem)/1.35 var(--font-serif), serif; }
 .group-phase-proof span { font: 600 .62rem/1.4 var(--font-mono), monospace; text-transform: uppercase; text-align: right; }
 
+.world-dribble-peak-lead { min-height: 360px; display: grid; grid-template-columns: 8fr 4fr; border-bottom: 2px solid var(--ink); }
+.world-dribble-peak-lead > div { padding: 34px; display: flex; flex-direction: column; justify-content: flex-end; }
+.world-dribble-peak-lead > div:first-child { border-right: 2px solid var(--ink); }
+.world-dribble-peak-lead span, .world-dribble-peak-lead p, .world-dribble-scales > div > span { margin: 0; font: 600 .67rem/1.5 var(--font-mono), monospace; text-transform: uppercase; }
+.world-dribble-peak-lead > div:first-child strong { color: var(--blue); font: 400 clamp(9rem, 20vw, 20rem)/.62 var(--font-display), sans-serif; letter-spacing: -.08em; }
+.world-dribble-peak-lead > div:last-child strong { color: var(--red); font: 400 clamp(6rem, 11vw, 11rem)/.7 var(--font-display), sans-serif; letter-spacing: -.06em; }
+.world-dribble-peak-lead p { margin-top: 16px; color: #625e54; }
+.world-dribble-scales { min-height: 520px; display: grid; grid-template-columns: 7fr 5fr; border-bottom: 2px solid var(--ink); }
+.world-dribble-scales > div { padding: 34px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+.world-dribble-podium { border-right: 2px solid var(--ink); }
+.world-dribble-podium > div { display: grid; grid-template-columns: 28px 155px 1fr 42px; gap: 12px; align-items: center; }
+.world-dribble-podium b { color: #777970; font: 600 .62rem var(--font-mono), monospace; }
+.world-dribble-podium p, .world-dribble-brazil p { margin: 0; font: 600 .65rem/1.35 var(--font-mono), monospace; text-transform: uppercase; }
+.world-dribble-podium small { display: block; color: #777970; font-size: .58rem; }
+.world-dribble-podium i, .world-dribble-brazil i { height: 34px; border: 1px solid var(--ink); }
+.world-dribble-podium i em, .world-dribble-brazil i em { display: block; height: 100%; background: #8d8e85; }
+.world-dribble-podium .messi i em, .world-dribble-brazil .messi i em { background: var(--blue); }
+.world-dribble-podium strong, .world-dribble-brazil > div > strong { font: 400 2.2rem/.8 var(--font-display), sans-serif; text-align: right; }
+.world-dribble-brazil > div:not(.world-dribble-margin) { display: grid; grid-template-columns: 120px 1fr 42px; gap: 12px; align-items: center; }
+.world-dribble-margin { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--ink); display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; }
+.world-dribble-margin strong { color: var(--red); font: 400 clamp(4rem, 7vw, 7rem)/.7 var(--font-display), sans-serif; }
+.world-dribble-margin p { font: italic 500 clamp(1rem, 1.6vw, 1.3rem)/1.35 var(--font-serif), serif; text-transform: none; }
+.world-dribble-peak-proof { min-height: 150px; padding: 25px 34px; display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
+.world-dribble-peak-proof strong { color: var(--blue); font: 400 clamp(2.5rem, 5vw, 5rem)/.8 var(--font-display), sans-serif; }
+.world-dribble-peak-proof p { margin: 0; font: italic 500 clamp(1rem, 1.7vw, 1.35rem)/1.35 var(--font-serif), serif; }
+.world-dribble-peak-proof span { font: 600 .62rem/1.4 var(--font-mono), monospace; text-transform: uppercase; text-align: right; }
+
 .ledger-section { border-bottom: 2px solid var(--ink); }
 .ledger-header { padding: 38px 34px; border-bottom: 2px solid var(--ink); display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .ledger-header .kicker { margin-bottom: 12px; }
@@ -1254,6 +1281,11 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .group-phase-summary > div, .group-phase-comparison > div { padding: 30px 20px; }
   .group-phase-proof { padding: 24px 20px; grid-template-columns: 1fr; }
   .group-phase-proof span { text-align: left; }
+  .world-dribble-peak-lead, .world-dribble-scales { grid-template-columns: 1fr; }
+  .world-dribble-peak-lead > div:first-child, .world-dribble-podium { border-right: 0; border-bottom: 2px solid var(--ink); }
+  .world-dribble-peak-lead > div, .world-dribble-scales > div { padding: 30px 20px; }
+  .world-dribble-peak-proof { padding: 24px 20px; grid-template-columns: 1fr; }
+  .world-dribble-peak-proof span { text-align: left; }
   .ledger-header { padding: 30px 20px; align-items: flex-start; flex-direction: column; }
   .filters { justify-content: flex-start; }
   .ledger-row { padding: 20px; grid-template-columns: 90px 1fr; gap: 18px; }
@@ -1411,6 +1443,8 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .european-century-progression-bars > div { grid-template-columns: 90px 1fr 34px; gap: 8px; }
   .european-century-progression-bars em { display: none; }
   .group-phase-volume > div { grid-template-columns: 105px 1fr 38px; gap: 8px; }
+  .world-dribble-podium > div { grid-template-columns: 22px 100px 1fr 36px; gap: 8px; }
+  .world-dribble-brazil > div:not(.world-dribble-margin) { grid-template-columns: 100px 1fr 36px; gap: 8px; }
   .decade-summary { grid-template-columns: 1fr; }
   .decade-summary p { grid-column: auto; grid-row: auto; }
   .decade-chart { height: 350px; }

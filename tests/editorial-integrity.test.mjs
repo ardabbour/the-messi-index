@@ -36,7 +36,7 @@ test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];
 
-  assert.equal(urls.length, 40);
+  assert.equal(urls.length, 41);
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(page, /http:\/\//);
 });
@@ -226,4 +226,16 @@ test("the group-phase plate combines all-time volume with scoring rate", async (
   assert.match(page, /Cristiano Ronaldo", goals: 73, games: 98, rate: 0\.74/);
   assert.match(page, /Erling Haaland", goals: 40, games: 38, rate: 1\.05/);
   assert.match(page, /sources\.groupPhaseScorers/);
+});
+
+test("the World Cup dribbling plate separates edition rank from tournament margin", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+
+  assert.match(page, /Plate 50 · tournament ball carrying/);
+  assert.match(page, /One short of second ever\. Twelve clear in Brazil\./);
+  assert.match(page, /Diego Maradona", edition: "Mexico 1986", dribbles: 53/);
+  assert.match(page, /Jairzinho", edition: "Mexico 1970", dribbles: 47/);
+  assert.match(page, /Lionel Messi", edition: "Brazil 2014", dribbles: 46/);
+  assert.match(page, /Arjen Robben", dribbles: 34/);
+  assert.match(page, /sources\.worldCupDribbles/);
 });

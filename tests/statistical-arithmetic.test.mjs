@@ -238,3 +238,11 @@ test("the group-phase volume and rate comparison reconciles", () => {
   assert.equal((40 / 38).toFixed(2), "1.05");
   assert.equal(80 / 40, 2);
 });
+
+test("the 2014 World Cup dribbling peak reconciles at both scales", () => {
+  assert.equal(53 - 46, 7);
+  assert.equal(47 - 46, 1);
+  assert.equal(46 - 34, 12);
+  assert.equal(((46 / 34 - 1) * 100).toFixed(1), "35.3");
+  assert.deepEqual([53, 47, 46].sort((a, b) => b - a), [53, 47, 46]);
+});

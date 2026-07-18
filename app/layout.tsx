@@ -8,13 +8,18 @@ const mono = IBM_Plex_Mono({ variable: "--font-mono", subsets: ["latin"], weight
 const serif = Lora({ variable: "--font-serif", subsets: ["latin"], style: ["normal", "italic"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://messi-rouge.vercel.app"),
   title: "The Messi Index — A statistical audit of the impossible",
   description: "An evidence-backed visual almanac of Lionel Messi records, margins and statistical absurdities.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "The Messi Index",
     description: "The statistical distances Lionel Messi put between himself and football's idea of normal.",
     type: "website",
     siteName: "The Messi Index",
+    url: "/",
   },
   twitter: {
     card: "summary",

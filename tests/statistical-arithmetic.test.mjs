@@ -148,3 +148,11 @@ test("Barcelona trophy cabinet reconciles", () => {
 test("seventeen consecutive World XI editions reconcile", () => {
   assert.equal(2023 - 2007 + 1, 17);
 });
+
+test("the U-20 knockout sweep reconciles", () => {
+  const knockoutGoals = [1, 1, 1, 2];
+  assert.equal(knockoutGoals.length, 4);
+  assert.equal(knockoutGoals.reduce((sum, value) => sum + value, 0), 5);
+  assert.equal(5 + 1, 6);
+  assert.ok(knockoutGoals.every((value) => value > 0));
+});

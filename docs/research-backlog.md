@@ -14,6 +14,12 @@ The 2026 FIFA World Cup final is scheduled after the current 15 July audit cutof
 
 ## High-value candidate plates
 
+- **Post-final World Cup record margins:** highest priority once FIFA marks the 2026 tournament statistics final; should replace the live checkpoint rather than create a duplicate plate.
+- **Player-of-the-Match edition distribution:** add only if FIFA publishes a clean edition-by-edition table; the current career and 2026 totals already appear in Plate 05A.
+- **Future Inter Miami season ledger:** wait for an official completed-season source so a moving total is not presented as a stable record.
+
+Rejected as duplicative: a separate eight-FIFA-awards panel substantially overlaps the eight-Ballon-d'Or comparison in Plate 11.
+
 ## Editorial gates
 
 - Avoid mixing official and friendly club matches.

@@ -65,6 +65,8 @@ const sources = {
     "https://www.fcbarcelona.com/en/football/first-team/news/2110565/thirteenth-consecutive-30-goal-season-for-messi/featured",
   worldXi:
     "https://www.fifa.com/en/the-best-fifa-football-awards/articles/lionel-messi-world-11-record-the-best",
+  u20WorldCup:
+    "https://www.fifa.com/en/tournaments/mens/u20worldcup/chile-2025/articles/lionel-messi-u20-world-cup",
 };
 
 const wcCareer = worldCup2026.career;
@@ -238,6 +240,12 @@ const worldCupScoringStages = [
 ];
 
 const worldXiYears = Array.from({ length: 17 }, (_, index) => 2007 + index);
+const u20KnockoutRun = [
+  { round: "Round of 16", opponent: "Colombia", goals: 1 },
+  { round: "Quarter-final", opponent: "Spain", goals: 1 },
+  { round: "Semi-final", opponent: "Brazil", goals: 1 },
+  { round: "Final", opponent: "Nigeria", goals: 2 },
+];
 const editionPlateCount = edition.plateCount;
 
 const filters: { id: Dossier; label: string }[] = [
@@ -1179,6 +1187,29 @@ export default function Home() {
           {worldXiYears.map((year) => <div key={year}><span>{year}</span><strong>XI</strong></div>)}
         </div>
         <div className="world-xi-proof"><strong>2023 − 2007 + 1 = 17</strong><p>Seventeen consecutive annual selections.</p><span>Age 20 → age 36</span></div>
+      </section>
+
+      <section className="plate u20-plate" aria-labelledby="u20-title">
+        <div className="plate-heading">
+          <span>Plate 40 · prologue</span>
+          <h2 id="u20-title">Before the senior era, he swept the tournament.</h2>
+          <a href={sources.u20WorldCup} target="_blank" rel="noreferrer">FIFA U-20 archive ↗</a>
+        </div>
+        <div className="u20-sweep" role="img" aria-label="At the 2005 FIFA U-20 World Cup, Messi won the team title, Golden Ball and Golden Boot with six goals, scoring in every knockout round">
+          <div><strong>01</strong><span>World champion</span></div>
+          <div><strong>02</strong><span>Golden Ball</span></div>
+          <div><strong>03</strong><span>Golden Boot</span></div>
+        </div>
+        <div className="u20-knockout" role="img" aria-label="Messi scored one goal against Colombia in the round of 16, one against Spain in the quarter-final, one against Brazil in the semi-final and two against Nigeria in the final">
+          {u20KnockoutRun.map((match) => (
+            <div key={match.round}>
+              <span>{match.round}</span>
+              <strong>{match.goals}</strong>
+              <p>{match.opponent}</p>
+            </div>
+          ))}
+        </div>
+        <div className="u20-proof"><strong>4 / 4</strong><p>Scored in every knockout round: five there, six in the tournament.</p><span>Golden Boot · Golden Ball · world champion</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

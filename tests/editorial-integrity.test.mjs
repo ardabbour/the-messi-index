@@ -49,6 +49,24 @@ test("live World Cup claims retain their audit cutoff", async () => {
   assert.match(ledger, new RegExp(`Live; dated ${snapshot.auditDateShort}`));
 });
 
+test("live World Cup snapshot remains structurally coherent", async () => {
+  const snapshotText = await readFile(new URL("data/live-world-cup-2026.json", root), "utf8");
+  const snapshot = JSON.parse(snapshotText);
+  const numericGroups = [snapshot.career, snapshot.tournament, snapshot.comparators];
+
+  assert.match(snapshot.auditDate, /^\d{4}-\d{2}-\d{2}$/);
+  assert.ok(["in_progress", "final"].includes(snapshot.status));
+  numericGroups.forEach((group) => {
+    Object.values(group).forEach((value) => {
+      if (typeof value === "number") assert.ok(Number.isFinite(value) && value >= 0);
+    });
+  });
+  assert.equal(snapshot.tournament.goals + snapshot.tournament.assists, snapshot.tournament.contributions);
+  assert.ok(snapshot.career.goals > snapshot.comparators.previousGoalRecord);
+  assert.ok(snapshot.career.wins > snapshot.comparators.previousWinRecord);
+  assert.ok(snapshot.career.captainAppearances > snapshot.comparators.nextCaptainAppearances);
+});
+
 test("visual plates and source links retain accessible, safe markup", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const imageRoles = page.match(/<[^>]+role="img"[^>]*>/g) ?? [];

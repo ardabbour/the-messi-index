@@ -12,6 +12,10 @@ The 2026 FIFA World Cup final is scheduled after the current 15 July audit cutof
 4. Replace `status: "in_progress"` and the matching interface wording only when FIFA publishes final tournament statistics.
 5. Run `npm test`, `npm run lint` and `npm run audit:sources`.
 
+### Live-source conflict protocol
+
+FIFA's dated key-stat article listed four Messi assists at the 15 July checkpoint, while mutable statistics surfaces can later revise assist attribution. Treat the dated article and its audit cutoff as one internally consistent snapshot. For the final update, record the exact FIFA page and publication/update date, reconcile goals plus assists before editing the JSON, and never combine a goal total from one revision with an assist total from another.
+
 ## High-value candidate plates
 
 - **Post-final World Cup record margins:** highest priority once FIFA marks the 2026 tournament statistics final; should replace the live checkpoint rather than create a duplicate plate.

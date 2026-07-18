@@ -79,6 +79,8 @@ const sources = {
     "https://copaamerica.com/en/news/records-broken-feats-copa-america-2024-messi-james-colombia-canada",
   qualifyingScorers:
     "https://www.fifa.com/en/tournaments/mens/worldcup/articles/conmebol-qualifying-top-goalscorers-history",
+  careerAssists400:
+    "https://es.mlssoccer.com/playoffs/2025/noticias/leo-messi-records-sin-fin-en-un-inter-miami-que-nunca-llego-tan-lejos",
 };
 
 const wcCareer = worldCup2026.career;
@@ -315,6 +317,12 @@ const qualifyingCampaigns = [
   { cycle: "2022", goals: 7, games: 15 },
   { cycle: "2026", goals: 8, games: 12, winner: true },
 ];
+const careerAssistBreakdown = [
+  { team: "Barcelona", assists: 269 },
+  { team: "Argentina", assists: 60 },
+  { team: "Paris Saint-Germain", assists: 34 },
+  { team: "Inter Miami", assists: 37 },
+];
 const editionPlateCount = edition.plateCount;
 
 const filters: { id: Dossier; label: string }[] = [
@@ -374,7 +382,7 @@ export default function Home() {
         <a href="#world-title"><b>05</b> World Cup</a>
         <a href="#late-title"><b>10</b> Late career</a>
         <a href="#awards-title"><b>11</b> Awards</a>
-        <a href="#world-xi-title"><b>39</b> Peer vote</a>
+        <a href="#career-assists-title"><b>45</b> Creation</a>
         <a href="#argentina-honours-title"><b>41</b> Argentina honours</a>
         <a href="#copa-career-title"><b>43</b> Copa América</a>
         <a href="#qualifying-title"><b>44</b> Qualifying</a>
@@ -1380,6 +1388,34 @@ export default function Home() {
           ))}
         </div>
         <div className="qualifying-proof"><strong>0 + 4 + 10 + 7 + 7 + 8 = 36</strong><p>CONMEBOL’s career leader—and, at 38, its 2026 campaign leader.</p><span>Seven goals clear of second place</span></div>
+      </section>
+
+      <section className="plate career-assists-plate" aria-labelledby="career-assists-title">
+        <div className="plate-heading inverse">
+          <span>Plate 45 · creation milestone</span>
+          <h2 id="career-assists-title">Four hundred goals without taking the shot.</h2>
+          <a href={sources.careerAssists400} target="_blank" rel="noreferrer">Major League Soccer ↗</a>
+        </div>
+        <div className="career-assists-lead">
+          <strong>400</strong>
+          <div><span>official career assists</span><p>The first footballer in MLS’s records to reach the milestone.</p></div>
+        </div>
+        <div className="assist-composition" role="img" aria-label="Messi's first 400 official career assists: 269 for Barcelona, 60 for Argentina, 34 for Paris Saint-Germain and 37 for Inter Miami">
+          <div className="assist-stack" aria-hidden="true">
+            {careerAssistBreakdown.map((item) => <i key={item.team} style={{ width: `${(item.assists / 400) * 100}%` }} />)}
+          </div>
+          <div className="assist-breakdown">
+            {careerAssistBreakdown.map((item, index) => (
+              <div key={item.team}>
+                <b>{String(index + 1).padStart(2, "0")}</b>
+                <strong>{item.assists}</strong>
+                <span>{item.team}</span>
+                <p>{((item.assists / 400) * 100).toFixed(1)}%</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="career-assists-proof"><strong>269 + 60 + 34 + 37 = 400</strong><p>Four shirts. Nearly two decades of making somebody else the scorer.</p><span>Milestone reached 9 November 2025</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

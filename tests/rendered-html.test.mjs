@@ -34,7 +34,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, new RegExp(`Issue (?:<!-- -->)?${edition.issue}`));
   assert.match(html, new RegExp(`${edition.plateCount}(?:<!-- -->)? plates, audited`));
   assert.match(html, /href="#awards-title"/);
-  assert.match(html, /href="#world-xi-title"/);
+  assert.match(html, /href="#career-assists-title"/);
   assert.match(html, /href="#argentina-honours-title"/);
   assert.match(html, /href="#copa-career-title"/);
   assert.match(html, /href="#qualifying-title"/);
@@ -105,6 +105,8 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /Five finals\. Champion in the last two\./);
   assert.match(html, /Thirty-six goals across six roads to the World Cup\./);
   assert.match(html, /Seven goals clear of second place/);
+  assert.match(html, /Four hundred goals without taking the shot\./);
+  assert.match(html, /Milestone reached 9 November 2025/);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

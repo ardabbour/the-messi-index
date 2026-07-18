@@ -187,3 +187,9 @@ test("the six-campaign South American qualifying record reconciles", () => {
   assert.equal(36 - 29, 7);
   assert.equal((36 / 72).toFixed(2), "0.50");
 });
+
+test("the 400-assist milestone reconciles across four shirts", () => {
+  const assists = [269, 60, 34, 37];
+  assert.equal(assists.reduce((sum, value) => sum + value, 0), 400);
+  assert.deepEqual(assists.map((value) => ((value / 400) * 100).toFixed(1)), ["67.3", "15.0", "8.5", "9.3"]);
+});

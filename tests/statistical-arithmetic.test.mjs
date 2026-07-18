@@ -199,3 +199,9 @@ test("the 400-assist milestone reconciles across four shirts", () => {
   assert.equal(assists.reduce((sum, value) => sum + value, 0), 400);
   assert.deepEqual(assists.map((value) => ((value / 400) * 100).toFixed(1)), ["67.3", "15.0", "8.5", "9.3"]);
 });
+
+test("the decade dribbling chasm reconciles", () => {
+  assert.equal(1482 - 567, 915);
+  assert.equal((1482 / 567).toFixed(2), "2.61");
+  assert.equal((915 / 567 * 100).toFixed(1), "161.4");
+});

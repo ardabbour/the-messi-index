@@ -81,6 +81,8 @@ const sources = {
     "https://www.fifa.com/en/tournaments/mens/worldcup/articles/conmebol-qualifying-top-goalscorers-history",
   careerAssists400:
     "https://es.mlssoccer.com/playoffs/2025/noticias/leo-messi-records-sin-fin-en-un-inter-miami-que-nunca-llego-tan-lejos",
+  decadeDribbles:
+    "https://www.fcbarcelona.com/en/football/first-team/actualites/1655195",
 };
 
 const wcCareer = worldCup2026.career;
@@ -246,6 +248,13 @@ const ledger = [
     group: "club" as Dossier,
     href: sources.uefaRecords,
   },
+  {
+    value: "1,482",
+    label: "La Liga dribbles in Barça’s decade analysis",
+    note: "A 915-dribble lead over second place—2.61 times Iker Muniain’s total.",
+    group: "club" as Dossier,
+    href: sources.decadeDribbles,
+  },
 ];
 
 const calendarYear = [
@@ -365,6 +374,10 @@ const careerAssistBreakdown = [
   { team: "Paris Saint-Germain", assists: 34 },
   { team: "Inter Miami", assists: 37 },
 ];
+const decadeDribbleLeaders = [
+  { name: "Lionel Messi", dribbles: 1482 },
+  { name: "Iker Muniain", dribbles: 567 },
+];
 const editionPlateCount = edition.plateCount;
 
 const filters: { id: Dossier; label: string }[] = [
@@ -426,6 +439,7 @@ export default function Home() {
         <a href="#late-title"><b>10</b> Late career</a>
         <a href="#awards-title"><b>11</b> Awards</a>
         <a href="#career-assists-title"><b>45</b> Creation</a>
+        <a href="#dribble-title"><b>46</b> Dribbling</a>
         <a href="#argentina-honours-title"><b>41</b> Argentina honours</a>
         <a href="#copa-career-title"><b>43</b> Copa América</a>
         <a href="#qualifying-title"><b>44</b> Qualifying</a>
@@ -1476,6 +1490,32 @@ export default function Home() {
           </div>
         </div>
         <div className="career-assists-proof"><strong>269 + 60 + 34 + 37 = 400</strong><p>Four shirts. Nearly two decades of making somebody else the scorer.</p><span>Milestone reached 9 November 2025</span></div>
+      </section>
+
+      <section className="plate dribble-plate" aria-labelledby="dribble-title">
+        <div className="plate-heading">
+          <span>Plate 46 · ball carrying</span>
+          <h2 id="dribble-title">First place was 915 dribbles away.</h2>
+          <a href={sources.decadeDribbles} target="_blank" rel="noreferrer">FC Barcelona decade analysis ↗</a>
+        </div>
+        <div className="dribble-layout">
+          <div className="dribble-lead">
+            <span>La Liga · Barça’s ten-season analysis</span>
+            <strong>1,482</strong>
+            <p>recorded dribbles by Lionel Messi</p>
+          </div>
+          <div className="dribble-race" role="img" aria-label="La Liga dribbles in FC Barcelona's decade analysis: Lionel Messi 1,482 and second-place Iker Muniain 567, a gap of 915">
+            {decadeDribbleLeaders.map((player) => (
+              <div className={player.name === "Lionel Messi" ? "leader" : ""} key={player.name}>
+                <span>{player.name}</span>
+                <i><b style={{ width: `${(player.dribbles / 1482) * 100}%` }} /></i>
+                <strong>{player.dribbles.toLocaleString("en-US")}</strong>
+              </div>
+            ))}
+            <div className="dribble-margin"><strong>+915</strong><p>Messi’s advantage was 161.4% of the runner-up’s entire total.</p></div>
+          </div>
+        </div>
+        <div className="dribble-proof"><strong>1,482 − 567 = 915</strong><p>Messi recorded 2.61 dribbles for every one by second place.</p><span>Historical snapshot published 17 April 2020</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

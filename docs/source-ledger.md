@@ -52,6 +52,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 43 | Copa América record of 39 appearances across seven editions, five beyond Sergio Livingstone’s prior 34; record five finals in the current final format | CONMEBOL / Opta | Historical / stable |
 | 44 | South American World Cup qualifying record of 36 goals in 72 games across six campaigns; seven clear of Luis Suárez, with a first single-campaign scoring title in 2026 | FIFA | Historical / stable |
 | 45 | First footballer in MLS’s records to reach 400 official career assists: 269 Barcelona, 60 Argentina, 34 Paris Saint-Germain and 37 Inter Miami | Major League Soccer | Milestone / stable; reached 9 Nov 2025 |
+| 46 | 1,482 La Liga dribbles in FC Barcelona’s ten-season analysis versus Iker Muniain’s second-place 567; gap of 915 and 2.61× ratio derived | FC Barcelona | Historical snapshot; published 17 Apr 2020 |
 
 ## Live-data rule
 

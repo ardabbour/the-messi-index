@@ -858,6 +858,27 @@ h1 em { color: var(--blue); font-style: normal; }
 .career-assists-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem) var(--font-serif), serif; }
 .career-assists-proof span { font: 600 .61rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
 
+.dribble-plate { background: var(--paper); }
+.dribble-layout { display: grid; grid-template-columns: 5fr 7fr; min-height: 470px; }
+.dribble-lead { padding: 34px; border-right: 2px solid var(--ink); display: flex; flex-direction: column; justify-content: center; }
+.dribble-lead span { font: 600 .68rem/1.4 var(--font-mono), monospace; text-transform: uppercase; letter-spacing: .08em; }
+.dribble-lead strong { margin: 32px 0 24px; color: var(--blue); font: 400 clamp(7.5rem, 16vw, 15rem)/.68 var(--font-display), sans-serif; letter-spacing: -.1em; }
+.dribble-lead p { margin: 0; font: italic 500 clamp(1.1rem, 2vw, 1.6rem) var(--font-serif), serif; }
+.dribble-race { padding: 54px 42px; display: flex; flex-direction: column; justify-content: center; }
+.dribble-race > div:not(.dribble-margin) { min-height: 105px; display: grid; grid-template-columns: 140px 1fr 80px; gap: 20px; align-items: center; border-bottom: 1px solid var(--paper-deep); }
+.dribble-race span { font: 600 .7rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+.dribble-race i { height: 30px; border: 1px solid var(--ink); }
+.dribble-race i b { display: block; height: 100%; background: var(--ink); }
+.dribble-race .leader i b { background: var(--blue); }
+.dribble-race > div > strong { font: 400 2rem var(--font-display), sans-serif; text-align: right; }
+.dribble-margin { margin-top: 42px; display: grid; grid-template-columns: auto 1fr; gap: 25px; align-items: center; }
+.dribble-margin strong { color: var(--blue); font: 400 clamp(4rem, 8vw, 7rem)/.8 var(--font-display), sans-serif; }
+.dribble-margin p { margin: 0; max-width: 32ch; font: italic 500 clamp(1rem, 1.8vw, 1.4rem)/1.35 var(--font-serif), serif; }
+.dribble-proof { min-height: 135px; padding: 25px 34px; border-top: 2px solid var(--ink); display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
+.dribble-proof strong { color: var(--blue); font: 400 clamp(1.5rem, 2.8vw, 2.7rem) var(--font-display), sans-serif; }
+.dribble-proof p { margin: 0; font: italic 500 clamp(1rem, 1.8vw, 1.4rem) var(--font-serif), serif; }
+.dribble-proof span { font: 600 .61rem/1.4 var(--font-mono), monospace; text-transform: uppercase; }
+
 .ledger-section { border-bottom: 2px solid var(--ink); }
 .ledger-header { padding: 38px 34px; border-bottom: 2px solid var(--ink); display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
 .ledger-header .kicker { margin-bottom: 12px; }
@@ -1099,6 +1120,10 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .career-assists-lead { padding: 30px 20px; grid-template-columns: 1fr; gap: 30px; }
   .assist-composition { padding: 24px 20px; }
   .career-assists-proof { padding: 24px 20px; grid-template-columns: 1fr; }
+  .dribble-layout { grid-template-columns: 1fr; }
+  .dribble-lead { min-height: 340px; padding: 30px 20px; border-right: 0; border-bottom: 2px solid var(--ink); }
+  .dribble-race { padding: 36px 20px; }
+  .dribble-proof { padding: 24px 20px; grid-template-columns: 1fr; }
   .ledger-header { padding: 30px 20px; align-items: flex-start; flex-direction: column; }
   .filters { justify-content: flex-start; }
   .ledger-row { padding: 20px; grid-template-columns: 90px 1fr; gap: 18px; }
@@ -1262,8 +1287,9 @@ footer p { margin: 0; color: #83a0ff; font: italic 500 clamp(1.2rem, 2vw, 1.8rem
   .victim-row { grid-template-columns: 1.5fr 1fr; padding: 12px 0; }
   .victim-row span:nth-of-type(2) { display: none; }
   .world-grid > div { min-height: 170px; }
-  .ledger-row { grid-template-columns: 72px 1fr; gap: 14px; }
-  .ledger-row > strong { font-size: 3.2rem; }
+  .ledger-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 20px; }
+  .ledger-row > strong { font-size: 3.8rem; }
+  .ledger-row > span { grid-column: 1; }
   .method-copy { columns: 1; }
 }
 

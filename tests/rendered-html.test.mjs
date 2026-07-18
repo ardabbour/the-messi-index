@@ -37,6 +37,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, new RegExp(`${edition.plateCount}(?:<!-- -->)? plates, audited`));
   assert.match(html, /href="#awards-title"/);
   assert.match(html, /href="#career-assists-title"/);
+  assert.match(html, /href="#dribble-title"/);
   assert.match(html, /href="#argentina-honours-title"/);
   assert.match(html, /href="#copa-career-title"/);
   assert.match(html, /href="#qualifying-title"/);
@@ -48,6 +49,8 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /2009\/10 · synchronized sweep/);
   assert.match(html, /The only player to complete the set/);
   assert.match(html, /major individual honours in 2009\/10/);
+  assert.match(html, /First place was 915 dribbles away/);
+  assert.match(html, /1,482 − 567 = 915/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

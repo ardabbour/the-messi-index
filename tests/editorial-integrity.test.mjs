@@ -36,7 +36,7 @@ test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];
 
-  assert.equal(urls.length, 37);
+  assert.equal(urls.length, 38);
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(page, /http:\/\//);
 });
@@ -121,7 +121,7 @@ test("every evidence-index destination resolves to an in-page heading", async ()
   const destinations = [...indexMarkup.matchAll(/href="#([^"]+)"/g)].map((match) => match[1]);
   const ids = new Set([...page.matchAll(/id="([^"]+)"/g)].map((match) => match[1]));
 
-  assert.equal(destinations.length, 11);
+  assert.equal(destinations.length, 12);
   destinations.forEach((destination) => {
     assert.ok(ids.has(destination), `Missing evidence-index destination: #${destination}`);
   });
@@ -177,4 +177,13 @@ test("the awards plate preserves the unique four-award season sweep", async () =
   assert.match(page, /only player to complete the set/i);
   assert.match(ledgerSource, /label: "major individual honours in 2009\/10"/);
   assert.match(ledgerSource, /value: "4\/4"/);
+});
+
+test("the dribbling plate adds a non-scoring statistical dimension", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+
+  assert.match(page, /Plate 46 · ball carrying/);
+  assert.match(page, /Lionel Messi", dribbles: 1482/);
+  assert.match(page, /Iker Muniain", dribbles: 567/);
+  assert.match(page, /Historical snapshot published 17 April 2020/);
 });

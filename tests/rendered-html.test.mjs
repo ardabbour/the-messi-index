@@ -43,6 +43,13 @@ test("server-renders the Messi statistical almanac", async () => {
     new RegExp(`${worldCup2026.career.playerOfMatchAwards}(?:<!-- -->)? across his World Cup career is also unequalled`),
   );
   assert.match(html, new RegExp(worldCup2026.auditDateLabel));
+  if (worldCup2026.status === "in_progress") {
+    assert.match(html, /final had not yet been played/i);
+    assert.match(html, /live dossier/i);
+  } else {
+    assert.match(html, /completed-tournament table/i);
+    assert.match(html, /final dossier/i);
+  }
   assert.match(html, /The “bad” year was 45 goals/);
   assert.match(html, /Fifty in the league\. Not the season\./);
   assert.match(html, /He led both columns\. Three years running\./);

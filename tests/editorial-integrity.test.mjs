@@ -40,6 +40,7 @@ test("live World Cup claims retain their audit cutoff", async () => {
   assert.equal(snapshot.auditDate, "2026-07-15");
   assert.equal(snapshot.status, "in_progress");
   assert.match(page, /wcAuditLabel/);
+  assert.match(page, /wcIsInProgress/);
   assert.match(page, /tournament was still in progress/i);
   assert.match(ledger, new RegExp(`Live; dated ${snapshot.auditDateShort}`));
 });

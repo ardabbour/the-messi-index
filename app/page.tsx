@@ -69,6 +69,8 @@ const wcTournament = worldCup2026.tournament;
 const wcComparators = worldCup2026.comparators;
 const wcAuditLabel = worldCup2026.auditDateLabel;
 const wcAuditShort = worldCup2026.auditDateShort;
+const wcIsInProgress = worldCup2026.status === "in_progress";
+const wcDossierLabel = wcIsInProgress ? "live dossier" : "final dossier";
 
 const ledger = [
   {
@@ -408,7 +410,7 @@ export default function Home() {
 
       <section className="plate world-plate" aria-labelledby="world-title">
         <div className="plate-heading">
-          <span>Plate 05 · live dossier</span>
+          <span>Plate 05 · {wcDossierLabel}</span>
           <h2 id="world-title">The World Cup, rewritten at 39</h2>
           <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
@@ -424,12 +426,12 @@ export default function Home() {
           <div><strong>{wcCareer.firstLatestGoalSpan}</strong><span>between his first and latest World Cup goals · record</span></div>
           <div><strong>Teens · 20s · 30s</strong><span>the only player to score across all three age decades</span></div>
         </div>
-        <p className="live-note">Live-stat warning: the 2026 tournament was still in progress when this plate was audited. Figures above follow FIFA’s {wcAuditLabel} update.</p>
+        <p className="live-note">{wcIsInProgress ? "Live-stat warning: the 2026 tournament was still in progress when this plate was audited." : "Final-tournament dossier."} Figures above follow FIFA’s {wcAuditLabel} update.</p>
       </section>
 
       <section className="plate live-2026-plate" aria-labelledby="live-2026-title">
         <div className="plate-heading inverse">
-          <span>Plate 05A · tournament checkpoint</span>
+          <span>Plate 05A · {wcIsInProgress ? "tournament checkpoint" : "final tournament"}</span>
           <h2 id="live-2026-title">Thirty-nine. Still setting the pace.</h2>
           <a href={sources.worldCup2026} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
@@ -444,7 +446,7 @@ export default function Home() {
           <div><strong>{wcTournament.matches}</strong><span>matches</span></div>
           <div><strong>{wcTournament.displayedMinutes}</strong><span>minutes</span></div>
           <div><strong>{wcTournament.minutesPerContribution}</strong><span>minutes per contribution</span></div>
-          <p>FIFA listed Messi first in the Golden Boot race at this checkpoint. The final had not yet been played, so this is a dated snapshot—not a finished tournament total.</p>
+          <p>{wcIsInProgress ? "FIFA listed Messi first in the Golden Boot race at this checkpoint. The final had not yet been played, so this is a dated snapshot—not a finished tournament total." : "FIFA’s completed-tournament table supplies the final totals in this snapshot."}</p>
         </div>
         <div className="live-2026-records">
           <div><strong>38 years · 357 days</strong><span>oldest World Cup hat-trick scorer</span><p>Three against Algeria; the previous record was 33 years, 130 days.</p></div>
@@ -743,7 +745,7 @@ export default function Home() {
 
       <section className="plate world-gap-plate" aria-labelledby="world-gap-title">
         <div className="plate-heading inverse">
-          <span>Plate 18 · live margins</span>
+          <span>Plate 18 · {wcIsInProgress ? "live margins" : "final margins"}</span>
           <h2 id="world-gap-title">“First” undersells the distance.</h2>
           <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
@@ -763,7 +765,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <p className="world-gap-note">The comparison target changes by row: “old record” where Messi surpassed a prior mark, “next” where the active leaderboard matters. Tournament figures were still live at audit time.</p>
+        <p className="world-gap-note">The comparison target changes by row: “old record” where Messi surpassed a prior mark, “next” where the active leaderboard matters. {wcIsInProgress ? "Tournament figures were still live at audit time." : "Tournament figures reflect FIFA’s completed-event audit."}</p>
       </section>
 
       <section className="plate peak-season-plate" aria-labelledby="peak-season-title">
@@ -953,7 +955,7 @@ export default function Home() {
 
       <section className="plate distance-plate" aria-labelledby="distance-title">
         <div className="plate-heading inverse">
-          <span>Plate 29 · live dossier</span>
+          <span>Plate 29 · {wcDossierLabel}</span>
           <h2 id="distance-title">The penalty area was optional.</h2>
           <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
@@ -970,7 +972,7 @@ export default function Home() {
 
       <section className="plate semifinal-age-plate" aria-labelledby="semifinal-age-title">
         <div className="plate-heading">
-          <span>Plate 30 · live dossier</span>
+          <span>Plate 30 · {wcDossierLabel}</span>
           <h2 id="semifinal-age-title">The semi-final had never seen this age.</h2>
           <a href={sources.semiFinal2026} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
         </div>
@@ -987,7 +989,7 @@ export default function Home() {
 
       <section className="plate six-cups-plate" aria-labelledby="six-cups-title">
         <div className="plate-heading inverse">
-          <span>Plate 31 · live dossier</span>
+          <span>Plate 31 · {wcDossierLabel}</span>
           <h2 id="six-cups-title">Six World Cups. No empty columns.</h2>
           <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · {wcAuditShort} ↗</a>
         </div>
@@ -1010,7 +1012,7 @@ export default function Home() {
 
       <section className="plate world-streak-plate" aria-labelledby="world-streak-title">
         <div className="plate-heading">
-          <span>Plate 32 · live dossier</span>
+          <span>Plate 32 · {wcDossierLabel}</span>
           <h2 id="world-streak-title">Nine World Cup matches. Nine scoresheets.</h2>
           <a href={sources.uefaRecords} target="_blank" rel="noreferrer">UEFA · 16 Jul 2026 ↗</a>
         </div>

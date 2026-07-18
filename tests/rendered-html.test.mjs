@@ -24,8 +24,8 @@ test("server-renders the Messi statistical almanac", async () => {
   const html = await response.text();
   assert.match(html, /<title>The Messi Index — A statistical audit of the impossible<\/title>/i);
   assert.match(html, /The record book ran out of/);
-  assert.match(html, /Vol\. 02/);
-  assert.match(html, /Issue 002/);
+  assert.match(html, /Vol\. 03/);
+  assert.match(html, /Issue 003/);
   assert.match(html, /The calendar-year anomaly/);
   assert.match(html, />91</);
   assert.match(html, /The World Cup, rewritten at 39/);
@@ -58,6 +58,8 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /His Argentina peak arrived in the World Cup year\./);
   assert.match(html, /The scorer had a second career as a provider\./);
   assert.match(html, /The penalty area was optional\./);
+  assert.match(html, /The semi-final had never seen this age\./);
+  assert.match(html, /Six World Cups\. No empty columns\./);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

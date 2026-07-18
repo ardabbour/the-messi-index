@@ -21,6 +21,8 @@ const sources = {
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/lionel-messi-argentina-stats-records",
   worldCup2026:
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-key-statistics",
+  semiFinal2026:
+    "https://www.fifa.com/en/articles/england-argentina-match-report-highlights",
   argentinaDebut:
     "https://www.fifa.com/en/articles/lionel-messi-international-debut-anniversary",
   assistMilestone:
@@ -203,7 +205,7 @@ export default function Home() {
           The Messi Index
         </a>
         <div className="masthead-meta">
-          <span>Vol. 02</span>
+          <span>Vol. 03</span>
           <span>18 July 2026</span>
           <span>Records, audited</span>
         </div>
@@ -917,6 +919,46 @@ export default function Home() {
         <div className="distance-share"><strong>7 ÷ 21 = 33.3%</strong><p>One in every three Messi World Cup goals has come from outside the area.</p><span>Live career total through 15 July 2026</span></div>
       </section>
 
+      <section className="plate semifinal-age-plate" aria-labelledby="semifinal-age-title">
+        <div className="plate-heading">
+          <span>Plate 30 · live dossier</span>
+          <h2 id="semifinal-age-title">The semi-final had never seen this age.</h2>
+          <a href={sources.semiFinal2026} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
+        </div>
+        <div className="semifinal-age-layout">
+          <div className="semifinal-age-total"><strong>39</strong><span>years · 21 days</span><p>oldest outfield player in a World Cup semi-final</p></div>
+          <div className="semifinal-age-study" role="img" aria-label="Messi was 39 years and 21 days old in the 2026 World Cup semi-final, compared with the previous record of 37 years and 236 days shared by Fritz Walter and Gunnar Gren">
+            <div className="semifinal-age-bar messi"><span>Lionel Messi · 2026</span><i style={{ width: "100%" }} /><strong>39y 21d</strong></div>
+            <div className="semifinal-age-bar prior"><span>Walter / Gren · 1958</span><i style={{ width: `${((37 * 365 + 236) / (39 * 365 + 21)) * 100}%` }} /><strong>37y 236d</strong></div>
+            <div className="semifinal-age-gap"><strong>More than a year</strong><span>older than the previous outfield-player benchmark</span></div>
+          </div>
+        </div>
+        <p className="semifinal-age-note">The prior mark had stood since Fritz Walter and Gunnar Gren faced each other in the 1958 semi-final. Messi also received Player of the Match against England.</p>
+      </section>
+
+      <section className="plate six-cups-plate" aria-labelledby="six-cups-title">
+        <div className="plate-heading inverse">
+          <span>Plate 31 · live dossier</span>
+          <h2 id="six-cups-title">Six World Cups. No empty columns.</h2>
+          <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA · 15 Jul 2026 ↗</a>
+        </div>
+        <div className="six-cups-summary">
+          <div><strong>6</strong><span>World Cups played</span><p>joint record</p></div>
+          <div><strong>6</strong><span>World Cups with an assist</span><p>only player</p></div>
+          <div><strong>5</strong><span>World Cups with a goal</span><p>Argentina record</p></div>
+        </div>
+        <div className="six-cups-grid" role="img" aria-label="Messi played and assisted in the 2006, 2010, 2014, 2018, 2022 and 2026 World Cups, and scored in every one except 2010">
+          {[2006, 2010, 2014, 2018, 2022, 2026].map((year) => (
+            <div key={year}>
+              <strong>{year}</strong>
+              <span className="cup-mark assist">A</span>
+              <span className={year === 2010 ? "cup-mark goal empty" : "cup-mark goal"}>{year === 2010 ? "—" : "G"}</span>
+            </div>
+          ))}
+        </div>
+        <div className="six-cups-legend"><span><i className="assist" />A · assist</span><span><i className="goal" />G · goal</span><p>Every edition contains a direct contribution; five contain both.</p></div>
+      </section>
+
       <section className="ledger-section" aria-labelledby="ledger-title">
         <div className="ledger-header">
           <div><p className="kicker">Selected entries</p><h2 id="ledger-title">The ledger of implausibility</h2></div>
@@ -982,7 +1024,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <span>The Messi Index · Issue 002</span>
+        <span>The Messi Index · Issue 003</span>
         <p>The whole point is that this isn&apos;t normal.</p>
         <a href="#top">Back to top ↑</a>
       </footer>

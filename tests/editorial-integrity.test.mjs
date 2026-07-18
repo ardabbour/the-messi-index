@@ -15,7 +15,7 @@ test("edition plate counts agree across product and documentation", async () => 
   const advertisedPlateCount = Number(readme.match(/contains (\d+) statistical plates/)?.[1]);
   const ledgerPlateCount = ledger.match(/^\| (?:\d|05A)/gm)?.length ?? 0;
 
-  assert.equal(renderedPlateCount, 30);
+  assert.equal(renderedPlateCount, 32);
   assert.equal(advertisedPlateCount, renderedPlateCount);
   assert.equal(ledgerPlateCount, renderedPlateCount);
 });
@@ -24,7 +24,7 @@ test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];
 
-  assert.equal(urls.length, 21);
+  assert.equal(urls.length, 22);
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(page, /http:\/\//);
 });

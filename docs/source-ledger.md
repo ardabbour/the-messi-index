@@ -36,6 +36,8 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 27 | Argentina calendar-year record of 18 goals in 14 appearances in 2022 | FIFA | Historical / stable |
 | 28 | 250th Barcelona assist and 46 La Liga goal contributions in 2019/20 | FIFA, FC Barcelona | Historical / stable |
 | 29 | Seven World Cup goals from outside the area versus Rivellino’s prior five | FIFA | Live; dated 15 Jul 2026 |
+| 30 | Oldest outfield World Cup semi-finalist at 39 years and 21 days | FIFA | Live; dated 15 Jul 2026 |
+| 31 | Played six World Cups, assisted in six and scored in five | FIFA | Live; dated 15 Jul 2026 |
 
 ## Live-data rule
 

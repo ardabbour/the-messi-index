@@ -55,7 +55,7 @@ Future editions are queued in [`docs/research-backlog.md`](docs/research-backlog
 - `app/page.tsx` contains the almanac content and interactions.
 - `app/globals.css` contains the responsive archival design system.
 - `data/edition.json` keeps the published volume, issue, date and plate count synchronized.
-- `data/live-world-cup-2026.json` is the dated source of truth for the tournament snapshot; its status also controls live/final interface wording.
+- `data/live-world-cup-2026.json` is the dated source of truth for the tournament snapshot; its status controls live/final interface wording, and its review deadline prevents stale provisional data from passing after the final.
 - `tests/rendered-html.test.mjs` verifies the production-rendered product.
 - `tests/statistical-arithmetic.test.mjs` verifies derived totals, rates and gaps.
 - `tests/editorial-integrity.test.mjs` keeps plate counts, source rows and live cutoffs synchronized.

@@ -3,6 +3,8 @@
   "auditDateLabel": "15 July 2026",
   "auditDateShort": "15 Jul 2026",
   "status": "in_progress",
+  "reviewDeadline": "2026-07-20T12:00:00Z",
+  "reviewReason": "Reconcile FIFA's completed tournament statistics after the 19 July final.",
   "career": {
     "goals": 21,
     "appearances": 33,

@@ -67,6 +67,21 @@ test("live World Cup snapshot remains structurally coherent", async () => {
   assert.ok(snapshot.career.captainAppearances > snapshot.comparators.nextCaptainAppearances);
 });
 
+test("an in-progress World Cup snapshot cannot outlive its review deadline", async () => {
+  const snapshotText = await readFile(new URL("data/live-world-cup-2026.json", root), "utf8");
+  const snapshot = JSON.parse(snapshotText);
+  const reviewDeadline = Date.parse(snapshot.reviewDeadline);
+
+  assert.ok(Number.isFinite(reviewDeadline), "The live snapshot needs a valid reviewDeadline");
+  assert.match(snapshot.reviewReason, /completed tournament statistics/i);
+  if (snapshot.status === "in_progress") {
+    assert.ok(
+      Date.now() <= reviewDeadline,
+      `The provisional World Cup snapshot expired at ${snapshot.reviewDeadline}; reconcile FIFA's completed table before publishing`,
+    );
+  }
+});
+
 test("visual plates and source links retain accessible, safe markup", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const imageRoles = page.match(/<[^>]+role="img"[^>]*>/g) ?? [];

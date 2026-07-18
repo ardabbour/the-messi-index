@@ -13,6 +13,8 @@ The 2026 FIFA World Cup final is scheduled after the current 15 July audit cutof
 5. Run `npm test`, `npm run lint` and `npm run audit:sources`.
 6. Recheck UEFA’s quickest-to-60 Champions League table; Plate 42 is current through 1 June 2026 and Haaland had not yet reached the milestone at that cutoff.
 
+The provisional JSON expires at 12:00 UTC on 20 July. After that deadline, the editorial-integrity suite intentionally fails until the snapshot is reconciled and marked final (or a documented later review deadline is set while FIFA’s completed table remains unavailable).
+
 ### Live-source conflict protocol
 
 FIFA's dated key-stat article listed four Messi assists at the 15 July checkpoint, while mutable statistics surfaces can later revise assist attribution. Treat the dated article and its audit cutoff as one internally consistent snapshot. For the final update, record the exact FIFA page and publication/update date, reconcile goals plus assists before editing the JSON, and never combine a goal total from one revision with an assist total from another.

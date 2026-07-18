@@ -144,3 +144,7 @@ test("Barcelona trophy cabinet reconciles", () => {
   assert.equal((35 / 17).toFixed(2), "2.06");
   assert.equal((778 / 35).toFixed(1), "22.2");
 });
+
+test("seventeen consecutive World XI editions reconcile", () => {
+  assert.equal(2023 - 2007 + 1, 17);
+});

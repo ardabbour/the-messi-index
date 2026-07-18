@@ -62,6 +62,8 @@ const sources = {
     "https://www.fcbarcelona.com/en/news/2108496/copa-del-rey-champions/amp",
   thirtyGoalRun:
     "https://www.fcbarcelona.com/en/football/first-team/news/2110565/thirteenth-consecutive-30-goal-season-for-messi/featured",
+  fifaTrophies:
+    "https://www.fifa.com/en/the-best-fifa-football-awards/articles/the-world-cup-the-best-and-all-of-lionel-messis-trophy-wins",
 };
 
 const wcCareer = worldCup2026.career;
@@ -233,6 +235,8 @@ const worldCupScoringStages = [
   { stage: "Semi-final", years: "2022" },
   { stage: "Final", years: "2022" },
 ];
+
+const worldXiYears = Array.from({ length: 17 }, (_, index) => 2007 + index);
 
 const filters: { id: Dossier; label: string }[] = [
   { id: "all", label: "Everything" },
@@ -1155,6 +1159,22 @@ export default function Home() {
           ))}
         </div>
         <div className="world-stage-proof"><strong>5 / 5</strong><p>The only player to score at every traditional stage.</p><span>New 2026 round of 32? Scored there too.</span></div>
+      </section>
+
+      <section className="plate world-xi-plate" aria-labelledby="world-xi-title">
+        <div className="plate-heading inverse">
+          <span>Plate 39 · peer recognition</span>
+          <h2 id="world-xi-title">Seventeen World XIs. No missing year.</h2>
+          <a href={sources.fifaTrophies} target="_blank" rel="noreferrer">FIFA ↗</a>
+        </div>
+        <div className="world-xi-summary">
+          <strong>17</strong>
+          <div><span>FIFA FIFPRO Men’s World 11 selections</span><p>2007 through 2023, inclusive</p></div>
+        </div>
+        <div className="world-xi-run" role="img" aria-label="Messi was selected to the FIFA FIFPRO Men's World 11 in every year from 2007 through 2023, seventeen consecutive editions">
+          {worldXiYears.map((year) => <div key={year}><span>{year}</span><strong>XI</strong></div>)}
+        </div>
+        <div className="world-xi-proof"><strong>2023 − 2007 + 1 = 17</strong><p>Seventeen consecutive annual selections.</p><span>Age 20 → age 36</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

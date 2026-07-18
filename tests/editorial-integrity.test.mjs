@@ -12,10 +12,12 @@ test("edition plate counts agree across product and documentation", async () => 
   ]);
 
   const renderedPlateCount = page.match(/className="plate-heading(?:\s|\")/g)?.length ?? 0;
+  const interfacePlateCount = Number(page.match(/const editionPlateCount = (\d+)/)?.[1]);
   const advertisedPlateCount = Number(readme.match(/contains (\d+) statistical plates/)?.[1]);
   const ledgerPlateCount = ledger.match(/^\| (?:\d|05A)/gm)?.length ?? 0;
 
   assert.equal(renderedPlateCount, 40);
+  assert.equal(interfacePlateCount, renderedPlateCount);
   assert.equal(advertisedPlateCount, renderedPlateCount);
   assert.equal(ledgerPlateCount, renderedPlateCount);
 });

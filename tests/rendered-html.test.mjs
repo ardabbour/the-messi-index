@@ -29,6 +29,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /The record book ran out of/);
   assert.match(html, /Vol\. 03/);
   assert.match(html, /Issue 003/);
+  assert.match(html, /40<!-- --> plates, audited/);
   assert.match(html, /The calendar-year anomaly/);
   assert.match(html, />91</);
   assert.match(html, /The World Cup, rewritten at 39/);

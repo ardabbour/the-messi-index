@@ -237,6 +237,7 @@ const worldCupScoringStages = [
 ];
 
 const worldXiYears = Array.from({ length: 17 }, (_, index) => 2007 + index);
+const editionPlateCount = 40;
 
 const filters: { id: Dossier; label: string }[] = [
   { id: "all", label: "Everything" },
@@ -262,7 +263,7 @@ export default function Home() {
         <div className="masthead-meta">
           <span>Vol. 03</span>
           <span>18 July 2026</span>
-          <span>Records, audited</span>
+          <span>{editionPlateCount} plates, audited</span>
         </div>
       </header>
 
@@ -288,7 +289,7 @@ export default function Home() {
       </section>
 
       <nav className="evidence-index" aria-label="Index of statistical evidence">
-        <span>Index of evidence</span>
+        <span>Index of {editionPlateCount} plates</span>
         <a href="#calendar-title"><b>01</b> Scoring anomaly</a>
         <a href="#barca-title"><b>02</b> Barcelona</a>
         <a href="#age-title"><b>04</b> Europe</a>

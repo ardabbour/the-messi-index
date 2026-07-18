@@ -39,6 +39,8 @@ const sources = {
     "https://www.fcbarcelona.com/en/news/1732775/leo-messi-wins-his-seventh-pichichi-a-laliga-record/amp",
   mlsMvp:
     "https://www.mlssoccer.com/news/inter-miami-cf-forward-lionel-messi-named-2025-landon-donovan-mls-most-valuable-player-for-second-consecutive-season",
+  mlsSix:
+    "https://www.mlssoccer.com/news/six-goal-contributions-lionel-messi-sets-two-more-mls-records-in-matchday-12",
   awardGap:
     "https://www.fifa.com/en/the-best-fifa-football-awards/articles/lionel-messi-international-football-argentina-records-statistics",
   europeVictims:
@@ -399,7 +401,7 @@ export default function Home() {
         </div>
         <div className="live-2026-records">
           <div><strong>38 years · 357 days</strong><span>oldest World Cup hat-trick scorer</span><p>Three against Algeria; the previous record was 33 years, 130 days.</p></div>
-          <div><strong>5</strong><span>Player of the Match awards in 2026</span><p>A single-edition record. His prior high of four in 2014 had been the joint record.</p></div>
+          <div><strong>5</strong><span>Player of the Match awards in 2026</span><p>A single-edition record; 16 across his World Cup career is also unequalled.</p></div>
           <a href={sources.worldCup} target="_blank" rel="noreferrer">FIFA record dossier ↗</a>
         </div>
       </section>
@@ -981,6 +983,28 @@ export default function Home() {
           ))}
         </div>
         <p className="world-streak-note">The run begins with every knockout round of Argentina’s 2022 title and continues through the first five matches of 2026. Two tournament formats; no blank match between them.</p>
+      </section>
+
+      <section className="plate six-in-half-plate" aria-labelledby="six-in-half-title">
+        <div className="plate-heading inverse">
+          <span>Plate 33</span>
+          <h2 id="six-in-half-title">One half. Six goal contributions.</h2>
+          <a href={sources.mlsSix} target="_blank" rel="noreferrer">Major League Soccer ↗</a>
+        </div>
+        <div className="six-in-half-summary">
+          <div className="six-in-half-total"><strong>6</strong><span>contributions in one match</span><p>MLS record</p></div>
+          <div className="six-in-half-equation"><div><strong>1</strong><span>goal</span></div><b>+</b><div><strong>5</strong><span>assists · MLS record</span></div><b>=</b><div><strong>6</strong><span>total · MLS record</span></div></div>
+        </div>
+        <div className="half-timeline" role="img" aria-label="All six Messi goal contributions against New York Red Bulls came in the second half: assists in minutes 48, 62, 69, 75 and 81, plus a goal in minute 50">
+          <div className="half-axis"><span>46′</span><span>60′</span><span>75′</span><span>90′</span></div>
+          {[
+            { minute: 48, type: "A" }, { minute: 50, type: "G" }, { minute: 62, type: "A" },
+            { minute: 69, type: "A" }, { minute: 75, type: "A" }, { minute: 81, type: "A" },
+          ].map((event, index) => (
+            <span className={event.type === "G" ? "half-event goal" : "half-event assist"} style={{ left: `${((event.minute - 45) / 45) * 100}%` }} key={`${event.minute}-${index}`}><b>{event.type}</b><small>{event.minute}′</small></span>
+          ))}
+        </div>
+        <div className="six-in-half-rate"><strong>45 ÷ 6 = 7.5 minutes</strong><p>One direct contribution every 7.5 minutes of the second half.</p><span>Inter Miami 6–2 New York Red Bulls · 4 May 2024</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

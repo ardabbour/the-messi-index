@@ -33,6 +33,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /51\.6/);
   assert.match(html, /oldest World Cup hat-trick scorer/);
   assert.match(html, /Player of the Match awards in 2026/);
+  assert.match(html, /16 across his World Cup career is also unequalled/);
   assert.match(html, /15 July 2026/);
   assert.match(html, /The “bad” year was 45 goals/);
   assert.match(html, /Fifty in the league\. Not the season\./);
@@ -61,6 +62,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /The semi-final had never seen this age\./);
   assert.match(html, /Six World Cups\. No empty columns\./);
   assert.match(html, /Nine World Cup matches\. Nine scoresheets\./);
+  assert.match(html, /One half\. Six goal contributions\./);
   assert.match(html, /Guinness record/);
   assert.match(html, /FC Barcelona/);
   assert.match(html, /UEFA/);

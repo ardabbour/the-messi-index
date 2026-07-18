@@ -2,7 +2,7 @@
 
 An interactive, evidence-backed football almanac about the statistical distances Lionel Messi put between himself and everyone else.
 
-Edition 003 contains 33 statistical plates, a filterable record ledger and an interactive scoring-pace translator.
+Edition 003 contains 34 statistical plates, a filterable record ledger and an interactive scoring-pace translator.
 
 The site favors directly labeled comparisons, transparent arithmetic and links to primary or governing-body sources. Moving totals—especially 2026 World Cup figures—carry explicit audit dates.
 

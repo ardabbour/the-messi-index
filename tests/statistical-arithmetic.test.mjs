@@ -106,3 +106,8 @@ test("nine-match World Cup scoring streak reconciles", () => {
   assert.equal(goals.reduce((sum, value) => sum + value, 0), 13);
   assert.equal((13 / 9).toFixed(2), "1.44");
 });
+
+test("six contributions in one MLS half reconcile", () => {
+  assert.equal(1 + 5, 6);
+  assert.equal((45 / 6).toFixed(1), "7.5");
+});

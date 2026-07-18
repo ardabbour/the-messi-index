@@ -11,7 +11,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 03 | Goals in 21 consecutive La Liga appearances and against all 19 opponents in sequence | FC Barcelona | Historical / stable |
 | 04 | Champions League age records and 18 successive scoring seasons | UEFA | Historical / stable |
 | 05 | World Cup career records: 21 goals, 33 appearances, 23 wins, 10 knockout assists | FIFA | Live; dated 15 Jul 2026 |
-| 05A | 2026 World Cup checkpoint: 8 goals, 4 assists, 12 contributions, 620 displayed minutes | FIFA | Live; dated 15 Jul 2026 |
+| 05A | 2026 checkpoint: 8 goals, 4 assists, 12 contributions and five of 16 career Player of Match awards | FIFA | Live; dated 15 Jul 2026 |
 | 06 | 579 goals from 2010–2019 and nine 50-goal years | FC Barcelona; total and mean derived | Historical / stable |
 | 07 | 50 La Liga goals in 37 matches in 2011/12 | UEFA | Historical / stable |
 | 08 | Led La Liga in both goals and assists in three straight seasons | FC Barcelona | Historical / stable |
@@ -39,6 +39,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 30 | Oldest outfield World Cup semi-finalist at 39 years and 21 days | FIFA | Live; dated 15 Jul 2026 |
 | 31 | Played six World Cups, assisted in six and scored in five | FIFA | Live; dated 15 Jul 2026 |
 | 32 | World Cup record of scoring in nine consecutive matches; 13 goals derived | UEFA, FIFA | Live; dated 15 Jul 2026 |
+| 33 | MLS single-match records of five assists and six contributions, all in one half | Major League Soccer | Historical / stable |
 
 ## Live-data rule
 

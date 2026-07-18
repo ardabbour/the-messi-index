@@ -27,7 +27,7 @@ npm run lint
 npm run audit:sources
 ```
 
-`npm test` creates the production build, checks the server-rendered page for the finished product copy and source labels, and reconciles the arithmetic behind the headline comparisons. `npm run audit:sources` performs a live reachability check for every linked statistical source.
+`npm test` creates the production build, checks the server-rendered page for the finished product copy and source labels, and reconciles the arithmetic behind the headline comparisons. `npm run audit:sources` verifies that every linked statistical source is reachable, returns HTML and remains on an approved evidence-owner domain after redirects.
 
 ## Counting policy
 
@@ -40,6 +40,7 @@ npm run audit:sources
 ## Main source families
 
 - FIFA for World Cup, international and major-honour records
+- CONMEBOL for Copa América records and continental milestones
 - UEFA for European club competition and league-era comparisons
 - FC Barcelona for the club archive and season-by-season records
 - Major League Soccer for the 2024–25 Inter Miami seasons

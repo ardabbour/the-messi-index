@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo_Black, IBM_Plex_Mono, Libre_Franklin, Lora } from "next/font/google";
+import edition from "../data/edition.json";
 import "./globals.css";
 
 const display = Archivo_Black({ variable: "--font-display", subsets: ["latin"], weight: "400" });
@@ -10,13 +11,13 @@ const serif = Lora({ variable: "--font-serif", subsets: ["latin"], style: ["norm
 export const metadata: Metadata = {
   metadataBase: new URL("https://messi-rouge.vercel.app"),
   title: "The Messi Index — A statistical audit of the impossible",
-  description: "An evidence-backed visual almanac of Lionel Messi records, margins and statistical absurdities.",
+  description: `A ${edition.plateCount}-plate, evidence-backed visual almanac of Lionel Messi records, margins and statistical absurdities.`,
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "The Messi Index",
-    description: "The statistical distances Lionel Messi put between himself and football's idea of normal.",
+    description: `${edition.plateCount} audited plates measuring the statistical distances Lionel Messi put between himself and football's idea of normal.`,
     type: "website",
     siteName: "The Messi Index",
     url: "/",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "The Messi Index",
-    description: "A statistical audit of the impossible.",
+    description: `${edition.plateCount} audited plates. A statistical audit of the impossible.`,
   },
 };
 

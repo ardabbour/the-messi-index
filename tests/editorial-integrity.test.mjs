@@ -24,6 +24,14 @@ test("edition plate counts agree across product and documentation", async () => 
   assert.equal(ledgerAuditDate, edition.publicationDate);
 });
 
+test("public metadata derives its edition scale from the shared manifest", async () => {
+  const layout = await readFile(new URL("app/layout.tsx", root), "utf8");
+
+  assert.match(layout, /import edition from "\.\.\/data\/edition\.json"/);
+  assert.match(layout, /edition\.plateCount/);
+  assert.doesNotMatch(layout, /description: "A \d+-plate/);
+});
+
 test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];

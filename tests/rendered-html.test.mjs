@@ -29,6 +29,7 @@ test("server-renders the Messi statistical almanac", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>The Messi Index — A statistical audit of the impossible<\/title>/i);
+  assert.match(html, new RegExp(`<meta name="description" content="A ${edition.plateCount}-plate, evidence-backed visual almanac`));
   assert.match(html, /The record book ran out of/);
   assert.match(html, new RegExp(`Vol\\. (?:<!-- -->)?${edition.volume}`));
   assert.match(html, new RegExp(`Issue (?:<!-- -->)?${edition.issue}`));

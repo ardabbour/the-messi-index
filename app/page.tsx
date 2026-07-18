@@ -62,8 +62,8 @@ const sources = {
     "https://www.fcbarcelona.com/en/news/2108496/copa-del-rey-champions/amp",
   thirtyGoalRun:
     "https://www.fcbarcelona.com/en/football/first-team/news/2110565/thirteenth-consecutive-30-goal-season-for-messi/featured",
-  fifaTrophies:
-    "https://www.fifa.com/en/the-best-fifa-football-awards/articles/the-world-cup-the-best-and-all-of-lionel-messis-trophy-wins",
+  worldXi:
+    "https://www.fifa.com/en/the-best-fifa-football-awards/articles/lionel-messi-world-11-record-the-best",
 };
 
 const wcCareer = worldCup2026.career;
@@ -1165,7 +1165,7 @@ export default function Home() {
         <div className="plate-heading inverse">
           <span>Plate 39 · peer recognition</span>
           <h2 id="world-xi-title">Seventeen World XIs. No missing year.</h2>
-          <a href={sources.fifaTrophies} target="_blank" rel="noreferrer">FIFA ↗</a>
+          <a href={sources.worldXi} target="_blank" rel="noreferrer">FIFA ↗</a>
         </div>
         <div className="world-xi-summary">
           <strong>17</strong>

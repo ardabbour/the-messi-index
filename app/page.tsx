@@ -224,6 +224,14 @@ const barcaTrophies = [
   { name: "Club World Cup", value: 3 },
 ];
 
+const worldCupScoringStages = [
+  { stage: "Group stage", years: "2006 → 2026" },
+  { stage: "Round of 16", years: "2022 · 2026" },
+  { stage: "Quarter-final", years: "2022" },
+  { stage: "Semi-final", years: "2022" },
+  { stage: "Final", years: "2022" },
+];
+
 const filters: { id: Dossier; label: string }[] = [
   { id: "all", label: "Everything" },
   { id: "club", label: "Club" },
@@ -1127,6 +1135,24 @@ export default function Home() {
           </div>
         </div>
         <div className="trophy-proof"><strong>35 ÷ 17 = 2.06</strong><p>trophies per Barcelona season</p><span>One trophy per 22.2 appearances across 778 games</span></div>
+      </section>
+
+      <section className="plate world-stage-plate" aria-labelledby="world-stage-title">
+        <div className="plate-heading">
+          <span>Plate 38 · stage coverage</span>
+          <h2 id="world-stage-title">One player. Every World Cup stage.</h2>
+          <a href={sources.uefaRecords} target="_blank" rel="noreferrer">UEFA · 16 Jul 2026 ↗</a>
+        </div>
+        <div className="world-stage-route" role="img" aria-label="Messi is the only player to score in the World Cup group stage, round of 16, quarter-final, semi-final and final">
+          {worldCupScoringStages.map((item, index) => (
+            <div key={item.stage}>
+              <b>{String(index + 1).padStart(2, "0")}</b>
+              <strong>{item.stage}</strong>
+              <span>{item.years}</span>
+            </div>
+          ))}
+        </div>
+        <div className="world-stage-proof"><strong>5 / 5</strong><p>The only player to score at every traditional stage.</p><span>New 2026 round of 32? Scored there too.</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

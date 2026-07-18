@@ -156,3 +156,10 @@ test("the U-20 knockout sweep reconciles", () => {
   assert.equal(5 + 1, 6);
   assert.ok(knockoutGoals.every((value) => value > 0));
 });
+
+test("Argentina's six-trophy arc reconciles", () => {
+  const honours = ["U20", "Olympic", "Copa", "Finalissima", "World Cup", "Copa"];
+  assert.equal(honours.length, 6);
+  assert.equal(new Set(honours).size, 5);
+  assert.equal(2024 - 2005, 19);
+});

@@ -67,6 +67,8 @@ const sources = {
     "https://www.fifa.com/en/the-best-fifa-football-awards/articles/lionel-messi-world-11-record-the-best",
   u20WorldCup:
     "https://www.fifa.com/en/tournaments/mens/u20worldcup/chile-2025/articles/lionel-messi-u20-world-cup",
+  fifaTrophies:
+    "https://www.fifa.com/en/the-best-fifa-football-awards/articles/the-world-cup-the-best-and-all-of-lionel-messis-trophy-wins",
 };
 
 const wcCareer = worldCup2026.career;
@@ -245,6 +247,14 @@ const u20KnockoutRun = [
   { round: "Quarter-final", opponent: "Spain", goals: 1 },
   { round: "Semi-final", opponent: "Brazil", goals: 1 },
   { round: "Final", opponent: "Nigeria", goals: 2 },
+];
+const argentinaHonours = [
+  { year: "2005", name: "U-20 World Cup", tier: "Youth world" },
+  { year: "2008", name: "Olympic gold", tier: "Olympic" },
+  { year: "2021", name: "Copa América", tier: "Continental" },
+  { year: "2022", name: "Finalissima", tier: "Intercontinental" },
+  { year: "2022", name: "World Cup", tier: "Senior world" },
+  { year: "2024", name: "Copa América", tier: "Continental" },
 ];
 const editionPlateCount = edition.plateCount;
 
@@ -1210,6 +1220,29 @@ export default function Home() {
           ))}
         </div>
         <div className="u20-proof"><strong>4 / 4</strong><p>Scored in every knockout round: five there, six in the tournament.</p><span>Golden Boot · Golden Ball · world champion</span></div>
+      </section>
+
+      <section className="plate argentina-honours-plate" aria-labelledby="argentina-honours-title">
+        <div className="plate-heading inverse">
+          <span>Plate 41 · Argentina honours</span>
+          <h2 id="argentina-honours-title">The youth world title was only the first one.</h2>
+          <a href={sources.fifaTrophies} target="_blank" rel="noreferrer">FIFA honours inventory ↗</a>
+        </div>
+        <div className="argentina-honours-summary">
+          <strong>6</strong>
+          <div><span>team trophies with Argentina</span><p>Five competitions. Youth, Olympic, continental, intercontinental and senior world champions.</p></div>
+        </div>
+        <div className="argentina-honours-run" role="img" aria-label="Messi won six Argentina trophies: the 2005 U-20 World Cup, 2008 Olympic gold, 2021 Copa America, 2022 Finalissima, 2022 World Cup and 2024 Copa America">
+          {argentinaHonours.map((honour, index) => (
+            <div key={`${honour.year}-${honour.name}`}>
+              <b>{String(index + 1).padStart(2, "0")}</b>
+              <strong>{honour.year}</strong>
+              <span>{honour.name}</span>
+              <p>{honour.tier}</p>
+            </div>
+          ))}
+        </div>
+        <div className="argentina-honours-proof"><strong>2024 − 2005 = 19</strong><p>Nineteen years from the first Argentina trophy to the latest.</p><span>Two world titles at two age levels</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

@@ -2,7 +2,7 @@
 
 An interactive, evidence-backed football almanac about the statistical distances Lionel Messi put between himself and everyone else.
 
-Edition 003 contains 41 statistical plates, a filterable record ledger and an interactive scoring-pace translator.
+Edition 003 contains 42 statistical plates, a filterable record ledger and an interactive scoring-pace translator.
 
 Live edition: [messi-rouge.vercel.app](https://messi-rouge.vercel.app) · Source: [github.com/ardabbour/the-messi-index](https://github.com/ardabbour/the-messi-index)
 

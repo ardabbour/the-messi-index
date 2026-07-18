@@ -28,7 +28,7 @@ test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];
 
-  assert.equal(urls.length, 30);
+  assert.equal(urls.length, 31);
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(page, /http:\/\//);
 });

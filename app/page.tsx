@@ -71,6 +71,8 @@ const sources = {
     "https://www.fifa.com/en/the-best-fifa-football-awards/articles/the-world-cup-the-best-and-all-of-lionel-messis-trophy-wins",
   olympicWorldDouble:
     "https://www.fifa.com/en/tournaments/olympicgames/paris2024/articles/world-champions-olympic-gold",
+  championsLeagueSixty:
+    "https://www.uefa.com/uefachampionsleague/news/026f-13bff87268a6-5932644cbba5-1000--kylian-mbappe-in-the-champions-league-records-stats-who-he/",
 };
 
 const wcCareer = worldCup2026.career;
@@ -264,6 +266,12 @@ const argentinaHonours = [
   { year: "2022", name: "Finalissima", tier: "Intercontinental" },
   { year: "2022", name: "World Cup", tier: "Senior world" },
   { year: "2024", name: "Copa América", tier: "Continental" },
+];
+const championsLeagueSixty = [
+  { name: "Lionel Messi", matches: 80 },
+  { name: "Robert Lewandowski", matches: 85 },
+  { name: "Kylian Mbappé", matches: 89 },
+  { name: "Cristiano Ronaldo", matches: 98 },
 ];
 const editionPlateCount = edition.plateCount;
 
@@ -1252,6 +1260,29 @@ export default function Home() {
           ))}
         </div>
         <div className="argentina-honours-proof"><strong>2024 − 2005 = 19</strong><p>Nineteen years from the first Argentina trophy to the latest.</p><span><a href={sources.olympicWorldDouble} target="_blank" rel="noreferrer">1 of 15 Olympic + World Cup double winners ↗</a></span></div>
+      </section>
+
+      <section className="plate sixty-goal-plate" aria-labelledby="sixty-goal-title">
+        <div className="plate-heading">
+          <span>Plate 42 · scoring velocity</span>
+          <h2 id="sixty-goal-title">Sixty goals. Eighty matches. Two records.</h2>
+          <a href={sources.championsLeagueSixty} target="_blank" rel="noreferrer">UEFA · updated 1 Jun 2026 ↗</a>
+        </div>
+        <div className="sixty-goal-lead">
+          <strong>80</strong>
+          <div><span>matches to 60 Champions League goals</span><p>The quickest anyone reached the milestone—and, at 26 years 86 days, the youngest.</p></div>
+        </div>
+        <div className="sixty-goal-race" role="img" aria-label="Matches needed to reach 60 Champions League goals: Lionel Messi 80, Robert Lewandowski 85, Kylian Mbappe 89 and Cristiano Ronaldo 98. Messi was five, nine and eighteen matches quicker respectively.">
+          {championsLeagueSixty.map((player) => (
+            <div className={player.name === "Lionel Messi" ? "leader" : ""} key={player.name}>
+              <span>{player.name}</span>
+              <i><b style={{ width: `${(player.matches / 100) * 100}%` }} /></i>
+              <strong>{player.matches}</strong>
+              <em>{player.matches === 80 ? "record" : `+${player.matches - 80}`}</em>
+            </div>
+          ))}
+        </div>
+        <div className="sixty-goal-proof"><strong>60 ÷ 80 = 0.75</strong><p>Three Champions League goals every four matches to the milestone.</p><span>Current through UEFA’s 1 June 2026 update</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

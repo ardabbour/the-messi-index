@@ -163,3 +163,10 @@ test("Argentina's six-trophy arc reconciles", () => {
   assert.equal(new Set(honours).size, 5);
   assert.equal(2024 - 2005, 19);
 });
+
+test("the race to 60 Champions League goals reconciles", () => {
+  const matches = [80, 85, 89, 98];
+  assert.deepEqual(matches.slice(1).map((value) => value - matches[0]), [5, 9, 18]);
+  assert.equal((60 / 80).toFixed(2), "0.75");
+  assert.equal((80 / 60).toFixed(2), "1.33");
+});

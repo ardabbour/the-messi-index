@@ -48,6 +48,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 39 | Selected to the FIFA FIFPRO Men’s World 11 in 17 consecutive editions, every year from 2007 through 2023 | FIFA | Historical / stable |
 | 40 | Won the 2005 U-20 World Cup, Golden Ball and Golden Boot with six goals; five came while scoring in all four knockout rounds | FIFA | Historical / stable |
 | 41 | Six Argentina team trophies across five competitions from the 2005 U-20 World Cup through the 2024 Copa América; one of 15 Olympic-and-World-Cup double winners | FIFA | Historical / stable |
+| 42 | Reached 60 Champions League goals in a record 80 matches and at a record-youngest 26 years 86 days; Lewandowski needed 85, Mbappé 89 and Ronaldo 98 matches | UEFA | Current record; UEFA update 1 Jun 2026 |
 
 ## Live-data rule
 

@@ -57,6 +57,8 @@ const sources = {
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/lionel-messi-2014-eden-hazard-2018-dribbles",
   ballonDor2015Vote:
     "https://inside.fifa.com/en/media-releases/messi-lloyd-luis-enrique-and-ellis-triumph-at-fifa-ballon-d-or-2015-2754944",
+  laLiga2021Leaders:
+    "https://www.fcbarcelona.com/en/news/2159771/messi-stats-leader-in-la-liga",
   suarezBarca:
     "https://www.fcbarcelona.com/en/football/first-team/players/4138/luis-suarez",
   freeKicks:
@@ -291,6 +293,13 @@ const ledger = [
     group: "awards" as Dossier,
     href: sources.ballonDor2015Vote,
   },
+  {
+    value: "11",
+    label: "La Liga attacking categories led in 2020/21",
+    note: "From goals and shooting to chance creation, dribbling and fouls received.",
+    group: "club" as Dossier,
+    href: sources.laLiga2021Leaders,
+  },
 ];
 
 const calendarYear = [
@@ -347,6 +356,18 @@ const ballonDor2015Electorate = [
   { group: "National-team coaches", voters: 165 },
   { group: "National-team captains", voters: 162 },
   { group: "Media representatives", voters: 171 },
+];
+const laLiga2021Comparisons = [
+  { metric: "Goals", messi: 30, next: 23 },
+  { metric: "Shots on target", messi: 91, next: 55 },
+  { metric: "Total shots", messi: 196, next: 123 },
+  { metric: "Woodwork hits", messi: 8, next: 7 },
+  { metric: "Free-kick goals", messi: 3, next: 2 },
+  { metric: "Outside-box goals", messi: 8, next: 4 },
+  { metric: "Chances created", messi: 77, next: 73 },
+  { metric: "Completed dribbles", messi: 159, next: 121 },
+  { metric: "Fouls received", messi: 99, next: 97 },
+  { metric: "Shots after dribbles", messi: 62, next: 37 },
 ];
 
 const barcaBreakdown = [
@@ -506,7 +527,6 @@ export default function Home() {
         <span>Index of {editionPlateCount} plates</span>
         <a href="#calendar-title"><b>01</b> Scoring anomaly</a>
         <a href="#barca-title"><b>02</b> Barcelona</a>
-        <a href="#age-title"><b>04</b> Europe</a>
         <a href="#world-title"><b>05</b> World Cup</a>
         <a href="#late-title"><b>10</b> Late career</a>
         <a href="#awards-title"><b>11</b> Awards</a>
@@ -518,6 +538,7 @@ export default function Home() {
         <a href="#qualifying-title"><b>44</b> Qualifying</a>
         <a href="#world-dribble-peak-title"><b>50</b> WC dribbling</a>
         <a href="#ballot-title"><b>51</b> Vote share</a>
+        <a href="#attack-spectrum-title"><b>52</b> Attack spectrum</a>
         <a href="#ledger-title"><b>∞</b> Full ledger</a>
       </nav>
 
@@ -1777,6 +1798,37 @@ export default function Home() {
           </div>
         </div>
         <div className="ballot-proof"><strong>27.76 + 7.86 = 35.62</strong><p>Put both podium challengers on the same side of the ballot. Messi still wins.</p><span>Official final result · FIFA</span></div>
+      </section>
+
+      <section className="plate attack-spectrum-plate" aria-labelledby="attack-spectrum-title">
+        <div className="plate-heading">
+          <span>Plate 52 · total attacking control</span>
+          <h2 id="attack-spectrum-title">One season. Eleven leaderboards.</h2>
+          <a href={sources.laLiga2021Leaders} target="_blank" rel="noreferrer">FC Barcelona season audit ↗</a>
+        </div>
+        <div className="attack-spectrum-lead">
+          <div><strong>11</strong><span>La Liga categories led</span><p>2020/21 · goals, shooting, creation, carrying and pressure absorbed</p></div>
+          <div>
+            <article><strong>30</strong><span>goals</span><p>Fifth straight scoring title.</p></article>
+            <article><strong>261</strong><span>dribbles attempted</span><p>Another outright league lead.</p></article>
+            <article><strong>77</strong><span>chances created</span><p>While taking 196 shots himself.</p></article>
+          </div>
+        </div>
+        <div className="attack-spectrum-race" role="img" aria-label="Ten quantified La Liga category comparisons from 2020/21. Lionel Messi led goals 30 to 23, shots on target 91 to 55, total shots 196 to 123, woodwork hits 8 to 7, free-kick goals 3 to 2, outside-box goals 8 to 4, chances created 77 to 73, completed dribbles 159 to 121, fouls received 99 to 97 and shots after dribbles 62 to 37. He also led dribbles attempted with 261.">
+          <div className="attack-spectrum-key"><span>Messi as % of the runner-up total</span><b>Runner-up = 100</b></div>
+          {laLiga2021Comparisons.map((item) => {
+            const index = (item.messi / item.next) * 100;
+            return (
+              <div className="attack-spectrum-row" key={item.metric}>
+                <span>{item.metric}</span>
+                <i><em style={{ width: `${index / 2}%` }} /><b>100</b></i>
+                <p><strong>{item.messi}</strong><small>vs {item.next}</small></p>
+                <b>{Math.round(index)}</b>
+              </div>
+            );
+          })}
+        </div>
+        <div className="attack-spectrum-proof"><strong>8 ÷ 4 = 2.00×</strong><p>Twice the next-best outside-box goal total. Ten quantified gaps above; the league-leading 261 attempted dribbles makes eleven.</p><span>Completed season · 2020/21</span></div>
       </section>
 
       <section className="ledger-section" aria-labelledby="ledger-title">

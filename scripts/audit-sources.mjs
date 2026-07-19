@@ -27,6 +27,10 @@ const claimFingerprints = new Map([
     "https://inside.fifa.com/en/media-releases/messi-lloyd-luis-enrique-and-ellis-triumph-at-fifa-ballon-d-or-2015-2754944",
     ["165 national team coaches", "162 national team captains", "171 media representatives", "41.33%", "27.76%", "7.86%"],
   ],
+  [
+    "https://www.fcbarcelona.com/en/news/2159771/messi-stats-leader-in-la-liga",
+    ["Goals (30)", "Most shots on goal (91)", "Most shots in total (196)", "Most chances created (77)", "Most dribbles attempted (261)", "Most dribbles completed (159)", "Most fouls received (99)", "Most shots after dribbles (62)"],
+  ],
 ]);
 
 if (urls.length === 0) {

@@ -253,3 +253,16 @@ test("the 2015 FIFA Ballon d'Or ballot dominance reconciles", () => {
   assert.ok(41.33 > 27.76 + 7.86);
   assert.equal(165 + 162 + 171, 498);
 });
+
+test("the 2020/21 La Liga attack-spectrum margins reconcile", () => {
+  const comparisons = [
+    [30, 23], [91, 55], [196, 123], [8, 7], [3, 2],
+    [8, 4], [77, 73], [159, 121], [99, 97], [62, 37],
+  ];
+  const indices = comparisons.map(([messi, next]) => Math.round((messi / next) * 100));
+
+  assert.equal(comparisons.length + 1, 11);
+  assert.deepEqual(indices, [130, 165, 159, 114, 150, 200, 105, 131, 102, 168]);
+  assert.equal(8 / 4, 2);
+  assert.equal((159 / 261 * 100).toFixed(1), "60.9");
+});

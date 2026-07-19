@@ -58,6 +58,7 @@ The site gives preference to competition organizers, governing bodies, clubs and
 | 49 | Champions League group/league-phase record of 80 goals in 86 matches, seven goals above Ronaldo and Lewandowski; second-best rate in UEFA's minimum-20-goal table, with exactly twice Haaland's 40-goal volume | UEFA; gaps and multiple derived | Current through UEFA update 1 Jun 2026 |
 | 50 | 46 successful dribbles at Brazil 2014: third-most in any World Cup edition, one behind Jairzinho's 47 and 12 ahead of tournament runner-up Arjen Robben's 34 | FIFA; runner-up total, one-dribble gap and 35.3% margin derived | Historical / stable |
 | 51 | Won the 2015 FIFA Ballon d'Or with 41.33% of votes versus Cristiano Ronaldo's 27.76% and Neymar's 7.86%; second and third combined for 35.62%, leaving a 5.71-point Messi margin across 498 participating voters | FIFA; combined share, margin and electorate total derived | Historical / stable |
+| 52 | Led La Liga in 11 attacking categories in 2020/21: goals, shots on target, total shots, woodwork hits, free-kick goals, outside-box goals, chances created, dribbles attempted, completed dribbles, fouls received and shots after dribbles; ten runner-up-normalized margins displayed | FC Barcelona; ratios and percentage indices derived | Completed season / stable |
 
 ## Live-data rule
 

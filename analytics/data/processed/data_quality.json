@@ -1,0 +1,65 @@
+{
+  "raw_rows": 3817,
+  "seasons": 7,
+  "missing_cells": 0,
+  "duplicate_player_seasons": 0,
+  "nonpositive_minutes": 0,
+  "by_season": [
+    {
+      "season": "2014/15",
+      "raw_rows": 523,
+      "qualified_forward_rows": 92,
+      "missing_cells": 0,
+      "duplicate_player_ids": 0,
+      "messi_rows": 1
+    },
+    {
+      "season": "2015/16",
+      "raw_rows": 539,
+      "qualified_forward_rows": 94,
+      "missing_cells": 0,
+      "duplicate_player_ids": 0,
+      "messi_rows": 1
+    },
+    {
+      "season": "2016/17",
+      "raw_rows": 541,
+      "qualified_forward_rows": 102,
+      "missing_cells": 0,
+      "duplicate_player_ids": 0,
+      "messi_rows": 1
+    },
+    {
+      "season": "2017/18",
+      "raw_rows": 557,
+      "qualified_forward_rows": 98,
+      "missing_cells": 0,
+      "duplicate_player_ids": 0,
+      "messi_rows": 1
+    },
+    {
+      "season": "2018/19",
+      "raw_rows": 531,
+      "qualified_forward_rows": 91,
+      "missing_cells": 0,
+      "duplicate_player_ids": 0,
+      "messi_rows": 1
+    },
+    {
+      "season": "2019/20",
+      "raw_rows": 556,
+      "qualified_forward_rows": 100,
+      "missing_cells": 0,
+      "duplicate_player_ids": 0,
+      "messi_rows": 1
+    },
+    {
+      "season": "2020/21",
+      "raw_rows": 570,
+      "qualified_forward_rows": 110,
+      "missing_cells": 0,
+      "duplicate_player_ids": 0,
+      "messi_rows": 1
+    }
+  ]
+}

@@ -41,6 +41,7 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /href="#world-golden-ball-title"/);
   assert.match(html, /href="#world-dribble-peak-title"/);
   assert.match(html, /href="#ballot-title"/);
+  assert.match(html, /href="#attack-spectrum-title"/);
   assert.match(html, /href="#argentina-honours-title"/);
   assert.match(html, /href="#copa-career-title"/);
   assert.match(html, /href="#qualifying-title"/);
@@ -79,6 +80,10 @@ test("server-renders the Messi statistical almanac", async () => {
   assert.match(html, /41\.33%/);
   assert.match(html, /Second \+ third/);
   assert.match(html, /27\.76 \+ 7\.86 = 35\.62/);
+  assert.match(html, /One season\. Eleven leaderboards\./);
+  assert.match(html, /Messi as % of the runner-up total/);
+  assert.match(html, /8 ÷ 4 = 2\.00×/);
+  assert.match(html, /league-leading 261 attempted dribbles makes eleven/);
   assert.match(html, /The World Cup, rewritten at 39/);
   assert.match(html, /Thirty-nine\. Still setting the pace\./);
   assert.match(html, new RegExp(`>${worldCup2026.career.goals}<`));

@@ -36,7 +36,7 @@ test("citation inventory uses unique secure URLs", async () => {
   const page = await readFile(new URL("app/page.tsx", root), "utf8");
   const urls = page.match(/https:\/\/[^"\s]+/g) ?? [];
 
-  assert.equal(urls.length, 42);
+  assert.equal(urls.length, 43);
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(page, /http:\/\//);
 });
@@ -53,6 +53,7 @@ test("the live source audit restricts redirects to approved evidence owners", as
   assert.match(auditScript, /"Right foot", "Left foot", "Header", "100 goals", "122 games", "1–20", "42 games", "81–100"/);
   assert.match(auditScript, /"just 86 matches", "ratio of 0\.93", "40 goals \/ 38 games", "80 \/ 86", "73 \/ 87", "73 \/ 98"/);
   assert.match(auditScript, /"165 national team coaches", "162 national team captains", "171 media representatives", "41\.33%", "27\.76%", "7\.86%"/);
+  assert.match(auditScript, /"Goals \(30\)", "Most shots on goal \(91\)", "Most shots in total \(196\)"/);
   assert.match(auditScript, /missing claim fingerprints/);
 });
 
@@ -251,4 +252,16 @@ test("the 2015 Ballon d'Or plate compares Messi with the combined podium challen
   assert.match(page, /Neymar", share: 7\.86/);
   assert.match(page, /National-team coaches", voters: 165/);
   assert.match(page, /sources\.ballonDor2015Vote/);
+});
+
+test("the 2020/21 attack-spectrum plate compares ten margins across eleven league leads", async () => {
+  const page = await readFile(new URL("app/page.tsx", root), "utf8");
+
+  assert.match(page, /Plate 52 · total attacking control/);
+  assert.match(page, /One season\. Eleven leaderboards\./);
+  assert.match(page, /metric: "Shots on target", messi: 91, next: 55/);
+  assert.match(page, /metric: "Outside-box goals", messi: 8, next: 4/);
+  assert.match(page, /metric: "Completed dribbles", messi: 159, next: 121/);
+  assert.match(page, /261<\/strong><span>dribbles attempted/);
+  assert.match(page, /sources\.laLiga2021Leaders/);
 });

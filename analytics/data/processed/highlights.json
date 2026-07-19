@@ -1,0 +1,96 @@
+{
+  "first_place_cells": 22,
+  "total_metric_seasons": 56,
+  "cells_above_two_sd": 47,
+  "cells_above_three_sd": 32,
+  "peak_by_metric": [
+    {
+      "metric": "key_passes90",
+      "metric_label": "Key passes / 90",
+      "season": "2019/20",
+      "messi_value": 2.7538,
+      "z_score": 3.5267,
+      "robust_z": 5.0694,
+      "percentile": 100.0,
+      "rank": 1,
+      "cohort_size": 100
+    },
+    {
+      "metric": "npg90",
+      "metric_label": "Non-penalty goals / 90",
+      "season": "2018/19",
+      "messi_value": 1.0651,
+      "z_score": 4.7285,
+      "robust_z": 4.4209,
+      "percentile": 100.0,
+      "rank": 1,
+      "cohort_size": 91
+    },
+    {
+      "metric": "npg_minus_npxg90",
+      "metric_label": "Non-penalty goals above xG / 90",
+      "season": "2018/19",
+      "messi_value": 0.3235,
+      "z_score": 3.4994,
+      "robust_z": 4.2296,
+      "percentile": 100.0,
+      "rank": 1,
+      "cohort_size": 91
+    },
+    {
+      "metric": "npxg90",
+      "metric_label": "Non-penalty xG / 90",
+      "season": "2020/21",
+      "messi_value": 0.6849,
+      "z_score": 3.4174,
+      "robust_z": 3.9647,
+      "percentile": 100.0,
+      "rank": 1,
+      "cohort_size": 110
+    },
+    {
+      "metric": "shots90",
+      "metric_label": "Shots / 90",
+      "season": "2020/21",
+      "messi_value": 5.817,
+      "z_score": 4.8723,
+      "robust_z": 5.7847,
+      "percentile": 100.0,
+      "rank": 1,
+      "cohort_size": 110
+    },
+    {
+      "metric": "xa90",
+      "metric_label": "Expected assists / 90",
+      "season": "2019/20",
+      "messi_value": 0.5193,
+      "z_score": 5.275,
+      "robust_z": 5.4625,
+      "percentile": 100.0,
+      "rank": 1,
+      "cohort_size": 100
+    },
+    {
+      "metric": "xgbuildup90",
+      "metric_label": "xGBuildup / 90",
+      "season": "2020/21",
+      "messi_value": 0.6067,
+      "z_score": 3.8438,
+      "robust_z": 4.6858,
+      "percentile": 100.0,
+      "rank": 1,
+      "cohort_size": 110
+    },
+    {
+      "metric": "xgchain90",
+      "metric_label": "xGChain / 90",
+      "season": "2018/19",
+      "messi_value": 1.2801,
+      "z_score": 3.8423,
+      "robust_z": 4.6549,
+      "percentile": 100.0,
+      "rank": 1,
+      "cohort_size": 91
+    }
+  ]
+}
